@@ -20,3 +20,6 @@ I believe the __Rails__ part of Ruby on Rails was what made it so popular and de
 Conventions, patterns, rules, styles, etc reduce the mental load while you are developing. Instead of spending your decision-making energy on how best to perform a routine task, you can essentially go into auto-pilot mode, saving that energy for solving more interesting problems.
 
 React Playbook is a collection of documents that attempts to give React its rails.
+
+## Note
+If you are new to React, looking through [petehunt/react-howto: Your guide to the (sometimes overwhelming!) React ecosystem.](https://github.com/petehunt/react-howto) is recommended.
