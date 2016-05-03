@@ -56,10 +56,10 @@ If you use eslint. Also works with Nuclide's Diagnostics window.
 ![](https://raw.githubusercontent.com/jacogr/atom-git-control/master/screenshots/git-01.png)
 
 ### [git-blame](https://atom.io/packages/git-blame)
-![](https://i.github-camo.com/48e49f0c648a225aa35bebaaff21d437b5b0461b/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f616c6578636f7272652f6769742d626c616d652f6d61737465722f696d616765732f73637265656e2d73686f742e706e67)
+![](https://raw.githubusercontent.com/alexcorre/git-blame/master/images/screen-shot.png)
 
 ### [merge-conflicts](https://atom.io/packages/merge-conflicts)
-![](https://i.github-camo.com/44ff44f156f274b8799022e44bcacb804fadc08a/68747470733a2f2f7261772e6769746875622e636f6d2f736d61736877696c736f6e2f6d657267652d636f6e666c696374732f6d61737465722f646f63732f636f6e666c6963742d7265736f6c7574696f6e2e676966)
+![](https://raw.github.com/smashwilson/merge-conflicts/master/docs/conflict-resolution.gif)
 
 ---
 
@@ -77,7 +77,7 @@ Settings: Disable the Exclude Active File to ensure `index.js` can be seen.
 ### [smart-tab-name](https://atom.io/packages/smart-tab-name)
 Gives more context to the file you are looking at. Especially useful when viewing index.js.
 
-![](https://i.github-camo.com/164d4406df3f766fdce0608217f98a1eaf153cd4/68747470733a2f2f6769746875622e636f6d2f4d6f4f782f61746f6d2d736d6172742d7461622d6e616d652f7261772f6d61737465722f73637265656e73686f74732f6f6e652d666f6c6465722e706e67)
+![](https://raw.githubusercontent.com/MoOx/atom-smart-tab-name/master/screenshots/one-folder.png)
 
 ### [atom-react-native-autocomplete](https://atom.io/packages/atom-react-native-autocomplete)
 Add Intellisense completion for RN components (not for your custom ones though)
@@ -96,10 +96,10 @@ Easily create the ending tag of a component in your jsx. Particularly helpful wh
 ### [vim-mode-plus-move-to-symbols](https://atom.io/packages/vim-mode-plus-move-to-symbols)
 
 ### [vim-mode-plus-project-find-from-search](https://atom.io/packages/vim-mode-plus-project-find-from-search)
-![](https://i.github-camo.com/2c20ce2edd235c941fcfd02bb3505c9206e3972e/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74396d642f74396d642f383430393230653531613931323736623630623232626533366663353966383733393765656330342f696d672f76696d2d6d6f64652d706c75732f766d702d70726f6a6563742d66696e642d66726f6d2d7365617263682e676966)
+![](https://raw.githubusercontent.com/t9md/t9md/840920e51a91276b60b22be36fc59f87397eec04/img/vim-mode-plus/vmp-project-find-from-search.gif)
 
 ### [vim-mode-plus-subword-movement](https://atom.io/packages/vim-mode-plus-subword-movement)
-![](https://i.github-camo.com/924801915b3f57d4a44b537a6a5b94756819c367/68747470733a2f2f676973742e6769746875622e636f6d2f63727368642f36663335393164636237336561383766656264302f7261772f316366306532643030636562363165326163663435623436633963653562666631303637333334392f4c4243757a4d593975542e676966)
+![](https://gist.github.com/crshd/6f3591dcb73ea87febd0/raw/1cf0e2d00ceb61e2acf45b46c9ce5bff10673349/LBCuzMY9uT.gif)
 
 ### [cursor-history](https://atom.io/packages/cursor-history)
 
