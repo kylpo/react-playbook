@@ -3,14 +3,14 @@ Styles, Conventions, Rules, Tips, and Tools!
 
 ## Table of contents
 - Component Architecture
-  - Intro - The Component Problem
-  - [A Component](https://github.com/kylpo/react-playbook/blob/master/component-architecture/2_A-Component.md)
+  - [Intro - The Component Problem](https://github.com/kylpo/react-playbook/blob/master/component-architecture/1_The-Component-Problem.md)
+  - [A Single Component](https://github.com/kylpo/react-playbook/blob/master/component-architecture/2_A-Component.md)
   - [Multiple Components](https://github.com/kylpo/react-playbook/blob/master/component-architecture/3_Multiple-Components.md)
-  - Component Dependencies
+  - [Component Dependencies](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md)
   - [Example App Structure](https://github.com/kylpo/react-playbook/blob/master/component-architecture/5_Example-App-Structure.md)
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
-  - eslint config to support the style
+  - eslint config to support the style //TODO
 - Tools
   - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)
 

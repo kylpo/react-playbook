@@ -72,7 +72,7 @@ Structurally, this looks great, but there is definitely an eye sore with the nam
 
 Yikes! And this is only 2 levels deep! `subcomponents` is a perfectly descriptive term, but dirties the fuzzy search. We could change it to something like `parts`, `sub`, etc, but really, any *word* will remain dirty. This is why a symbol will be needed here.
 
-#### New Convention: `subcomponent` directories will be labeled with an `_`
+##### New Convention: `subcomponent` directories will be labeled with an `_`
 
 Example:
 ```
@@ -150,7 +150,7 @@ For mobile, however, we are not using Webpack, so this structure is not yet poss
 ### Sharing Components in React Native
 Since we can not resolved multiple `/shared/` as though they were a `/node_modules/` folder in React Native, we are forced to only have one, top-level `/shared/` directory.
 
-#### New Convention: Any shared app components live in the top-level `/shared/` folder and are imported from `'shared/<<Component>>'`
+##### New Convention: Any shared app components live in the top-level `/shared/` folder and are imported from `'shared/<<Component>>'`
 
 ```
 /app
@@ -171,3 +171,5 @@ Note: Eventually, this `/shared/` folder might contain too many components to re
 - __Shared__ app components exist in the `/shared/` folder
 
 Next up, we'll explore app-dependent and independent components!
+
+## Next Up: [Component Dependencies](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md)

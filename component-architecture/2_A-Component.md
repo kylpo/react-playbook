@@ -139,3 +139,5 @@ Note: `__tests__` and `assets` should only exist if there is something in them. 
 
 ## Learn More
 [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.uy1ewt283)
+
+## Next Up: [Multiple Components](https://github.com/kylpo/react-playbook/blob/master/component-architecture/3_Multiple-Components.md)
