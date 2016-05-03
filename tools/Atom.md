@@ -23,7 +23,7 @@ Pretty crucial for me, coming from vim. This allows me to easily switch between 
 Surprisingly, this is missing by default. Very helpful for if your flow is to open Atom, then open the project you'd like, instead of opening Atom from `cli` in the project you want.
 
 ### [clipboard-plus](https://atom.io/packages/clipboard-plus)
-![](https://i.github-camo.com/3e515033ac645bfe2e94d5d073176934e5254f66/687474703a2f2f692e6779617a6f2e636f6d2f34386366633636633866386237363636656662373333346439323866316139652e676966)
+![](http://i.gyazo.com/48cfc66c8f8b7666efb7334d928f1a9e.gif)
 
 ### [quick-highlight](https://atom.io/packages/quick-highlight)
 (Works nicely with vim-mode-plus, too)
@@ -32,12 +32,12 @@ Surprisingly, this is missing by default. Very helpful for if your flow is to op
 ### [todo-show](https://atom.io/packages/todo-show)
 Finds all the TODOs, FIXMEs, HACKs, etc. in your project.
 
-![](https://i.github-camo.com/f15ae70a5e4f1078889fba95bcfdfdec75306a28/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6d726f64616c67616172642f61746f6d2d746f646f2d73686f772f6d61737465722f73637265656e73686f74732f707265766965772e706e67)
+![](https://raw.githubusercontent.com/mrodalgaard/atom-todo-show/master/screenshots/preview.png)
 
 ### [pigments](https://atom.io/packages/pigments)
 A package to display colors in project and files.
 
-![](https://i.github-camo.com/16c0c12a183c6f57fb33481984593a515777d5e8/68747470733a2f2f6769746875622e636f6d2f61626533332f61746f6d2d7069676d656e74732f626c6f622f6d61737465722f7265736f75726365732f7069676d656e74732e6769663f7261773d74727565)
+![](https://raw.githubusercontent.com/abe33/atom-pigments/master/resources/pigments.gif)
 
 ### [file-icons](https://atom.io/packages/file-icons)
 Assigns icons to file types (seen in tree view and tab title)
@@ -53,7 +53,7 @@ If you use eslint. Also works with Nuclide's Diagnostics window.
 - A comprehensive GUI to interacting with git.
 - git-flow button makes it easy
 
-![](https://i.github-camo.com/e35620a073ae64498e9dbff837aa273d3dcb263d/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6a61636f67722f61746f6d2d6769742d636f6e74726f6c2f6d61737465722f73637265656e73686f74732f6769742d30312e706e67)
+![](https://raw.githubusercontent.com/jacogr/atom-git-control/master/screenshots/git-01.png)
 
 ### [git-blame](https://atom.io/packages/git-blame)
 ![](https://i.github-camo.com/48e49f0c648a225aa35bebaaff21d437b5b0461b/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f616c6578636f7272652f6769742d626c616d652f6d61737465722f696d616765732f73637265656e2d73686f742e706e67)

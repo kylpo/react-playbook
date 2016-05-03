@@ -29,6 +29,7 @@ For this example, we'll show a React Native app using Redux.
 │   |       └── /index.js       
 │   ├── /shared/                # Shared, app-dependent Components and functions
 │   └── /types/                 # Types for the app-specific objects that would usually be a model
+|                               # NOTE: if using something like Immutable.js to define Records, call this /models/ instead
 |
 ├── /lib                        # Your non-app-specific Components and functions
 |
