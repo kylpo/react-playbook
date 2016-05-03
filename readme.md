@@ -4,11 +4,11 @@ Styles, Conventions, Rules, Tips, and Tools!
 ## Table of contents
 - Component Architecture
   - The Component Problem
-  - A Component
-  - Multiple Components
+  - [A Component](https://github.com/kylpo/react-playbook/blob/master/component-architecture/2_A-Component.md)
+  - [Multiple Components](https://github.com/kylpo/react-playbook/blob/master/component-architecture/3_Multiple-Components.md)
   - Component Dependencies
 - Style
-  - Kylpo's coding style
+  - coding style
   - eslint config to support the style
 - Tools
   - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)

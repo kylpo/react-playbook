@@ -109,7 +109,7 @@ But do you really want to refactor all of your code imports every time you conve
 import Root from './MyComponent'
 export default Root
 ```
-Now, you previous import of `import MyComponent from './MyComponent'` will work.
+Now, your previous import of `import MyComponent from './MyComponent'` will work.
 
 Aside: Eventually, I will likely build a tool to convert a file component to a folder component. It will auto-gen this `index.js` file, similar to [create-index](https://github.com/gajus/create-index).
 
