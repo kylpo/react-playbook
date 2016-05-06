@@ -3,7 +3,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 
 ## Table of contents
 - Component Architecture
-  - [Intro - The Component Problem](https://github.com/kylpo/react-playbook/blob/master/component-architecture/1_The-Component-Problem.md)
+  - [Intro - The "Component" Problem](https://github.com/kylpo/react-playbook/blob/master/component-architecture/1_The-Component-Problem.md)
   - [A Single Component](https://github.com/kylpo/react-playbook/blob/master/component-architecture/2_A-Component.md)
   - [Multiple Components](https://github.com/kylpo/react-playbook/blob/master/component-architecture/3_Multiple-Components.md)
   - [Component Dependencies](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md)
