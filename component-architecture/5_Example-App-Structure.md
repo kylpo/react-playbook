@@ -37,3 +37,5 @@ For this example, we'll show a React Native app using Redux.
 ├── /node_modules/              # 3rd-party libraries and utilities
 └── package.json                # The list of 3rd party libraries and utilities
 ```
+
+## Next Up: [Future Tooling](https://github.com/kylpo/react-playbook/blob/master/component-architecture/6_Future-Tooling.md)
