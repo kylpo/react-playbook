@@ -7,7 +7,7 @@
   \____\___/|_| |_| |_| .__/ \___/|_| |_|\___|_| |_|\__| /_/   \_\_|  \___|_| |_|_|\__\___|\___|\__|\__,_|_|  \___|
                       |_|                                                                                          
 ```
-# Part 1 - The "Component" problem
+# Part 1: The "Component" problem
 If I said something was a "file", what would that mean to you? Likely not much - you’d have to ask follow-up questions. Is it physical or digital? Is it text? Is it an image? Excel? Word?
 
 What about a "module"? Same problem.

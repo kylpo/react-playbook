@@ -8,7 +8,11 @@
                       |_|                                                                                          
 ```
 # Part 2: A Single Component
+First, let's identify the primary types of any single component.
+
 ## Types
+(aka separating concerns)
+
 ### Presentational
 Presentational components are your __ui__ components. They should only react to `props` passed down (and __local__ `state` if absolutely necessary). They’re concerned about the render, and should hold little to no logic.
 
@@ -71,7 +75,9 @@ Presentational                  Container
 
 Note: This combination is also a __component__
 
-Good practice if the container and presentational are extracted into separate files, but likely a code smell if they are combined into one big file, sharing the two's responsibilities.
+A single component may share the responsibilities of a Presentational and Container, and is likely the way you currently build your components if you had not heard of the Container/Presentational pattern.
+
+Good practice if the container and presentational are extracted into separate files (contained in a folder, called a __Folder Component__), but likely a code smell if they are combined into one big file. Having said that, we don't have all the time in the world, so sharing responsibilities in a single file is OK, but it should be small, focussed, and be refactored when it grows.
 
 # File/Folder structure
 Speaking of file and folder components, lets see exactly how they would be represented in the file system.
