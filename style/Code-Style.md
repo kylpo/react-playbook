@@ -205,6 +205,28 @@ array.sort( byNameAscending() )
 # React-specific conventions
 In general, keep your components as small and focussed as possible (and reasonable). The conventions below will help with this.
 
+## Imports order
+Structure your imports like: functions, constants, __vertical space__, then components
+```javascript
+// Good
+import React from 'react'
+import { connect } from 'react-redux'
+import { ANIMATION_TIMING } from 'constants'
+
+import MyAnimatedComponent from './MyAnimatedComponent'
+import NavBar form 'react-native-navbar'
+import {
+  View,
+  Text,
+  TouchableOpacity,
+} from 'react-native'
+
+class MyComponent extends React.Component { ... }
+```
+
+#### Why
+This allows you to more easily skim and parse a component's dependencies.
+
 ## Stateless functional components
 Gone are the days of renderSection(). Now you should be using a stateless functional component. Note, any exported component should probably still be the class style so that you have access to shouldComponentUpdate and such. Otherwise, consider Recompose.
 ```javascript
