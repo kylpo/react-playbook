@@ -42,9 +42,16 @@ A package to display colors in project and files.
 ### [file-icons](https://atom.io/packages/file-icons)
 Assigns icons to file types (seen in tree view and tab title)
 
-
 ### [linter-eslint](https://atom.io/packages/linter-eslint)
 If you use eslint. Also works with Nuclide's Diagnostics window.
+
+### [atom-ternjs](https://atom.io/packages/atom-ternjs)
+Intellisense for js
+
+### [terminal-plus](https://atom.io/packages/terminal-plus)
+Terminals in your Atom editor
+
+![](https://raw.githubusercontent.com/jeremyramin/terminal-plus/master/resources/demo.gif)
 
 ---
 
@@ -105,3 +112,6 @@ Easily create the ending tag of a component in your jsx. Particularly helpful wh
 
 ### [vim-mode-clipboard-plus](https://atom.io/packages/vim-mode-clipboard-plus)
 (Requires clipboard-plus)
+
+### [relative-numbers](https://atom.io/packages/relative-numbers)
+![](https://raw.githubusercontent.com/justmoon/relative-numbers/master/screencast.gif)

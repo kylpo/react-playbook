@@ -9,6 +9,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Component Dependencies](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md)
   - [Example App Structure](https://github.com/kylpo/react-playbook/blob/master/component-architecture/5_Example-App-Structure.md)
   - [Future Tooling](https://github.com/kylpo/react-playbook/blob/master/component-architecture/6_Future-Tooling.md)
+  - [Appendix](https://github.com/kylpo/react-playbook/blob/master/component-architecture/Appendix.md)
 - [Best Practices](https://github.com/kylpo/react-playbook/blob/master/best-practices/readme.md)
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
