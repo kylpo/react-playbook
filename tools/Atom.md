@@ -53,6 +53,11 @@ Terminals in your Atom editor
 
 ![](https://raw.githubusercontent.com/jeremyramin/terminal-plus/master/resources/demo.gif)
 
+### [smalls](https://atom.io/packages/smalls)
+Rapid cursor positioning across any visible chars with search and jump. SO GOOD!
+
+__Settings:__ Jump Trigger Input Length: 2
+
 ---
 
 ## Plugins - git
@@ -74,12 +79,12 @@ Terminals in your Atom editor
 ### [nuclide](https://atom.io/packages/nuclide)
 Built-in tooling for React Native and Flow
 
-Settings: Be sure to read through the `Use` section and disable what you don't need. Like `Hack` and `hg` features, for example.
+__Settings__: Be sure to read through the `Use` section and disable what you don't need. Like `Hack` and `hg` features, for example.
 
 ### [file-explorer](https://atom.io/packages/file-explorer)
 Your primary tool to navigate up and down a component tree. Better tool than the left Tree View that comes with Atom.
 
-Settings: Disable the Exclude Active File to ensure `index.js` can be seen.
+__Settings__: Disable the Exclude Active File to ensure `index.js` can be seen.
 
 ### [smart-tab-name](https://atom.io/packages/smart-tab-name)
 Gives more context to the file you are looking at. Especially useful when viewing index.js.
