@@ -206,20 +206,20 @@ array.sort( byNameAscending() )
 In general, keep your components as small and focussed as possible (and reasonable). The conventions below will help with this.
 
 ## Imports order
-Structure your imports like: functions, constants, __vertical space__, then components
+Structure your imports like: functions, constants, __vertical space__, then components. Each block should be ordered as external, then local.
 ```javascript
 // Good
-import React from 'react'
-import { connect } from 'react-redux'
-import { ANIMATION_TIMING } from 'constants'
+import React from 'react'                                 // external
+import { connect } from 'react-redux'                     // external
+import { ANIMATION_TIMING } from 'constants'              // local
 
-import MyAnimatedComponent from './MyAnimatedComponent'
-import NavBar form 'react-native-navbar'
 import {
   View,
   Text,
   TouchableOpacity,
-} from 'react-native'
+} from 'react-native'                                     // external
+import NavBar form 'react-native-navbar'                  // external
+import MyAnimatedComponent from './MyAnimatedComponent'   // local
 
 class MyComponent extends React.Component { ... }
 ```
