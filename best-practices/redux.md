@@ -12,17 +12,17 @@
 # Redux
 [Redux](https://github.com/reactjs/redux) holds your App's state. It is predictable and has great tooling, but might be a bit slower than something like [MobX](https://github.com/mobxjs/mobx) ([Abramov's tweet](https://twitter.com/dan_abramov/status/733705049902329856)).
 
-## Guidelines and Rules
-* React makes your UI reactive (hence its name) by treating data from your store as a __fact__. So you don’t have to tell your view ‘how to update the UI.’ In the same way, I also believe Redux/Flux makes your data model reactive, by treating actions as a fact, so you don’t have to tell your data model how to update themselves.
-  * [from @dtinth](https://github.com/reactjs/redux/issues/1171#issuecomment-167714850)
+React makes your UI reactive (hence its name) by treating data from your store as a __fact__. So you don’t have to tell your view ‘how to update the UI.’ In the same way, I also believe Redux/Flux makes your data model reactive, by treating actions as a fact, so you don’t have to tell your data model how to update themselves. - [from @dtinth](https://github.com/reactjs/redux/issues/1171#issuecomment-167714850)
+
+## Rules
 * Your __reducers__ must be pure (__deterministic__).
 * Any logic with side effects (__non-deterministic__) (external services, async code) belong in an action (via something like [redux-thunk](https://github.com/gaearon/redux-thunk) and/or [redux-saga](https://github.com/yelouafi/redux-saga))
   * For more about the deterministic vs non-deterministic, see [this](https://github.com/reactjs/redux/issues/1171#issuecomment-205888533) Github Issue response.
-* Redux should store the minimal possible state, allowing Selectors to compute derived data.
 * Containers read a store's data through selectors. Selectors are your "reading API" and should be __co-located__ with their reducers.
   * See [So you’ve screwed up your Redux store — or, why Redux makes refactoring easy](https://blog.boldlisting.com/so-youve-screwed-up-your-redux-store-or-why-redux-makes-refactoring-easy-400e19606c71#.rho2ned2d)
   * and [Computing Derived Data | Redux](http://redux.js.org/docs/recipes/ComputingDerivedData.html)
 * __Use selectors everywhere__. Even for the most trivial ones.
+* Redux should store the minimal possible state, allowing Selectors to compute derived data.
 * Use [Reselect](https://github.com/reactjs/reselect) for selectors that need to be memoized (like derived data).
 * Selectors can be composed of other selectors
 * Normalize your data for better reducer composition
