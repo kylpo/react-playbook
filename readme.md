@@ -10,13 +10,18 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Example App Structure](https://github.com/kylpo/react-playbook/blob/master/component-architecture/5_Example-App-Structure.md)
   - [Future Tooling](https://github.com/kylpo/react-playbook/blob/master/component-architecture/6_Future-Tooling.md)
   - [Appendix](https://github.com/kylpo/react-playbook/blob/master/component-architecture/Appendix.md)
-- [Best Practices](https://github.com/kylpo/react-playbook/blob/master/best-practices/readme.md)
+- Best Practices
+  - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
+  - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - eslint config to support the style //TODO
 - Tools
   - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)
   - [Vim](https://github.com/kylpo/react-playbook/blob/master/tools/Vim.md) - not yet written
+  - [CLI](https://github.com/kylpo/react-playbook/blob/master/tools/CLI.md)
+- Notes
+  - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
 
 ## Why?
 I believe the __Rails__ part of Ruby on Rails was what made it so popular and developer-friendly.
