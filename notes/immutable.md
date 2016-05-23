@@ -14,15 +14,16 @@
 - Used for equality checks
   - As easy as primitive checks:
 ```js
-var x=10, y=10
-x==y   //true
-x===y  //true
+var x = 10
+var y = 10
+x == y   //true
+x === y  //true
 ```
     but for objects and arrays, instead!
   - This works perfectly with the `shouldComponentUpdate` component lifecycle hook in React.
     - See [PureRenderMixin](https://facebook.github.io/react/docs/pure-render-mixin.html)
 - Can be done __without__ libraries:
-```
+```js
 Object.assign( {}, oldObj, {key: update} )
 array.concat( [newItem] )
 ```
