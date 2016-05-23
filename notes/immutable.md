@@ -22,6 +22,7 @@ x === y  //true
     but for objects and arrays, instead!
   - This works perfectly with the `shouldComponentUpdate` component lifecycle hook in React.
     - See [PureRenderMixin](https://facebook.github.io/react/docs/pure-render-mixin.html)
+
 - Can be done __without__ libraries:
 ```js
 Object.assign( {}, oldObj, {key: update} )
