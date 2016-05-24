@@ -22,6 +22,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [CLI](https://github.com/kylpo/react-playbook/blob/master/tools/CLI.md)
 - Notes
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
+  - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
 
 ## Why?
 I believe the __Rails__ part of Ruby on Rails was what made it so popular and developer-friendly.
