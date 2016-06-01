@@ -52,7 +52,7 @@ React makes your UI reactive (hence its name) by treating data from your store a
   * __Why?__ For namespacing and sorting your reducers
 
 
-* __DO__ build your action creators using [redux-actions](https://github.com/acdlite/redux-actions)'s `createAction()`
+* __DO__ build your action creators using [redux-actions](https://github.com/acdlite/redux-actions)' `createActions()`
   * e.g. `createAction( 'TODO_ADD' )`
   * __Why?__ To reduce boilerplate and enforce [FSA](https://github.com/acdlite/flux-standard-action)-compliant actions
 
@@ -119,6 +119,10 @@ export default handleActions({
 export const getTodos = (state) => state
 
 ```
+
+## Types
+* If you are typing your code with Flow or Typescript, be sure to type your redux code as well!
+* Flow: [Using Redux with Flow](http://frantic.im/using-redux-with-flow) is a nice write-up
 
 ## Resources
 * [Recommendations for best practices regarding action-creators, reducers, and selectors](https://github.com/reactjs/redux/issues/1171)
