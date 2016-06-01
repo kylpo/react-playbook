@@ -21,8 +21,9 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Vim](https://github.com/kylpo/react-playbook/blob/master/tools/Vim.md) - not yet written
   - [CLI](https://github.com/kylpo/react-playbook/blob/master/tools/CLI.md)
 - Notes
-  - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
+  - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
+  - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
 
 ## Why?
 I believe the __Rails__ part of Ruby on Rails was what made it so popular and developer-friendly.
