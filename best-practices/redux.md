@@ -17,7 +17,8 @@ React makes your UI reactive (hence its name) by treating data from your store a
   * For more about the deterministic vs non-deterministic, see [this](https://github.com/reactjs/redux/issues/1171#issuecomment-205888533) Github Issue response.
 * Containers read a store's data through selectors. Selectors are your "reading API" and should be __co-located__ with their reducers.
   * See [So you’ve screwed up your Redux store — or, why Redux makes refactoring easy](https://blog.boldlisting.com/so-youve-screwed-up-your-redux-store-or-why-redux-makes-refactoring-easy-400e19606c71#.rho2ned2d)
-  * and [Computing Derived Data | Redux](http://redux.js.org/docs/recipes/ComputingDerivedData.html)
+  * [Computing Derived Data | Redux](http://redux.js.org/docs/recipes/ComputingDerivedData.html)
+  * [Colocating Selectors with Reducers](https://egghead.io/lessons/javascript-redux-colocating-selectors-with-reducers)
 * __Use selectors everywhere__. Even for the most trivial ones.
 * Redux should store the minimal possible state, allowing Selectors to compute derived data.
 * Use [Reselect](https://github.com/reactjs/reselect) for selectors that need to be memoized (like derived data).
