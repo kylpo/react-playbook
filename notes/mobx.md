@@ -118,3 +118,6 @@ if (__DEV__) {
   })
 }
 ```
+
+# Resources
+- [Why we chose MobX over Redux for Spectacle Editor](http://formidable.com/blog/2016/06/02/why-we-chose-mobx-over-redux-for-spectacle-editor/)
