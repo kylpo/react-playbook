@@ -13,7 +13,7 @@ First, let's identify the primary types of any single component.
 (aka separating concerns)
 
 ### Presentational
-Presentational components are your __ui__ components. They should only react to `props` passed down (and __local__ `state` if absolutely necessary). They’re concerned about the render, and should hold little to no logic.
+Presentational components are your __ui__ components. They should only react to `props` passed down (and __local__ `state` if absolutely necessary). They’re concerned about how it __looks__, and should hold little to no logic.
 
 Example: The ui of a Button
 
@@ -31,7 +31,7 @@ Presentational
 Note: This is a __component__
 
 ### Container
-Container components are the inverse of presentational components: they only care about the __logic__. Instead of rendering multiple components in its render, it will typically render just one, and be sure to pass `props` to that component based on the logic it cares about (this means it will have __no stylesheets__, by the way).
+Container components are the inverse of presentational components: they only care about it __works__. Instead of rendering multiple components in its render, it will typically render just one, and be sure to pass `props` to that component based on the logic it cares about (this means it will have __no stylesheets__, by the way).
 
 Example: Wrapping a Button to specify the `onPress` functionality
 

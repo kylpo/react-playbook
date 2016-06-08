@@ -17,6 +17,10 @@
   - Having a nested ref means that section of your render can not easily be refactored out into its own component.
 - If you must use one (to get the dom node, for example), it must be to the top component in your render. __Don't ever use refs of a nested component.__ If you need the ref of a child, extract it out to its own component, then pass a prop/callback to it.
 
+## APIs
+- Generic components that need broad customization should provide and act on a `render___` prop to override their default implementation.
+  - e.g. Navbar's `title` (string) prop vs `renderTitle` (function (Component)) prop
+
 # General
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)
 
