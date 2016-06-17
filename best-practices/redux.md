@@ -42,7 +42,7 @@ React makes your UI reactive (hence its name) by treating data from your store a
 * Use [redux-actions](https://github.com/acdlite/redux-actions)
 * action name: `<NOUN>_<VERB>`
 * action creator name: `<verb><Noun>`
-* selector name: `get<Noun>`
+* selector name: `select<Noun>`
 
 ### Actions
 * __DO__ name each action (constant) as `<NOUN>_<VERB>` with the present tense
@@ -60,9 +60,9 @@ React makes your UI reactive (hence its name) by treating data from your store a
   * __Why?__ As a convention to clearly identify what type of function it is
 
 ### Selectors
-* __DO__ name each selector as `get<Noun>`
-  * e.g. `const getTodo = (state) => state`
-  * __Why?__ As a convention to clearly identify what type of function it is
+* __DO__ name each selector as `select<Noun>`
+  * e.g. `const selectTodo = (state) => state`
+  * __Why?__ Clearly identify that it is a Selector, not just a getter. For more, see [this](https://twitter.com/_jayphelps/status/739905438116806656) twitter conversation.
 
 ### Reducers
 * __DO__ build your reducers using [redux-actions](https://github.com/acdlite/redux-actions)'s `handleAction()`
@@ -114,7 +114,7 @@ export default handleActions({
 }, initialState )
 
 //- Selectors
-export const getTodos = (state) => state
+export const selectTodos = (state) => state
 
 ```
 
