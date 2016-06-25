@@ -26,7 +26,7 @@ Well, having app-independent code in scope of `app` doesn't really make much sen
 
 What about in `/lib`?
 
-`lib` was a common folder name for 3rd party libraries before the npm and bundler era. It was a naming convention that clearly denoted independent, generic code. This is where we'll place our independent components and functions! It is outside of `/app`, and anyone modifying or creating within it will know what criteria it needs to meet.
+`lib` was a common folder name for 3rd party libraries before the npm and bundler era. It was a naming convention that clearly denoted independent, generic code. This is where we'll place our independent components and functions! It is outside of `/app`, and anyone modifying or creating within it will know what criteria it needs to meet. For more on the `lib` name, see [this tweet](https://twitter.com/housecor/status/745962536751632385).
 
 #### What is the criteria for `lib` components and functions?
 - no imports of app code
