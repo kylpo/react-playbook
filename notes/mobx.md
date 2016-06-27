@@ -33,6 +33,7 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - [Mobx + Form Validation](https://jsfiddle.net/royriojas/qp5p33cn/)
 - [A React-Native app to remote control Google Play Music Desktop](https://github.com/GPMDP/google-play-music-desktop-remote)
 - [RFX Stack - Universal App featuring: React + Feathers + MobX](https://github.com/foxhound87/rfx-stack)
+- [mobx-ssr-example: Server-side rendering with mobx and react-router](https://github.com/kuuup/mobx-ssr-example)
 
 ## Performance
 - Any computation is deferred until needed by I/O. Huge performance benefits. Simplifies GC. - [@mwestrate](https://twitter.com/mweststrate/status/734001713800224768)

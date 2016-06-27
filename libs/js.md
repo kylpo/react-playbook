@@ -11,6 +11,7 @@
 ## Utility
 - [date-fns - modern JavaScript date utility library](https://date-fns.org/)
 - [raf: requestAnimationFrame polyfill library](https://github.com/chrisdickinson/raf)
+- [tween-functions: Robert Penner's easing functions, slightly modified](https://github.com/chenglou/tween-functions)
 
 ## Forms
 - [revalidate: Elegant and composable validations](https://github.com/jfairbank/revalidate)

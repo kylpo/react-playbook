@@ -29,3 +29,6 @@
 - [react-ink: A React component for adding material design style ink](https://github.com/vigetlabs/react-ink)
 
 ![](https://camo.githubusercontent.com/bbccee01118c48a9c43809afbb1df08097883308/687474703a2f2f636c2e6c792f696d6167652f317233363130327a304d33722f696e6b2e676966)
+
+## Debug/Perf
+- [why-did-you-update: Puts your console on blast when React is making unnecessary updates.](https://github.com/garbles/why-did-you-update)
