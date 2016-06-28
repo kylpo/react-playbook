@@ -29,8 +29,6 @@
 - [react-flip-move: Effortless animation between DOM changes (eg. list reordering) using the FLIP technique.](https://github.com/joshwcomeau/react-flip-move)
 ![](https://camo.githubusercontent.com/327ab3ca8958538e66c1bad251fcd60441b5093f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f676974687562646f63732f666d2d6d61696e2d64656d6f2e676966)
 
-
-
 ## Style
 - [react-ink: A React component for adding material design style ink](https://github.com/vigetlabs/react-ink)
 
@@ -38,6 +36,8 @@
 
 - [material-ui: React Components that Implement Google's Material Design.](https://github.com/callemall/material-ui)
 
-
 ## Native
 - [react-native-material-kit: Bringing Material Design to React Native](https://github.com/xinthink/react-native-material-kit/)
+
+## Debug/Perf
+- [why-did-you-update: Puts your console on blast when React is making unnecessary updates.](https://github.com/garbles/why-did-you-update)

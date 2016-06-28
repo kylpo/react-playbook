@@ -47,17 +47,17 @@ Easy, just nest them in our component folder! Our component folder will now look
 
 This is so helpful. We are structuring our apps the way the render tree will render them!
 
+---
+
 __FAQ: Why use nesting over a big, flat `components/` folder?__
-__Thought is not complete:__ A single, flat `components/` folder works really well in small projects and tutorials, but just doesn't scale. As your project grows in complexity and size, you'll pollute this folder with components of generic names, but are only used in a small subset of components, or are namespaced to the parent component, but pollute the parent's render. It is essentially the same problem that BEM css has.
 
-Two problems will arise as your project grows in complexity.
-- Keeping your component's render meaningful, you keep your subcomponent names generic
+A single, flat `components/` folder works really well in small projects and tutorials, but just doesn't scale. As your project grows in complexity and size, your `components/` folder bloats with namespaced components and/or generic component names that have too many concerns or too specific of concerns.
 
- Consider refactoring a component into multiple subcomponents. These subcomponents are only used by the parent component.
-- Refactor without fear
-- Less activation energy to do the right thing
-- Splitting out shared components would poulte shared
-  - or the user would be tempted to place all of those subcomponents in that one file.
+And as this folder grows, the activation energy to refactor and simplify components becomes greater. To prevent bloating it further, you might choose to break up a complicated render into inline subcomponents via `render___()` or defining stateless functional components in your file. Why is this a problem? Well, what happens when this subcomponent gains complexity? Do you need to refactor it out into a new file? Do you make more inline subcomponents and bloat the current file? It doesn't matter! You shouldn't need to think this much.
+
+These problems and activation energy are avoided with the nested components structure. This mindlessly repeatable task encourages you to do the right thing: breaking up and simplifying your components.
+
+---
 
 For completeness, lets see what the folder structure would look like if Button was a folder component with subcomponents:
 ```
