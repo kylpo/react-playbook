@@ -18,14 +18,26 @@
 
 ![](https://camo.githubusercontent.com/f398473c6f3ffe71db23db43c2024440a68f8a8f/68747470733a2f2f7261776769742e636f6d2f6761627269656c62756c6c2f72656163742d61696d2f6d61737465722f6578616d706c652e676966)
 
+- [React Sortable Higher-order Components](http://clauderic.github.io/react-sortable-hoc/#/basic-configuration/basic-usage?_k=5zvgfe)
+
 ## Forms
 - [Handling React Forms with Mobx Observables](https://blog.risingstack.com/handling-react-forms-with-mobx-observables/)
 
 ## Charts and Animations
 - [Chart Transitions with React and D3 4.0](http://www.delimited.io/blog/2016/5/18/react-and-d3-40)
 - [victory: A collection of composable React components for building interactive data visualizations](https://github.com/FormidableLabs/victory)
+- [react-flip-move: Effortless animation between DOM changes (eg. list reordering) using the FLIP technique.](https://github.com/joshwcomeau/react-flip-move)
+![](https://camo.githubusercontent.com/327ab3ca8958538e66c1bad251fcd60441b5093f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f676974687562646f63732f666d2d6d61696e2d64656d6f2e676966)
+
+
 
 ## Style
 - [react-ink: A React component for adding material design style ink](https://github.com/vigetlabs/react-ink)
 
 ![](https://camo.githubusercontent.com/bbccee01118c48a9c43809afbb1df08097883308/687474703a2f2f636c2e6c792f696d6167652f317233363130327a304d33722f696e6b2e676966)
+
+- [material-ui: React Components that Implement Google's Material Design.](https://github.com/callemall/material-ui)
+
+
+## Native
+- [react-native-material-kit: Bringing Material Design to React Native](https://github.com/xinthink/react-native-material-kit/)
