@@ -20,6 +20,14 @@
 ## APIs
 - Generic components that need broad customization should provide and act on a `render___` prop to override their default implementation.
   - e.g. Navbar's `title` (string) prop vs `renderTitle` (function (Component)) prop
+- Only use `setState` iff it affects something that should be rerendered and it can not be computed from props.
+  - from [Dan](https://twitter.com/dan_abramov/status/749710501916139520):
+![](https://pbs.twimg.com/media/CmeBsGzW8AQp_av.jpg)
+
+## Perf
+- Do not pass in Array or Object literals to subcomponents. If you do, PureRenderMixin will not work, since `['hi', 'bye'] !== ['hi', 'bye']`. Instead, move that array creation to an instance field or completely outside of the component. This means you should also define inline styles outside of your `render()`.
+  - [Performance Engineering with React](http://benchling.engineering/performance-engineering-with-react/)
+  - [React.js pure render performance anti-pattern — Medium](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.y7zpsjsu6)
 
 # General
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)

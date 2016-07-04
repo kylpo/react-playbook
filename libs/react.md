@@ -22,6 +22,7 @@
 
 ## Forms
 - [Handling React Forms with Mobx Observables](https://blog.risingstack.com/handling-react-forms-with-mobx-observables/)
+- [react-input-enhancements: Set of enhancements for input control](https://github.com/alexkuz/react-input-enhancements)
 
 ## Charts and Animations
 - [Chart Transitions with React and D3 4.0](http://www.delimited.io/blog/2016/5/18/react-and-d3-40)
