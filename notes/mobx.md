@@ -14,6 +14,7 @@ MobX is an app state manager (used in place of something like Redux)
 - "That’s what I’m liking about #mobx though.  It plugs into my code, not vice versa." - [@skellock](https://twitter.com/skellock/status/734768185782743045)
 - "With MobX, there's no boilerplate. No constants & switch statements, just reactive components of observable values." - [@tomaash](https://twitter.com/tomaash/status/741278218599190528)
 - "with MobX you minimize instead of normalize state" - [@mweststrate](https://twitter.com/mweststrate/status/741649166846267393)
+- "What I <3 most about #MobX is that I can keep my state structured in a way that makes sense. No normalizr + reselect needed" - [@zavelevsky"](https://twitter.com/zavelevsky/status/750701407179829249)
 
 ## Getting Started
 - [Video: 3 mins] [Mobx and React intro ](https://egghead.io/lessons/javascript-mobx-and-react-intro-syncing-the-ui-with-the-app-state-using-observable-and-observer?utm_content=buffer621b3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
