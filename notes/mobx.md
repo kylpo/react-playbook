@@ -53,6 +53,10 @@ Never pass mobx observables as props. Just import them where they are needed. As
 If already using mobX for app state, consider using it in place of React' `setState()`: see [3 Reasons why I stopped using React.setState — Medium](https://medium.com/@mweststrate/3-reasons-why-i-stopped-using-react-setstate-ab73fc67a42e#.802uvhns0)
 - To enforce this, use the [no-set-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md) eslint rule
 
+# Structure
+![](https://pbs.twimg.com/media/CnbC3auXEAE4UdZ.jpg:large)
+- from [@jay_soo](https://twitter.com/jay_soo/status/754004481524793344)
+
 # Patterns
 - [Lazy Loading observables](https://github.com/mobxjs/mobx/issues/307)
 - [Server Rendering - Hydration with MobX](https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.ksm0szwm9)

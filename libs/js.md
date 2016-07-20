@@ -17,6 +17,9 @@
 ## Forms
 - [revalidate: Elegant and composable validations](https://github.com/jfairbank/revalidate)
 
+# Functions
+- [a native scrollTo function in javascript that uses requestAnimationFrame and easing for animation](https://gist.github.com/james2doyle/5694700)
+
 ## Charts and Animations
 .
 

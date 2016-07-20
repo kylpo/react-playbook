@@ -16,6 +16,9 @@
   - Why? Using refs makes the implementation more brittle. The `ref`d component can not be wrapped without custom logic.
   - Having a nested ref means that section of your render can not easily be refactored out into its own component.
 - If you must use one (to get the dom node, for example), it must be to the top component in your render. __Don't ever use refs of a nested component.__ If you need the ref of a child, extract it out to its own component, then pass a prop/callback to it.
+- DO NOT use string refs. All refs should use the callback style.
+- DO NOT use `findDOMNode()`
+  - use callback refs instead [abramov tweet](https://twitter.com/dan_abramov/status/752936646602031104)
 
 ## APIs
 - Generic components that need broad customization should provide and act on a `render___` prop to override their default implementation.
