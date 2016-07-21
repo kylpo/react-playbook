@@ -20,6 +20,9 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)
   - [Vim](https://github.com/kylpo/react-playbook/blob/master/tools/Vim.md) - not yet written
   - [CLI](https://github.com/kylpo/react-playbook/blob/master/tools/CLI.md)
+- Useful libs
+  - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
+  - [js](https://github.com/kylpo/react-playbook/blob/master/libs/js.md)
 - Notes
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)

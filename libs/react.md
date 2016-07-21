@@ -18,7 +18,11 @@
 
 ![](https://camo.githubusercontent.com/f398473c6f3ffe71db23db43c2024440a68f8a8f/68747470733a2f2f7261776769742e636f6d2f6761627269656c62756c6c2f72656163742d61696d2f6d61737465722f6578616d706c652e676966)
 
+- [react-waypoint: A React component to execute a function whenever you scroll to an element.](https://github.com/brigade/react-waypoint?utm_campaign=Fullstack%2BReact&utm_medium=email&utm_source=Fullstack_React_25)
+
+## Layout
 - [React Sortable Higher-order Components](http://clauderic.github.io/react-sortable-hoc/#/basic-configuration/basic-usage?_k=5zvgfe)
+- [react-stonecutter: Animated grid layout component for React](https://github.com/dantrain/react-stonecutter?utm_campaign=Fullstack%2BReact&utm_medium=email&utm_source=Fullstack_React_25)
 
 ## Forms
 - [Handling React Forms with Mobx Observables](https://blog.risingstack.com/handling-react-forms-with-mobx-observables/)
@@ -39,6 +43,7 @@
 
 ## Native
 - [react-native-material-kit: Bringing Material Design to React Native](https://github.com/xinthink/react-native-material-kit/)
+- [react-native-material-design: React Native UI Components for Material Design](https://github.com/react-native-material-design/react-native-material-design?utm_campaign=Fullstack%2BReact&utm_medium=email&utm_source=Fullstack_React_25)
 
 ## Debug/Perf
 - [why-did-you-update: Puts your console on blast when React is making unnecessary updates.](https://github.com/garbles/why-did-you-update)
