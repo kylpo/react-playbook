@@ -24,8 +24,10 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
   - [js](https://github.com/kylpo/react-playbook/blob/master/libs/js.md)
 - Notes
+  - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
+  - [React Interesting Ideas](https://github.com/kylpo/react-playbook/blob/master/notes/react-ideas.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
 
 ## Why?
