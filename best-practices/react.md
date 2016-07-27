@@ -40,5 +40,18 @@
 
 # General
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)
+ 
+## Testing
+Write component tests that accomplish the following goals (from [Getting Started with TDD in React](https://semaphoreci.com/community/tutorials/getting-started-with-tdd-in-react?utm_source=javascriptweekly&utm_medium=email)):
+* it renders
+* it renders the correct thing
+  * default props
+  * varied props
+* it renders the different states
+* test events
+* test edge cases
+  * e.g. something that uses an array should be thrown an empty array
+
+"Testing exact render is bad, but testing props have correct impact in render is big. Also events and lifecycle." - [@FwardPhoenix](https://twitter.com/FwardPhoenix/status/757591796641914880)
 
 ### Many more to come...
