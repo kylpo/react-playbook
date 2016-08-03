@@ -37,10 +37,16 @@
 - Do not pass in Array or Object literals to subcomponents. If you do, PureRenderMixin will not work, since `['hi', 'bye'] !== ['hi', 'bye']`. Instead, move that array creation to an instance field or completely outside of the component. This means you should also define inline styles outside of your `render()`.
   - [Performance Engineering with React](http://benchling.engineering/performance-engineering-with-react/)
   - [React.js pure render performance anti-pattern — Medium](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.y7zpsjsu6)
+- "Don’t stress over binding in render() too much. In my experience it makes a real difference in maybe 10% of cases."
+  - [abramov tweet](https://twitter.com/dan_abramov/status/760199672824815616)
+- "Don‘t use PureComponent everywhere. Measure."
+  - [abramov tweet](https://twitter.com/dan_abramov/status/759383530120110080)
+- "What are the performance implications of wrapping most #React components in HoC? It can double the # of lifecycle methods called."
+  - [brehm tweet](https://twitter.com/spikebrehm/status/760593924184432640)
 
 # General
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)
- 
+
 ## Testing
 Write component tests that accomplish the following goals (from [Getting Started with TDD in React](https://semaphoreci.com/community/tutorials/getting-started-with-tdd-in-react?utm_source=javascriptweekly&utm_medium=email)):
 * it renders
@@ -53,5 +59,7 @@ Write component tests that accomplish the following goals (from [Getting Started
   * e.g. something that uses an array should be thrown an empty array
 
 "Testing exact render is bad, but testing props have correct impact in render is big. Also events and lifecycle." - [@FwardPhoenix](https://twitter.com/FwardPhoenix/status/757591796641914880)
+
+"Jest snapshot testing + inline style + css-layout = auto layout regression prevention." - [cheng lou](https://twitter.com/_chenglou/status/758461301307748353)
 
 ### Many more to come...
