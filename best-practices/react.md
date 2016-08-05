@@ -43,6 +43,19 @@
   - [abramov tweet](https://twitter.com/dan_abramov/status/759383530120110080)
 - "What are the performance implications of wrapping most #React components in HoC? It can double the # of lifecycle methods called."
   - [brehm tweet](https://twitter.com/spikebrehm/status/760593924184432640)
+- Higher order components should be wrapped before render()
+  - [abramov](https://github.com/krasimir/react-in-patterns/issues/12)
+
+```js
+var OriginalComponent = () => <p>Hello world.</p>;
+var EnhancedComponent = enhanceComponent(OriginalComponent);
+
+class App extends React.Component {
+  render() {
+    return React.createElement(EnhancedComponent);
+  }
+};
+```
 
 # General
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)
