@@ -27,6 +27,7 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 ## Learning More
 - [Practical React with MobX - YouTube](https://www.youtube.com/watch?v=XGwuM_u7UeQ&feature=youtu.be)
 - [Becoming fully reactive: an in-depth explanation of MobX — Medium](https://medium.com/@mweststrate/becoming-fully-reactive-an-in-depth-explanation-of-mobservable-55995262a254#.hlnc7wmuk)
+- "mobx observable is really like "thing that notifies observers when it changes". You don't subscribe to them" - [@15lettermax](https://twitter.com/15lettermax/status/763228391377997824)
 
 ## Examples
 - [mobx-examples: A collection of simple mobx examples](https://github.com/mattruby/mobx-examples)

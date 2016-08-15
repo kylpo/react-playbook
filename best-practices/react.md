@@ -26,6 +26,9 @@
 - DO NOT use `findDOMNode()`
   - use callback refs instead [abramov tweet](https://twitter.com/dan_abramov/status/752936646602031104)
 
+## Context
+- Always make sure context is shallowly immutable, avoids issues with PureRenderMixin components not propagating context changes
+  - [mweststrate tweet](https://twitter.com/mweststrate/status/764182336888078336)
 ## APIs
 - Generic components that need broad customization should provide and act on a `render___` prop to override their default implementation.
   - e.g. Navbar's `title` (string) prop vs `renderTitle` (function (Component)) prop
