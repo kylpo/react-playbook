@@ -31,7 +31,7 @@ Presentational
 Note: This is a __component__
 
 ### Container
-Container components are the inverse of presentational components: they only care about it __works__. Instead of rendering multiple components in its render, it will typically render just one, and be sure to pass `props` to that component based on the logic it cares about (this means it will have __no stylesheets__, by the way).
+Container components are the inverse of presentational components: they only care about how it __works__. Instead of rendering multiple components in its render, it will typically render just one, and be sure to pass `props` to that component based on the logic it cares about (this means it will have __no stylesheets__, by the way).
 
 Example: Wrapping a Button to specify the `onPress` functionality
 
