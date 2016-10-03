@@ -51,11 +51,11 @@ This is so helpful. We are structuring our apps the way the render tree will ren
 
 __FAQ: Why use nesting over a big, flat `components/` folder?__
 
-A single, flat `components/` folder works really well in small projects and tutorials, but just doesn't scale. As your project grows in complexity and size, your `components/` folder bloats with namespaced components and/or generic component names that have too many concerns or too specific of concerns.
+A single, flat `components/` folder works really well in small, example projects and tutorials, but just doesn't scale. As your project grows in complexity and size, your `components/` folder bloats with namespaced components and/or generic component names that have too many concerns or too specific of concerns.
 
 And as this folder grows, the activation energy to refactor and simplify components becomes greater. To prevent bloating it further, you might choose to break up a complicated render into inline subcomponents via `render___()` or defining stateless functional components in your file. Why is this a problem? Well, what happens when this subcomponent gains complexity? Do you need to refactor it out into a new file? Do you make more inline subcomponents and bloat the current file? It doesn't matter! You shouldn't need to think this much.
 
-These problems and activation energy are avoided with the nested components structure. This mindlessly repeatable task encourages you to do the right thing: breaking up and simplifying your components.
+These problems are avoided if you use the nested components structure from the get-go. The nesting is mindlessly repeatable, and encourages you to do the right thing. Refactor away! No activation energy required!
 
 ---
 

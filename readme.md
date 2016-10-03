@@ -23,6 +23,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Useful libs
   - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
   - [js](https://github.com/kylpo/react-playbook/blob/master/libs/js.md)
+  - [MobX](https://github.com/kylpo/react-playbook/blob/master/libs/mobx.md)
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
