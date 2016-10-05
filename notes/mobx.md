@@ -48,13 +48,10 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - [mobxjs/react-particles-experiment: An experiment to see if you can make a particle generator in redux+react+d3.](https://github.com/mobxjs/react-particles-experiment)
 
 # Best Practices
-The [Provider and Inject](https://github.com/mobxjs/mobx-react#provider-and-inject) pattern is a great way to inject store observables as props, so the component can use its usual React lifecycle hooks.
-
-__Stores__: Separate your ui-stores (forms, navigation, modals) and domain-stores (models). See [Defining data stores](http://mobxjs.github.io/mobx/best/store.html).
-
-"If you want to update some observables automatically (e.g. in autorun), you probably should use computed instead" - [mweststrate](https://twitter.com/mweststrate/status/738955213009096704)
-
-If already using mobX for app state, consider using it in place of React' `setState()`: see [3 Reasons why I stopped using React.setState — Medium](https://medium.com/@mweststrate/3-reasons-why-i-stopped-using-react-setstate-ab73fc67a42e#.802uvhns0)
+- The [Provider and Inject](https://github.com/mobxjs/mobx-react#provider-and-inject) pattern is a great way to inject store observables as props, so the component can use its usual React lifecycle hooks.
+- __Stores__: Separate your ui-stores (forms, navigation, modals) and domain-stores (models). See [Defining data stores](http://mobxjs.github.io/mobx/best/store.html).
+- "If you want to update some observables automatically (e.g. in autorun), you probably should use computed instead" - [mweststrate](https://twitter.com/mweststrate/status/738955213009096704)
+- If already using mobX for app state, consider using it in place of React' `setState()`: see [3 Reasons why I stopped using React.setState — Medium](https://medium.com/@mweststrate/3-reasons-why-i-stopped-using-react-setstate-ab73fc67a42e#.802uvhns0)
 - To enforce this, use the [no-set-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md) eslint rule
 
 # Structure
