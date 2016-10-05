@@ -10,12 +10,6 @@
 # MobX
 MobX is an app state manager (used in place of something like Redux)
 
-## What people are saying about it
-- "That’s what I’m liking about #mobx though.  It plugs into my code, not vice versa." - [@skellock](https://twitter.com/skellock/status/734768185782743045)
-- "With MobX, there's no boilerplate. No constants & switch statements, just reactive components of observable values." - [@tomaash](https://twitter.com/tomaash/status/741278218599190528)
-- "with MobX you minimize instead of normalize state" - [@mweststrate](https://twitter.com/mweststrate/status/741649166846267393)
-- "What I <3 most about #MobX is that I can keep my state structured in a way that makes sense. No normalizr + reselect needed" - [@zavelevsky"](https://twitter.com/zavelevsky/status/750701407179829249)
-
 ## Getting Started
 - [Video: 3 mins] [Mobx and React intro ](https://egghead.io/lessons/javascript-mobx-and-react-intro-syncing-the-ui-with-the-app-state-using-observable-and-observer?utm_content=buffer621b3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 - [MobX: Ten minute introduction to MobX and React](https://mobxjs.github.io/mobx/getting-started.html)
@@ -28,6 +22,15 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - [Practical React with MobX - YouTube](https://www.youtube.com/watch?v=XGwuM_u7UeQ&feature=youtu.be)
 - [Becoming fully reactive: an in-depth explanation of MobX — Medium](https://medium.com/@mweststrate/becoming-fully-reactive-an-in-depth-explanation-of-mobservable-55995262a254#.hlnc7wmuk)
 - "mobx observable is really like "thing that notifies observers when it changes". You don't subscribe to them" - [@15lettermax](https://twitter.com/15lettermax/status/763228391377997824)
+
+## Some Main concepts
+- Actions, observable state, computed property values, reactions
+- Strive for the smallest possible state. Derive the rest.
+- Computed: like formulas in spreadsheets
+  - Not allowed to produce side effects
+- types of reactions: `observer`, `when`, `autorun`
+  - these have side effects
+- With an observable array of objects, for example, MobX will automatically make the objects observables. This means child components of the list may need to be Observers to react to the object changes.
 
 ## Examples
 - [mobx-examples: A collection of simple mobx examples](https://github.com/mattruby/mobx-examples)
@@ -45,9 +48,9 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - [mobxjs/react-particles-experiment: An experiment to see if you can make a particle generator in redux+react+d3.](https://github.com/mobxjs/react-particles-experiment)
 
 # Best Practices
-__Stores__: Separate your ui-stores (forms, navigation, modals) and domain-stores (models). See [Defining data stores](http://mobxjs.github.io/mobx/best/store.html).
+The [Provider and Inject](https://github.com/mobxjs/mobx-react#provider-and-inject) pattern is a great way to inject store observables as props, so the component can use its usual React lifecycle hooks.
 
-Never pass mobx observables as props. Just import them where they are needed. As [@luc_h](https://twitter.com/luc_h/status/741893763765809152) said, "Props are a React thing, MobX has nothing to do with them."
+__Stores__: Separate your ui-stores (forms, navigation, modals) and domain-stores (models). See [Defining data stores](http://mobxjs.github.io/mobx/best/store.html).
 
 "If you want to update some observables automatically (e.g. in autorun), you probably should use computed instead" - [mweststrate](https://twitter.com/mweststrate/status/738955213009096704)
 
@@ -69,10 +72,6 @@ If already using mobX for app state, consider using it in place of React' `setSt
   - Reactive Programming is making your functions *react to events they are listening in to*, rather than making your buttons (components), http requests, and all other parts of your application *call* your functions. - [video](https://www.youtube.com/watch?v=31URmaeNHSs&feature=youtu.be&t=640)
 - Flux (Redux) is designed to answer the question: when does a given slice of state change, and where does the data come from? It is not designed to be the most performant, or the most concise way of writing mutations. Its focus is on making the code predictable. - [Dan Abramov](https://twitter.com/dan_abramov/status/733742952657342464)
 - __Redux con__: It is kinda strange in Redux to see `<Something/>` in a render with no props but then has some required propTypes and gets them. - [@ryanflorence](https://twitter.com/ryanflorence/status/736278249458835456)
-
-### Should I pass the observable value all the way down to my children?
-No, the components that care about the observable should just import it. This has an perf improvement, as well.
-- See [Do child components need `@observer`? · Issue #101 · mobxjs/mobx](https://github.com/mobxjs/mobx/issues/101#issuecomment-220891704) thread
 
 ### Is there a router for MobX?
 - Not really. See this thread for some responses: https://twitter.com/DonHansDampf/status/735339826984128513
