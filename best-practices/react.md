@@ -61,6 +61,7 @@ class App extends React.Component {
 ```
 
 # General
+- "If a parent needs to know about it, the parent owns it"
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)
 
 ## Testing

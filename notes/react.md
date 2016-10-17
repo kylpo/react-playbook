@@ -24,5 +24,19 @@ React.createElement('div', {height:5},
 
 Note: this means even if the parent div did not render Child, React will still create the Element. This is an argument for using Child Functions for conditionally rendering components. See the Usage section of [react-media](https://github.com/ReactTraining/react-media#usage) for more.
 
+# Patterns
+## RefNode
+```js
+refNode={node => this.node = node}
+ref={this.props.refNode}
+```
+
+## HOCs
+Basically a HOC enhances a component with new capabilities. This way you can abstract common behaviors into reusable pieces.
+
+## Types of HOCs
+Wrappers -> wrap children and introduce something to dom
+Manipulators (or Injectors) -> pass props (injects props into child(ren))
+
 # Interesting ideas
 - [You might not need React Router — Free Code Camp](https://medium.freecodecamp.com/you-might-not-need-react-router-38673620f3d#.z27bsomqb)

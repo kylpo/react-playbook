@@ -29,7 +29,10 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
   - [React](https://github.com/kylpo/react-playbook/blob/master/notes/react.md)
+  - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
+- Trivia
+  - [React](https://github.com/kylpo/react-playbook/blob/master/trivia/react.md)
 
 ## Why?
 I believe the __Rails__ part of Ruby on Rails was what made it so popular and developer-friendly.
