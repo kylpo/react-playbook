@@ -258,6 +258,10 @@ class MyComponent extends React.Component {
  }
 }
 ```
+
+#### Why
+Why not use render___() in components? They spiral out of control. You should be building subcomponents instead!
+
 ## Extract non-this functions out of component
 Utility functions that do not actually use any instance properties should not exist within the component definition. They should be above the component definition, or in some separate, imported helpers file.
 ```javascript
