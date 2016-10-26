@@ -19,6 +19,9 @@
 ![](https://camo.githubusercontent.com/f398473c6f3ffe71db23db43c2024440a68f8a8f/68747470733a2f2f7261776769742e636f6d2f6761627269656c62756c6c2f72656163742d61696d2f6d61737465722f6578616d706c652e676966)
 
 - [react-waypoint: A React component to execute a function whenever you scroll to an element.](https://github.com/brigade/react-waypoint?utm_campaign=Fullstack%2BReact&utm_medium=email&utm_source=Fullstack_React_25)
+![](https://camo.githubusercontent.com/a829185bcb329fb225c3bce6d8a5a05918625bc1/68747470733a2f2f7261772e6769746875622e636f6d2f627269676164652f72656163742d776179706f696e742f6d61737465722f72656163742d776179706f696e742d64656d6f2e676966)
+
+- [react-lazyload: Lazyload your Component, Image or anything matters the performance.](https://github.com/jasonslyvia/react-lazyload)
 
 ## Layout
 - [React Sortable Higher-order Components](http://clauderic.github.io/react-sortable-hoc/#/basic-configuration/basic-usage?_k=5zvgfe)
