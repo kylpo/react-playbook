@@ -26,6 +26,8 @@
 ## Layout
 - [React Sortable Higher-order Components](http://clauderic.github.io/react-sortable-hoc/#/basic-configuration/basic-usage?_k=5zvgfe)
 - [react-stonecutter: Animated grid layout component for React](https://github.com/dantrain/react-stonecutter?utm_campaign=Fullstack%2BReact&utm_medium=email&utm_source=Fullstack_React_25)
+- [yahoo/react-stickynode: A performant and comprehensive React sticky component.](https://github.com/yahoo/react-stickynode)
+  - also handles sticky elements that are taller than viewport
 
 ## Forms
 - [Handling React Forms with Mobx Observables](https://blog.risingstack.com/handling-react-forms-with-mobx-observables/)
