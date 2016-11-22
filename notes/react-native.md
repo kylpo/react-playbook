@@ -7,9 +7,13 @@
 
 ```
 
+
 # React Native
 ## How does it work?
 Javacript Core runs in a separate thread and talks to native iOS modules via RCTBridge. Native iOS modules must use certain annotations to recieve and send to RN components.
+
+## Guides
+[Introduction · Rangle.io: React Native Workshop](https://rangle-io.gitbooks.io/react-native-workshop/content/)
 
 ## Animations
 ### Performance

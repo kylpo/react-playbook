@@ -103,6 +103,9 @@ Easily create the ending tag of a component in your jsx. Particularly helpful wh
 - Cool feature demos: https://github.com/t9md/atom-vim-mode-plus/wiki/GIFs
 - Example [keymap](https://github.com/t9md/atom-vim-mode-plus/wiki/Keymap-example) (from creator)
 - All [commands](https://github.com/t9md/atom-vim-mode-plus/wiki/Commands)
+- [TIPS](https://github.com/t9md/atom-vim-mode-plus/wiki/TIPS#use-system-clipboard-only-when-you-use-space-as-leaderkey)
+- [YouDontKnowVimModePlus](https://github.com/t9md/atom-vim-mode-plus/wiki/YouDontKnowVimModePlus)
+- [AdvancedTopicTutorial](https://github.com/t9md/atom-vim-mode-plus/wiki/AdvancedTopicTutorial)
 
 ### [vim-mode-plus-move-to-symbols](https://atom.io/packages/vim-mode-plus-move-to-symbols)
 
