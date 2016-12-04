@@ -19,9 +19,12 @@ MobX is an app state manager (used in place of something like Redux)
 Yes and no. In MobX, anything can `counter++` an observable to change it's state. This kept many people away from trying MobX - we like the predictability of one-way, top-down actions updating our state. Fortunately, MobX responded to this community ask by introducing `@action` and `mobx.useStrict()`. See [MobX 2.2: explicit actions, controlled mutations and improved DX](https://medium.com/@mweststrate/mobx-2-2-explicit-actions-controlled-mutations-and-improved-dx-45cdc73c7c8d#.6h94skvar) for more.
 
 ## Learning More
-- [Practical React with MobX - YouTube](https://www.youtube.com/watch?v=XGwuM_u7UeQ&feature=youtu.be)
+- [MobX tutorial #1 - MobX + React is AWESOME - YouTube](https://www.youtube.com/watch?v=_q50BXqkAfI)
+- [MobX tutorial #2 - Computed Values and Nested/Referenced Observables - YouTube](https://www.youtube.com/watch?v=nYvNqKrl69s)
 - [Becoming fully reactive: an in-depth explanation of MobX — Medium](https://medium.com/@mweststrate/becoming-fully-reactive-an-in-depth-explanation-of-mobservable-55995262a254#.hlnc7wmuk)
 - "mobx observable is really like "thing that notifies observers when it changes". You don't subscribe to them" - [@15lettermax](https://twitter.com/15lettermax/status/763228391377997824)
+- [A MobX introduction and case study - We Are Wizards Blog](https://blog.wearewizards.io/a-mobx-introduction-and-case-study)
+  - Goes in to Typescript and mobx vs redux/immutable
 
 ## Some Main concepts
 - Actions, observable state, computed property values, reactions
@@ -40,6 +43,7 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - [RFX Stack - Universal App featuring: React + Feathers + MobX](https://github.com/foxhound87/rfx-stack)
 - [google-play-music-desktop-remote: A React-Native app to remote control Google Play Music Desktop](https://github.com/GPMDP/google-play-music-desktop-remote)
 - [mobx-ssr-example: Server-side rendering with mobx and react-router](https://github.com/kuuup/mobx-ssr-example)
+- [MobX React: Refactor your application from Redux to MobX - RWieruch](http://www.robinwieruch.de/mobx-react/)
 
 ## Performance
 - Any computation is deferred until needed by I/O. Huge performance benefits. Simplifies GC. - [@mwestrate](https://twitter.com/mweststrate/status/734001713800224768)
@@ -48,7 +52,6 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - [mobxjs/react-particles-experiment: An experiment to see if you can make a particle generator in redux+react+d3.](https://github.com/mobxjs/react-particles-experiment)
 
 # Best Practices
-- The [Provider and Inject](https://github.com/mobxjs/mobx-react#provider-and-inject) pattern is a great way to inject store observables as props, so the component can use its usual React lifecycle hooks.
 - __Stores__: Separate your ui-stores (forms, navigation, modals) and domain-stores (models). See [Defining data stores](http://mobxjs.github.io/mobx/best/store.html).
 - "If you want to update some observables automatically (e.g. in autorun), you probably should use computed instead" - [mweststrate](https://twitter.com/mweststrate/status/738955213009096704)
 - If already using mobX for app state, consider using it in place of React' `setState()`: see [3 Reasons why I stopped using React.setState — Medium](https://medium.com/@mweststrate/3-reasons-why-i-stopped-using-react-setstate-ab73fc67a42e#.802uvhns0)
