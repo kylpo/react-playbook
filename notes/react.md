@@ -38,5 +38,9 @@ Basically a HOC enhances a component with new capabilities. This way you can abs
 Wrappers -> wrap children and introduce something to dom
 Manipulators (or Injectors) -> pass props (injects props into child(ren))
 
+# Security
+- For SSR, be sure to sanitize your stores that you serialize (for later hydration) to prevent XSS
+  - [The Most Common XSS Vulnerability in React.js Applications](https://medium.com/node-security/the-most-common-xss-vulnerability-in-react-js-applications-2bdffbcc1fa0#.vlnhi9gcv)
+
 # Interesting ideas
 - [You might not need React Router — Free Code Camp](https://medium.freecodecamp.com/you-might-not-need-react-router-38673620f3d#.z27bsomqb)
