@@ -15,6 +15,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
+  - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
   - eslint config to support the style //TODO
 - Tools
   - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)

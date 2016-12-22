@@ -13,6 +13,11 @@
   - Especially useful when editing two React Native roots
   - ![](http://blog.atom.io/img/posts/atom-add-command-line.gif)
 - Follow Atom's [blog](http://blog.atom.io/)
+- "preserve last search" option in Command Palette package
+- cmd-shift-b to see git modified buffers
+- Fuzzy Finder - ensure Search All Panes is not toggled
+- toggle Use Custom Titlebar in Core Settings
+- cmd-k cmd-w to close pane
 
 ## Plugins - Generic
 ### [advanced-open-file](https://atom.io/packages/advanced-open-file)

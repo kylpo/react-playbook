@@ -63,6 +63,7 @@ class App extends React.Component {
 # General
 - "If a parent needs to know about it, the parent owns it"
 - "Limiting yourself to pure functions as much as possible just makes complex logic *so* much easier to express" - [Henrik Joreteg](https://twitter.com/HenrikJoreteg/status/722654861280550913)
+- "Multiple simple components are better than one highly customisable one" from [11 lessons learned as a React contractor](https://medium.com/@jolyon_russ/11-lessons-learned-as-a-react-contractor-f515cd0491cf#.liewu56oc)
 
 ## Testing
 Write component tests that accomplish the following goals (from [Getting Started with TDD in React](https://semaphoreci.com/community/tutorials/getting-started-with-tdd-in-react?utm_source=javascriptweekly&utm_medium=email)):

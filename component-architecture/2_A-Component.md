@@ -38,6 +38,10 @@ Example: Wrapping a Button to specify the `onPress` functionality
 Container is concerned about data - not just logic and app state. It gets and organizes data, then renders its corresponding sub-component. That's it.
 
 [Read More](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.uy1ewt283)
+
+[And this tweet thread about not taking it too far](https://twitter.com/dan_abramov/status/802569801906475008)
+
+Note: Some examples and articles will only show __*Connected* Containers__ - ones that are only used to connected to your stores. This is a specific type of Container, and does not represent all possible uses of them.
 ```
 Container
 
