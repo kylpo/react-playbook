@@ -22,6 +22,7 @@ Javacript Core runs in a separate thread and talks to native iOS modules via RCT
 ### Performance
 - [Tal Kol - Introduction to React Native Performance - YouTube](https://www.youtube.com/watch?v=9VqVv_sVgv0&index=56&list=WL) is a must-watch!
 - [React Native Internals: A Wider Picture (Part 1: MessageQueue & JS Thread)](https://medium.com/@rotemmiz/react-native-internals-a-wider-picture-part-1-messagequeue-js-thread-7894a7cba868#.qtq5sohfe)
+- [Linking Animations to Scroll Position in React Native – Medium](https://medium.com/@albert.brand/linking-animations-to-scroll-position-in-react-native-5c55995f5a6e#.hfmft0pyd)
 
 ## Debugging
 - [rn-snoopy: Snoopy is a profiling tool for React Native, that lets you snoop on the React Native Bridge.](https://github.com/jondot/rn-snoopy)

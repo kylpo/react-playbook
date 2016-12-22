@@ -101,6 +101,9 @@ Add Intellisense completion for RN components (not for your custom ones though)
 ### [less-than-slash](https://atom.io/packages/less-than-slash)
 Easily create the ending tag of a component in your jsx. Particularly helpful when you convert a self-closing tag into a wrapping one.
 
+### [atom-wrap-in-tag](https://atom.io/packages/atom-wrap-in-tag)
+![](https://i.github-camo.com/07b67f4500cbf448ab0455a4586260fd042659af/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f73616e75736172742f61746f6d2d777261702d696e2d7461672f6d61737465722f696d616765732f73637265656e73686f742e676966)
+
 ---
 
 ## Plugins - Vim
