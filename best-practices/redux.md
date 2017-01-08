@@ -122,6 +122,10 @@ export const selectTodos = (state) => state
 * If you are typing your code with Flow or Typescript, be sure to type your redux code as well!
 * Flow: [Using Redux with Flow](http://frantic.im/using-redux-with-flow) is a nice write-up
 
+## Other Considerations
+* [Idiomatic Redux: Thoughts on Thunks, Sagas, Abstraction, and Reusability · Mark's Dev
+  Blog](http://blog.isquaredsoftware.com/2017/01/idiomatic-redux-thoughts-on-thunks-sagas-abstraction-and-reusability/)
+
 ## Resources
 * [Recommendations for best practices regarding action-creators, reducers, and selectors](https://github.com/reactjs/redux/issues/1171)
   * Really good thread for aligning on fat vs skinny actions
