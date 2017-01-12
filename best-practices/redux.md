@@ -22,6 +22,9 @@ React makes your UI reactive (hence its name) by treating data from your store a
 * __Use selectors everywhere__. Even for the most trivial ones.
 * Redux should store the minimal possible state, allowing Selectors to compute derived data.
 * Use [Reselect](https://github.com/reactjs/reselect) for selectors that need to be memoized (like derived data).
+* `mapState`should run as fast as possible.
+  * if using immutable, DO NOT call `toJS()` in a `mapState`
+  * from [Practical Redux, Part 6: Connected Lists, Forms, and Performance · Mark's Dev Blog](http://blog.isquaredsoftware.com/2017/01/practical-redux-part-6-connected-lists-forms-and-performance/)
 * Selectors can be composed of other selectors
 * Normalize your data for better reducer composition
   * see the output of [normalizr](https://github.com/paularmstrong/normalizr) for an example
