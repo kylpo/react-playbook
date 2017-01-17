@@ -86,6 +86,22 @@ React makes your UI reactive (hence its name) by treating data from your store a
   }, initialState )
   ```
   * __Why__ this instead of the documented `switch` statement? Primarily because it keeps a clean switch-like syntax, while adding block scoping to the cases. This means you can reuse variable of the names in each "case". With `switch`, your `case`s are scoped to the `switch`, so you are forced to use `var` or unique names.
+* __OR__ use `switch`/`case` with block scoping
+  * e.g.
+  
+  ```js
+  switch (something) {
+    case 'abc': {
+      const local = ...
+      break
+    }
+    case 'def': {
+      const local = ...
+      break
+    }
+  }
+  ```
+  * As the [airbnb style guide](https://github.com/airbnb/javascript/blob/master/README.md#comparison--switch-blocks) points out
 
 ### Files
 * __DO__ structure your Redux files (typically in the `/flux` folder) with the [Ducks](https://github.com/erikras/ducks-modular-redux) pattern
