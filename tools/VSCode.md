@@ -17,12 +17,42 @@
 `sort lines`
 
 ## Plugins
-### [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+### Settings
+#### [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 - This is the first thing you should install and set up - great for backing up and syncing the same config across machines.
 - After install, be sure to `Sync: Advanced Options > Toggle Auto-Upload` and `Toggle Auto-Download` to force staying in sync.
 
-### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for `.ts` linting
+#### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for `.ts` linting
 
+#### [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+![](https://shardulm94.gallerycdn.vsassets.io/extensions/shardulm94/trailing-spaces/0.2.11/1474455467376/Microsoft.VisualStudio.Services.Icons.Default)
+
+#### [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+Everything you could need for git analysis (history, blame, diff). Not for commit and branch management - that is baked in by default.
+![](https://raw.githubusercontent.com/eamodio/vscode-git-codelens/master/images/preview-gitlens.gif)
+
+#### [File Navigator](https://marketplace.visualstudio.com/items?itemName=jakelucas.code-file-nav)
+Closest thing to vinegar.vim
+
+#### [Duplicate file](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-duplicate)
+Add missing `Duplicate File` entry to File Explorer right-click menu.
+
+OR just copy/paste, then rename the file without this extension
+
+#### [Markdown Navigate](https://marketplace.visualstudio.com/items?itemName=jrieken.md-navigate)
+![](https://raw.githubusercontent.com/jrieken/md-navigate/master/demo.gif)
+
+### Editing
+#### [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+Automatically closes tags while writing the first one, and can close tags after the fact with `cmd-alt-.`
+
+#### [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+Currently has a [bug](https://github.com/formulahendry/vscode-auto-rename-tag/issues/19) with multi-line tags though
+
+![](https://raw.githubusercontent.com/formulahendry/vscode-auto-rename-tag/master/images/usage.gif)
+
+#### [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
+Select a chunk of code and press `alt-w` to wrap code in a tag
 ### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) and its [roadmap](https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md) of what is available today
 
 You'll want to enable holding down `j` and `k` with
@@ -59,32 +89,6 @@ consider using these settings:
 ],
 ```
 
-### [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
-![](https://shardulm94.gallerycdn.vsassets.io/extensions/shardulm94/trailing-spaces/0.2.11/1474455467376/Microsoft.VisualStudio.Services.Icons.Default)
-
-### [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-Everything you could need for git analysis (history, blame, diff). Not for commit and branch management - that is baked in by default.
-![](https://raw.githubusercontent.com/eamodio/vscode-git-codelens/master/images/preview-gitlens.gif)
-
-### [File Navigator](https://marketplace.visualstudio.com/items?itemName=jakelucas.code-file-nav)
-Closest thing to vinegar.vim
-
-### [Duplicate file](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-duplicate)
-Add missing `Duplicate File` entry to File Explorer right-click menu.
-
-OR just copy/paste, then rename the file without this extension
-
-### [Markdown Navigate](https://marketplace.visualstudio.com/items?itemName=jrieken.md-navigate)
-![](https://raw.githubusercontent.com/jrieken/md-navigate/master/demo.gif)
-
-### XML/JSX
-#### [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-Automatically closes tags while writing the first one, and can close tags after the fact with `cmd-alt-.`
-
-#### [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-Currently has a [bug](https://github.com/formulahendry/vscode-auto-rename-tag/issues/19) with multi-line tags though
-
-![](https://raw.githubusercontent.com/formulahendry/vscode-auto-rename-tag/master/images/usage.gif)
-
-#### [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
-Select a chunk of code and press `alt-w` to wrap code in a tag
+### [Emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
+#### [keyboard-scroll](https://marketplace.visualstudio.com/items?itemName=selbh.keyboard-scroll) to enable `ctrl-l` functionality
+#### [jumpy](https://marketplace.visualstudio.com/items?itemName=wmaurer.vscode-jumpy) (doesn't work with Emacs-plugin [yet](https://github.com/Microsoft/vscode/issues/13441)) for an Ace-Jump alternative
