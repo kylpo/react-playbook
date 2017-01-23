@@ -37,6 +37,9 @@
 ![](https://pbs.twimg.com/media/CmeBsGzW8AQp_av.jpg)
 
 ## Perf
+- [The Netflix Tech Blog: Crafting a high-performance TV user interface using React](http://techblog.netflix.com/2017/01/crafting-high-performance-tv-user.html)
+  - Goes in to react.createElement() costs and avoiding it with inlining, which can only work in `ref`-less components.
+  - Also an interesting idea of merging props with `__proto__` and not something like `const newProps = Object.assign({}, this.props, { prop1: 'foo' })`
 - Do not pass in Array or Object literals to subcomponents. If you do, PureRenderMixin will not work, since `['hi', 'bye'] !== ['hi', 'bye']`. Instead, move that array creation to an instance field or completely outside of the component. This means you should also define inline styles outside of your `render()`.
   - [Performance Engineering with React](http://benchling.engineering/performance-engineering-with-react/)
   - [React.js pure render performance anti-pattern — Medium](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.y7zpsjsu6)

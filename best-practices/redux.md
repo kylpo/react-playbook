@@ -22,6 +22,9 @@ React makes your UI reactive (hence its name) by treating data from your store a
 * __Use selectors everywhere__. Even for the most trivial ones.
 * Redux should store the minimal possible state, allowing Selectors to compute derived data.
 * Use [Reselect](https://github.com/reactjs/reselect) for selectors that need to be memoized (like derived data).
+* `mapState`should run as fast as possible.
+  * if using immutable, DO NOT call `toJS()` in a `mapState`
+  * from [Practical Redux, Part 6: Connected Lists, Forms, and Performance · Mark's Dev Blog](http://blog.isquaredsoftware.com/2017/01/practical-redux-part-6-connected-lists-forms-and-performance/)
 * Selectors can be composed of other selectors
 * Normalize your data for better reducer composition
   * see the output of [normalizr](https://github.com/paularmstrong/normalizr) for an example
@@ -83,6 +86,22 @@ React makes your UI reactive (hence its name) by treating data from your store a
   }, initialState )
   ```
   * __Why__ this instead of the documented `switch` statement? Primarily because it keeps a clean switch-like syntax, while adding block scoping to the cases. This means you can reuse variable of the names in each "case". With `switch`, your `case`s are scoped to the `switch`, so you are forced to use `var` or unique names.
+* __OR__ use `switch`/`case` with block scoping
+  * e.g.
+  
+  ```js
+  switch (something) {
+    case 'abc': {
+      const local = ...
+      break
+    }
+    case 'def': {
+      const local = ...
+      break
+    }
+  }
+  ```
+  * As the [airbnb style guide](https://github.com/airbnb/javascript/blob/master/README.md#comparison--switch-blocks) points out
 
 ### Files
 * __DO__ structure your Redux files (typically in the `/flux` folder) with the [Ducks](https://github.com/erikras/ducks-modular-redux) pattern
