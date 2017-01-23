@@ -23,7 +23,8 @@
 
 ### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for `.ts` linting
 
-### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) and its [roadmap](https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md) of what is available today
+
 You'll want to enable holding down `j` and `k` with
 ```bash
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
