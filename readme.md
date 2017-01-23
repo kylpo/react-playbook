@@ -19,6 +19,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - eslint config to support the style //TODO
 - Tools
   - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)
+  - [VS Code](https://github.com/kylpo/react-playbook/blob/master/tools/VSCode.md) - not yet written
   - [Vim](https://github.com/kylpo/react-playbook/blob/master/tools/Vim.md) - not yet written
   - [CLI](https://github.com/kylpo/react-playbook/blob/master/tools/CLI.md)
 - Useful libs
