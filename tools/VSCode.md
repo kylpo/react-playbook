@@ -9,6 +9,7 @@
 # VS Code
 ## Tips
 - see [Microsoft/vscode-tips-and-tricks: Collection of helpful tips and tricks for VS Code.](https://github.com/Microsoft/vscode-tips-and-tricks)
+- [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
 
 ## Hotkeys/commands
 ### cmd-shift-p (Command Palette)
@@ -18,6 +19,8 @@
 ### [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 - This is the first thing you should install and set up - great for backing up and syncing the same config across machines.
 - After install, be sure to `Sync: Advanced Options > Toggle Auto-Upload` and `Toggle Auto-Download` to force staying in sync.
+
+### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for `.ts` linting
 
 ### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
 You'll want to enable holding down `j` and `k` with
@@ -71,3 +74,15 @@ OR just copy/paste, then rename the file without this extension
 
 ### [Markdown Navigate](https://marketplace.visualstudio.com/items?itemName=jrieken.md-navigate)
 ![](https://raw.githubusercontent.com/jrieken/md-navigate/master/demo.gif)
+
+### XML/JSX
+#### [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+Automatically closes tags while writing the first one, and can close tags after the fact with `cmd-alt-.`
+
+#### [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+Currently has a [bug](https://github.com/formulahendry/vscode-auto-rename-tag/issues/19) with multi-line tags though
+
+![](https://raw.githubusercontent.com/formulahendry/vscode-auto-rename-tag/master/images/usage.gif)
+
+#### [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
+Select a chunk of code and press `alt-w` to wrap code in a tag
