@@ -9,6 +9,7 @@
 # VS Code
 ## Tips
 - see [Microsoft/vscode-tips-and-tricks: Collection of helpful tips and tricks for VS Code.](https://github.com/Microsoft/vscode-tips-and-tricks)
+- [awesome-vscode: A curated list of delightful VS Code packages and resources.](https://github.com/viatsko/awesome-vscode)
 - [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
 
 ## Hotkeys/commands
