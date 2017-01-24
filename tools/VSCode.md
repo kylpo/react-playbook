@@ -19,8 +19,7 @@
 - `cmd-shift-o` nav to symbol
 
 
-## Plugins
-### Settings
+## Settings Plugins
 #### [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 - This is the first thing you should install and set up - great for backing up and syncing the same config across machines.
 - After install, be sure to `Sync: Advanced Options > Toggle Auto-Upload` and `Toggle Auto-Download` to force staying in sync.
@@ -57,7 +56,7 @@ OR just copy/paste, then rename the file without this extension
 
 ---
 
-### Editing
+## Editing Plugins
 #### [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 Automatically closes tags while writing the first one, and can close tags after the fact with `cmd-alt-.`
 
@@ -69,9 +68,9 @@ Currently has a [bug](https://github.com/formulahendry/vscode-auto-rename-tag/is
 #### [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
 Select a chunk of code and press `alt-w` to wrap code in a tag
 
----
 
-### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) and its [roadmap](https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md) of what is available today
+## Vim
+#### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) and its [roadmap](https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md) of what is available today
 
 You'll want to enable holding down `j` and `k` with
 ```bash
@@ -107,8 +106,8 @@ consider using these settings:
 ],
 ```
 
----
 
-### [Emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
+## Emacs
+#### [Emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
 #### [keyboard-scroll](https://marketplace.visualstudio.com/items?itemName=selbh.keyboard-scroll) to enable `ctrl-l` functionality
 #### [jumpy](https://marketplace.visualstudio.com/items?itemName=wmaurer.vscode-jumpy) (doesn't work with Emacs-plugin [yet](https://github.com/Microsoft/vscode/issues/13441)) for an Ace-Jump alternative
