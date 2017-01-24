@@ -26,6 +26,13 @@
 - [buzinas/tslint-eslint-rules: Improve your TSLint with the missing ESLint rules](https://github.com/buzinas/tslint-eslint-rules)
 - [palantir/tslint-react: Lint rules related to React & JSX for TSLint.](https://github.com/palantir/tslint-react)
 - [Microsoft/tslint-microsoft-contrib: A set of TSLint rules used on some Microsoft projects.](https://github.com/Microsoft/tslint-microsoft-contrib)
+- [vrsource/vrsource-tslint-rules: A extra set of tslint rules](https://github.com/vrsource/vrsource-tslint-rules)
+
+Recommendation: start with
+```js
+"extends": ["tslint:latest", "tslint-react"]
+```
+and trim back rules as you see fit. For reference, `tslint:latest` is a combination of [latest](https://github.com/palantir/tslint/blob/master/src/configs/latest.ts) and [recommended](https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts) rules.
 
 #### [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
 ![](https://shardulm94.gallerycdn.vsassets.io/extensions/shardulm94/trailing-spaces/0.2.11/1474455467376/Microsoft.VisualStudio.Services.Icons.Default)
