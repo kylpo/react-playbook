@@ -12,9 +12,12 @@
 - [awesome-vscode: A curated list of delightful VS Code packages and resources.](https://github.com/viatsko/awesome-vscode)
 - [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
 
+
 ## Hotkeys/commands
-### cmd-shift-p (Command Palette)
-`sort lines`
+- `cmd-shift-p` (Command Palette)
+  - `"sort lines"`
+- `cmd-shift-o` nav to symbol
+
 
 ## Plugins
 ### Settings
@@ -52,6 +55,8 @@ OR just copy/paste, then rename the file without this extension
 #### [Markdown Navigate](https://marketplace.visualstudio.com/items?itemName=jrieken.md-navigate)
 ![](https://raw.githubusercontent.com/jrieken/md-navigate/master/demo.gif)
 
+---
+
 ### Editing
 #### [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 Automatically closes tags while writing the first one, and can close tags after the fact with `cmd-alt-.`
@@ -63,6 +68,9 @@ Currently has a [bug](https://github.com/formulahendry/vscode-auto-rename-tag/is
 
 #### [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
 Select a chunk of code and press `alt-w` to wrap code in a tag
+
+---
+
 ### [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) and its [roadmap](https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md) of what is available today
 
 You'll want to enable holding down `j` and `k` with
@@ -98,6 +106,8 @@ consider using these settings:
     }
 ],
 ```
+
+---
 
 ### [Emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
 #### [keyboard-scroll](https://marketplace.visualstudio.com/items?itemName=selbh.keyboard-scroll) to enable `ctrl-l` functionality
