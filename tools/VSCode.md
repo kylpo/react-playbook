@@ -54,7 +54,6 @@ OR just copy/paste, then rename the file without this extension
 #### [Markdown Navigate](https://marketplace.visualstudio.com/items?itemName=jrieken.md-navigate)
 ![](https://raw.githubusercontent.com/jrieken/md-navigate/master/demo.gif)
 
----
 
 ## Editing Plugins
 #### [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
