@@ -22,7 +22,10 @@
 - This is the first thing you should install and set up - great for backing up and syncing the same config across machines.
 - After install, be sure to `Sync: Advanced Options > Toggle Auto-Upload` and `Toggle Auto-Download` to force staying in sync.
 
-#### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for `.ts` linting
+#### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for linting `.ts` [rules](https://palantir.github.io/tslint/rules/)
+- [buzinas/tslint-eslint-rules: Improve your TSLint with the missing ESLint rules](https://github.com/buzinas/tslint-eslint-rules)
+- [palantir/tslint-react: Lint rules related to React & JSX for TSLint.](https://github.com/palantir/tslint-react)
+- [Microsoft/tslint-microsoft-contrib: A set of TSLint rules used on some Microsoft projects.](https://github.com/Microsoft/tslint-microsoft-contrib)
 
 #### [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
 ![](https://shardulm94.gallerycdn.vsassets.io/extensions/shardulm94/trailing-spaces/0.2.11/1474455467376/Microsoft.VisualStudio.Services.Icons.Default)
