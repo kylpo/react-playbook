@@ -78,7 +78,8 @@ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 ```
 
 consider using these settings:
-```js
+```json5
+"editor.lineNumbers": "relative"
 "vim.leader": " ", // map leader to <space>
 "vim.hlsearch": true,
 "vim.useSystemClipboard": true,
