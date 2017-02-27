@@ -153,7 +153,7 @@ else {
 }
 ```
 #### Why
-All revolves around vertical spacing. The more popular style of housing `else` on the closing `}` just clutters up the content of condition1 too much. Also, using the more spaced out version that I prefer has revealed refactoring opportunities for more complex nested if statements. Win win.
+All revolves around vertical spacing. The more popular style of housing `else` on the closing `}` just clutters up the content of condition1 too much. Also, using the more spaced out version that I prefer has revealed refactoring opportunities for more complex nested if statements. Win win. See [this](https://twitter.com/jlongster/status/834407714965057540) twitter thread for other reasons.
 
 # Code Conventions
 
