@@ -22,6 +22,7 @@
 ## Settings Plugins
 #### [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 - This is the first thing you should install and set up - great for backing up and syncing the same config across machines.
+- Follow steps in Sync readme to set up a Github Key.
 - After install, be sure to `Sync: Advanced Options > Toggle Auto-Upload` and `Toggle Auto-Download` to force staying in sync.
 
 #### [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) for linting `.ts` [rules](https://palantir.github.io/tslint/rules/)
