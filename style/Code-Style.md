@@ -202,6 +202,22 @@ function byNameAscending( a, b ) { ... }
 array.sort( byNameAscending() )
 ```
 
+## Use `get` functions for derived and computed props/state
+_EXPERIMENTAL_
+```jsx
+get fullName() {
+  return `${this.props.firstName} ${this.props.lastName}`
+}
+
+render() {
+  return (
+    <Text>{this.fullName}</Text>
+  )
+}
+```
+### Reference
+[react-bits/03.computed-props-state.jsx](https://github.com/vasanthk/react-bits/blob/master/conventions/03.computed-props-state.jsx)
+
 # React-specific conventions
 In general, keep your components as small and focussed as possible (and reasonable). The conventions below will help with this.
 

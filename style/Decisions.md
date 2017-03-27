@@ -9,7 +9,7 @@ height={10}
 This defaults to px, which is the decided-on sizing unit for most cases. Also, React Native requires only a number, so may as well stay consistent between stacks.
 
 # DOM
-## margin-bomttom or margin-top?
+## margin-bottom or margin-top?
 margin-top
 
 ### why
@@ -43,20 +43,20 @@ let E_TYPE = {
 // bad
 // avoid uncached strings in heavy tasks (or better in general)
 if (entity.type === "Robot") {
-  
+
 }
 
 // good
 // the compiler can resolve member expressions
 // without much deepness pretty fast
 if (entity.type === E_TYPE.Robot) {
-  
+
 }
 
 // perfect
 // right side of binary expression can even get unfold
 if (entity.type === ROBOT) {
-  
+
 }
 ```
 
@@ -65,3 +65,30 @@ No, `'function'` will be cached, and `typeof` is very fast
 
 #### more
 [Writing efficient JavaScript – Medium](https://medium.com/@xilefmai/efficient-javascript-14a11651d563#.69425zp7f)
+
+## Micro-perf: Try as much to avoid computations/vars in render
+### Why
+Because these vars are created and garbage collected soon after with each render (expensive)
+```jsx
+// BAD
+render () {
+  let make = `Make: ${this.props.make}`;
+
+  return <div>{name}</div>;
+}
+
+// GOOD
+render () {
+  return <div>{`Make: ${this.props.make}`}</div>;
+}
+
+// GOOD
+get make () {
+  return `Make: ${this.props.make}`;
+}
+
+render () {
+  return <div>{this.make}</div>;
+}
+```
+from [react-bits/04.cached-vars-in-render.jsx](https://github.com/vasanthk/react-bits/blob/master/conventions/04.cached-vars-in-render.jsx)
