@@ -63,6 +63,9 @@ if (entity.type === ROBOT) {
 ### Does this mean something like `typeof fun === 'function'` should be avoided?
 No, `'function'` will be cached, and `typeof` is very fast
 
+### A note on `undefined`
+Use `someVar === undefined` over `typeof someVar === 'undefined'`, as it is less work for the compiler. See [this tweet](https://twitter.com/calebmer/status/845084035319779329).
+
 #### more
 [Writing efficient JavaScript – Medium](https://medium.com/@xilefmai/efficient-javascript-14a11651d563#.69425zp7f)
 
