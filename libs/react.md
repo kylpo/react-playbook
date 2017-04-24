@@ -28,6 +28,7 @@
 - [react-stonecutter: Animated grid layout component for React](https://github.com/dantrain/react-stonecutter?utm_campaign=Fullstack%2BReact&utm_medium=email&utm_source=Fullstack_React_25)
 - [yahoo/react-stickynode: A performant and comprehensive React sticky component.](https://github.com/yahoo/react-stickynode)
   - also handles sticky elements that are taller than viewport
+- [berzniz/react-overdrive: Super easy magic-move transitions for React apps](https://github.com/berzniz/react-overdrive)
 
 ## Forms
 - [Handling React Forms with Mobx Observables](https://blog.risingstack.com/handling-react-forms-with-mobx-observables/)
