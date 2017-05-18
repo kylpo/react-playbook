@@ -36,6 +36,7 @@ Basically a HOC enhances a component with new capabilities. This way you can abs
 
 ## Types of HOCs
 Wrappers -> wrap children and introduce something to dom
+
 Manipulators (or Injectors) -> pass props (injects props into child(ren))
 
 ## Function as Children
