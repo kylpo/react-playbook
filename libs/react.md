@@ -8,6 +8,7 @@
 ```
 
 ## Utility
+- [thinkloop/link-react: A generalized link \<a\> component that allows client-side navigation while taking into account exceptions.](https://github.com/thinkloop/link-react)
 - [react-keydown: Lightweight keydown wrapper for React components](https://github.com/glortho/react-keydown)
 
 ![](https://raw.githubusercontent.com/glortho/react-keydown/master/example/public/react-keydown-logo.png)
