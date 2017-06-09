@@ -25,6 +25,7 @@ Yes and no. In MobX, anything can `counter++` an observable to change it's state
 - "mobx observable is really like "thing that notifies observers when it changes". You don't subscribe to them" - [@15lettermax](https://twitter.com/15lettermax/status/763228391377997824)
 - [A MobX introduction and case study - We Are Wizards Blog](https://blog.wearewizards.io/a-mobx-introduction-and-case-study)
   - Goes in to Typescript and mobx vs redux/immutable
+- [Michel Weststrate on Twitter: "Bunch of excellent tips on how to scale MobX applications: https://t.co/0imjjYENUo by @KatSickk"](https://twitter.com/mweststrate/status/869183911070498817)
 
 ## Some Main concepts
 - Actions, observable state, computed property values, reactions

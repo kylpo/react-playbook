@@ -36,7 +36,11 @@ Basically a HOC enhances a component with new capabilities. This way you can abs
 
 ## Types of HOCs
 Wrappers -> wrap children and introduce something to dom
+
 Manipulators (or Injectors) -> pass props (injects props into child(ren))
+
+## Function as Children
+[Ryan Florence on Twitter: "@wincent @timbucki @sebmck I think we're talking about <Thing>{() => ()}</Thing> v. <Thing render={() => ()}/> In which case, I, too, prefer the "attribute" form."](https://twitter.com/ryanflorence/status/865302840696225792)
 
 # Security
 - For SSR, be sure to sanitize your stores that you serialize (for later hydration) to prevent XSS

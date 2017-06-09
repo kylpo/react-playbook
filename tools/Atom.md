@@ -19,6 +19,9 @@
 - toggle Use Custom Titlebar in Core Settings
 - cmd-k cmd-w to close pane
 
+## Other Links
+[The Ultimate Atom Editor Setup (+for JS/React) – Productivity Freak – Medium](https://medium.com/productivity-freak/my-atom-editor-setup-for-js-react-9726cd69ad20)
+
 ## Plugins - Generic
 ### [advanced-open-file](https://atom.io/packages/advanced-open-file)
 Pretty crucial for me, coming from vim. This allows me to easily switch between open tabs without ctr-tabbing or clicking. Also has an omni search.
