@@ -17,11 +17,6 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
   - eslint config to support the style //TODO
-- Tools
-  - [Atom](https://github.com/kylpo/react-playbook/blob/master/tools/Atom.md)
-  - [VS Code](https://github.com/kylpo/react-playbook/blob/master/tools/VSCode.md)
-  - [Vim](https://github.com/kylpo/react-playbook/blob/master/tools/Vim.md) - not yet written
-  - [CLI](https://github.com/kylpo/react-playbook/blob/master/tools/CLI.md)
 - Useful libs
   - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
   - [js](https://github.com/kylpo/react-playbook/blob/master/libs/js.md)
@@ -32,6 +27,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
   - [React](https://github.com/kylpo/react-playbook/blob/master/notes/react.md)
   - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
+  - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
 - Trivia
   - [React](https://github.com/kylpo/react-playbook/blob/master/trivia/react.md)

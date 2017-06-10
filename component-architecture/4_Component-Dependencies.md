@@ -32,6 +32,7 @@ What about in `/lib`?
 - no imports of app code
 - no knowledge of the app's state or models
   - does not enforce PropTypes that reflect an app's model
+  - e.g. no `user: UserType` proptypes, only primitive types
 - can only depend on others in lib or node_modules
 - must broadcast its own constants/utils if they do not already exist in lib
 - uppercase means Component, lower means function (a util or helper)
