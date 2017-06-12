@@ -121,7 +121,7 @@ What does this mean? `sCU => false` will not re-render, but its props will still
 
 > So really, it is best to think of `shouldComponentUpdate` as more of a `shouldComponentRerender`.
 
-Note: this is actually a pretty cool thing! One use case where we don't want to re-render a component, but still respond to an updated prop is for enabling a declarative prop for an imperative operation. An `<Animate>` component, for example, might accept a `triggerOnChangedValue` prop, which will call an `.animate()` method. Using this component will not compute re-renders, it'll just `animate()` it with the prop change: `<Animate triggerOnChangedValue={this.state.animationTrigger} />`.
+Note: this is actually a pretty cool thing! One use case where we don't want to re-render a component, but still respond to an updated prop is for enabling a declarative prop for an imperative operation. An `<Animate>` component, for example, might accept a `triggerOnChangedValue` prop, which will call an `.animate()` method. Using this component will not re-render, it'll just `animate()` when the prop changes: `<Animate triggerOnChangedValue={this.state.animationTrigger} />`.
 
 ## When to avoid `PureComponent`
 When Dan Abramov tweeted ["PSA: React.PureComponent can make your app slower if you use it everywhere."](https://twitter.com/dan_abramov/status/820668074223353858), he was referring to `PureComponent`'s `shouldComponentUpdate()` executing code for each update. If a component is re-rendered more often that it is prevented, then it is wastefully executing that code. As mentioned in the intro, this'll happen when passing in new objects, arrays, and functions, but there is another case...
