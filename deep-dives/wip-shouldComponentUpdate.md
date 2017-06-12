@@ -91,11 +91,11 @@ and this component that just updates the prop it passes to the above component a
 ```jsx
 class UpdatesChildProp extends React.Component {
   state = {
-    updates: 'hello',
+    updates: 'initial',
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({updates: 'bye'}), 400)
+    setTimeout(() => this.setState({updates: 'updated'}), 400)
   }
 
   render() {
@@ -111,27 +111,16 @@ ReactDom.render(<UpdatesChildProp />)
 what do you expect to see in `console`?
 
 ```
-render: {updatingProp: "hello"}
-cWRP: {updatingProp: "bye"}
+render: {updatingProp: "initial"}
+cWRP: {updatingProp: "updated"}
 ```
 
 What does this mean? `sCU => false` will not re-render, but its props will still update. So really, it is best to think of `shouldComponentUpdate` as more of a `shouldComponentRerender`.
 
 Note: this is actually a pretty cool thing! One use case where we don't want to re-render a component, but still respond to an updated prop is for enabling a declarative prop for an imperative operation. An `<Animate>` component, for example, might accept a `triggerOnChangedValue` prop, which will call an `.animate()` method. Using this component will not compute re-renders, it'll just `animate()` it with the prop change: `<Animate triggerOnChangedValue={this.state.animationTrigger} />`.
 
-
-[Jason Miller 🦊⚛ on Twitter: "found this lying around https://t.co/2FYSvqw6XX https://t.co/BZSNNjN8b6"](https://twitter.com/_developit/status/867120306539954176)
-
-[Optimizing React Rendering (Part 1) – Flexport Engineering](https://flexport.engineering/optimizing-react-rendering-part-1-9634469dca02)
-
-
-- [Dan Abramov on Twitter: "PSA: React.PureComponent can make your app slower if you use it everywhere."](https://twitter.com/dan_abramov/status/820668074223353858)
-- use primitives over objects/arrays, as http://ericlathrop.com/2017/02/why-did-this-react-component-rerender/ mentions
-
-be sure to look through your [gdoc](https://docs.google.com/document/d/1KfC1aoQbd9bAVXQGNNGm5-1hCG-P2TeX-vabaVZG6I8/edit)
-
-
 ## PureComponent
+- [Dan Abramov on Twitter: "PSA: React.PureComponent can make your app slower if you use it everywhere."](https://twitter.com/dan_abramov/status/820668074223353858)
 Did you know that you should never pure a comp with children? I certainly didn't before I did some digging. Join my on that adventure, then sick around for done other goodies if you'd like.
 
 Given this page, what do we expect to see in console?
@@ -288,22 +277,6 @@ Bummer, this means we can't benefit from `PureComponent` with children defined i
 
 **New rule: only allow `PureComponent` in components that do not have a `children` prop**
 
-
-Other reads
-- [React.PureComponent Considered Harmful – Hacker Noon](https://hackernoon.com/react-purecomponent-considered-harmful-8155b5c1d4bc)
-- [React PureComponent Pitfalls – ShakaCode](https://blog.shakacode.com/react-purecomponent-pitfalls-d057882f4b6e)
-- [Take `children` off `props` · Issue #4694 · facebook/react](https://github.com/facebook/react/issues/4694)
-# links
-[Tommy Leunen on Twitter: "React Q: Should we always use PureComponent and a pure "mixin" for SFC? Or bc most components are not costly to render it's better not?"](https://twitter.com/tommy/status/854366714812747776)
-- [Daniel Steigerwald on Twitter: "ShouldUpdate check belongs to data (redux connect), not view. Learned that the hard way."](https://twitter.com/steida/status/854374773270380544)
-
-`React.cloneElement()` breaks PureComponent children because the passedProps is a new object every time?
-- [React is Slow, React is Fast: Optimizing React Apps in Practice – DailyJS – Medium](https://medium.com/dailyjs/react-is-slow-react-is-fast-optimizing-react-apps-in-practice-394176a11fba#.tkrfivb1w)
-
-[Quick Redux tips for connecting your React components](https://medium.com/dailyjs/quick-redux-tips-for-connecting-your-react-components-e08da72f5b3)
-
-
-
 # `cloneElement()` of a PureComponent child
 Beware: when cloning a PureComponent, the same don't-pass-objects-or-arrays rule applies. The 2nd argument of the `cloneElement()` will always be an object, but no value of that object should be an object or array.
 ```jsx
@@ -372,3 +345,17 @@ PureComponent Render # BAD!
 ```
 
 [[Perf] shouldComponentUpdate/pure components do not work with react element/node type props · Issue #7412 · facebook/react](https://github.com/facebook/react/issues/7412)
+
+# Other reads
+- [Jason Miller 🦊⚛ on Twitter: "found this lying around https://t.co/2FYSvqw6XX https://t.co/BZSNNjN8b6"](https://twitter.com/_developit/status/867120306539954176)
+- [React.PureComponent Considered Harmful – Hacker Noon](https://hackernoon.com/react-purecomponent-considered-harmful-8155b5c1d4bc)
+- [React PureComponent Pitfalls – ShakaCode](https://blog.shakacode.com/react-purecomponent-pitfalls-d057882f4b6e)
+- [Take `children` off `props` · Issue #4694 · facebook/react](https://github.com/facebook/react/issues/4694)
+- [Optimizing React Rendering (Part 1) – Flexport Engineering](https://flexport.engineering/optimizing-react-rendering-part-1-9634469dca02)
+- [Quick Redux tips for connecting your React components](https://medium.com/dailyjs/quick-redux-tips-for-connecting-your-react-components-e08da72f5b3)
+- [Tommy Leunen on Twitter: "React Q: Should we always use PureComponent and a pure "mixin" for SFC? Or bc most components are not costly to render it's better not?"](https://twitter.com/tommy/status/854366714812747776)
+- [Daniel Steigerwald on Twitter: "ShouldUpdate check belongs to data (redux connect), not view. Learned that the hard way."](https://twitter.com/steida/status/854374773270380544)
+- use primitives over objects/arrays, as http://ericlathrop.com/2017/02/why-did-this-react-component-rerender/ mentions
+
+`React.cloneElement()` breaks PureComponent children because the passedProps is a new object every time?
+- [React is Slow, React is Fast: Optimizing React Apps in Practice – DailyJS – Medium](https://medium.com/dailyjs/react-is-slow-react-is-fast-optimizing-react-apps-in-practice-394176a11fba#.tkrfivb1w)
