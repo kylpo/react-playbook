@@ -350,6 +350,7 @@ PureComponent Render # BAD!
 See [this](https://github.com/facebook/react/issues/7412) github issue for more.
 
 # Other reads
+- [Optimizing Performance - React](https://facebook.github.io/react/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 - [React PureComponent Pitfalls – ShakaCode](https://blog.shakacode.com/react-purecomponent-pitfalls-d057882f4b6e)
 - [Take `children` off `props` · Issue #4694 · facebook/react](https://github.com/facebook/react/issues/4694)
 - [Optimizing React Rendering (Part 1) – Flexport Engineering](https://flexport.engineering/optimizing-react-rendering-part-1-9634469dca02)
