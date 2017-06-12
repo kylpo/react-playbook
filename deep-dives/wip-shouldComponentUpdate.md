@@ -26,11 +26,11 @@ class MyComponent extends React.Component {
 Note: this hook is only available to class-based components, not Stateless Functional Components. Some Stateless Functional Components may be "pure" in the sense that they do not have side effects, but they will always re-render, so don't confuse them with `React.PureComponent`s.
 
 ### Why do we care about limiting re-renders?
-For performance!
+Performance!
 
 The less code we run, the more performant it'll be. In fact, the most performant thing we could do in our React apps today would be to write all of our components with a `shouldComponentUpdate() { return false }`. Of course, that is just about as helpful as saying "the most secure computer is the one that is turned off, and buried 100 feet under ground". Our app would be completely static and non-interactive if all of our components had a `sCU => false`.
 
-There are some components that really should be static and non-interactive though. Once rendered the first time, they should live the rest of their days without updating and re-rendering. This is where we'll want to `sCU => false`.
+There are some components that really should be static and non-interactive though. Once rendered the first time, they should live the rest of their time without updating and re-rendering. This is where we'll want to `sCU => false`.
 
 There are also components that should re-render if and only if certain (or any) props have actually changed. This is where custom `shouldComponentUpdate()` and `React.PureComponent` come in.
 
@@ -115,14 +115,16 @@ render: {updatingProp: "initial"}
 cWRP: {updatingProp: "updated"}
 ```
 
-What does this mean? `sCU => false` will not re-render, but its props will still update. So really, it is best to think of `shouldComponentUpdate` as more of a `shouldComponentRerender`.
+What does this mean? `sCU => false` will not re-render, but its props will still update.
+
+> So really, it is best to think of `shouldComponentUpdate` as more of a `shouldComponentRerender`.
 
 Note: this is actually a pretty cool thing! One use case where we don't want to re-render a component, but still respond to an updated prop is for enabling a declarative prop for an imperative operation. An `<Animate>` component, for example, might accept a `triggerOnChangedValue` prop, which will call an `.animate()` method. Using this component will not compute re-renders, it'll just `animate()` it with the prop change: `<Animate triggerOnChangedValue={this.state.animationTrigger} />`.
 
-## PureComponent
-- [Dan Abramov on Twitter: "PSA: React.PureComponent can make your app slower if you use it everywhere."](https://twitter.com/dan_abramov/status/820668074223353858)
-Did you know that you should never pure a comp with children? I certainly didn't before I did some digging. Join my on that adventure, then sick around for done other goodies if you'd like.
+## When to avoid `PureComponent`
+When Dan Abramov tweeted ["PSA: React.PureComponent can make your app slower if you use it everywhere."](https://twitter.com/dan_abramov/status/820668074223353858), he was referring to `PureComponent`'s `shouldComponentUpdate()` executing code for each update. If a component is re-rendered more often that it is prevented, then it is wastefully executing that code. As mentioned in the intro, this'll happen when passing in new objects, arrays, and functions, but there is another case...
 
+### Exploring `shouldComponentUpdate` and `children`
 Given this page, what do we expect to see in console?
 ```jsx
 const Div = (props) => {
@@ -167,8 +169,7 @@ class WrappingWontUpdate extends React.Component {
 }
 
 export default class Home extends React.Component {
-
-  ...
+  //...
 
   render() {
     return (
@@ -186,7 +187,7 @@ Div Render # initial mount
 # nothing after setState
 ```
 
-Makes sense, makes sense. Let's explore PureComponent.
+Makes sense, makes sense. Let's explore `PureComponent`.
 ```jsx
 class PureComponentWrapper extends React.PureComponent {
   render() {
@@ -198,8 +199,7 @@ class PureComponentWrapper extends React.PureComponent {
 }
 
 export default class Home extends React.Component {
-
-  ...
+  //...
 
   render() {
     return (
@@ -236,7 +236,6 @@ Uhhh, what? Why is a pureComponent re-rendering even when the child hasn't chang
 One more exploration:
 ```jsx
 class PureComponentWithChildren extends React.PureComponent {
-
   render() {
     console.log('PureComponentWithChildren Render');
 
@@ -249,7 +248,6 @@ class PureComponentWithChildren extends React.PureComponent {
 }
 
 export default class Home extends React.Component {
-
   state = {}
 
   componentDidMount() {
@@ -272,10 +270,10 @@ Div Render # initial mount
 ```
 
 Bummer, this means we can't benefit from `PureComponent` with children defined in a parent component.
-[Children prop gets recreated killing PureComponent optimizations · Issue #8669 · facebook/react](https://github.com/facebook/react/issues/8669)
 
+> New rule: Never `PureComponent` a component with `children`
 
-**New rule: only allow `PureComponent` in components that do not have a `children` prop**
+See [this](https://github.com/facebook/react/issues/8669) github issue for more.
 
 # `cloneElement()` of a PureComponent child
 Beware: when cloning a PureComponent, the same don't-pass-objects-or-arrays rule applies. The 2nd argument of the `cloneElement()` will always be an object, but no value of that object should be an object or array.
