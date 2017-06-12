@@ -275,8 +275,9 @@ Bummer, this means we can't benefit from `PureComponent` with children defined i
 
 See [this](https://github.com/facebook/react/issues/8669) github issue for more.
 
-# `cloneElement()` of a PureComponent child
+## `cloneElement()` of a `PureComponent` child
 Beware: when cloning a PureComponent, the same don't-pass-objects-or-arrays rule applies. The 2nd argument of the `cloneElement()` will always be an object, but no value of that object should be an object or array.
+
 ```jsx
 class Cloning_ extends React.Component {
   render() {
