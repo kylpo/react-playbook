@@ -231,18 +231,18 @@ WontUpdate Render # initial mount
 PureComponentWrapper Render # after setState
 ```
 
-Uhhh, what? Why is a pureComponent re-rendering even when the child hasn't changed?
+Uhhh, what? Why is `PureComponentWrapper` re-rendering even when the child hasn't changed? Does `PureComponent` not actually do anything?
 
 One more exploration:
 ```jsx
-class PureComponentWithChildren extends React.PureComponent {
+class PureComponentWithSubcomponents extends React.PureComponent {
   render() {
-    console.log('PureComponentWithChildren Render');
+    console.log('PureComponentWithSubcomponents Render');
 
     return (
-      <PureComponentWrapper>
+      <span>
         <Div />
-      </PureComponentWrapper>
+      </span>
     )
   }
 }
@@ -256,28 +256,30 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <PureComponentWithChildren />
+      <PureComponentWithSubcomponents />
     )
   }
 }
 ```
 ```bash
-PureComponentWithChildren Render # initial mount
-PureComponentWrapper Render # initial mount
+PureComponentWithSubcomponents Render # initial mount
 Div Render # initial mount
 
 # nothing after setState
 ```
 
-Bummer, this means we can't benefit from `PureComponent` with children defined in a parent component.
+Yes, the control above shows that `PureComponent` does indeed work when children are not passed to it. The difference is that this `PureComponent` only has subcomponents in its render, not children passed in via the parent. Bummer, this means we can't benefit from `PureComponent`s with children.
 
-> New rule: Never `PureComponent` a component with `children`
+> New rule: Never `PureComponent` a component with a `children` prop. `PureComponent`s with subcomponents in their render are still OK though.
 
 See [this](https://github.com/facebook/react/issues/8669) github issue for more.
 
 ## `cloneElement()` of a `PureComponent` child
-Beware: when cloning a PureComponent, the same don't-pass-objects-or-arrays rule applies. The 2nd argument of the `cloneElement()` will always be an object, but no value of that object should be an object or array.
+This has been a long post, so I'll get right to the point:
 
+> When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` will always be an object, but no value of that object should be a new object, array, or function.
+
+Below is an example of safe usage:
 ```jsx
 class Cloning_ extends React.Component {
   render() {
@@ -330,7 +332,7 @@ passProps Object {hi: "hi"}
 # GOOD! missing PureComponent Render
 ```
 
-Above is the desired effect. Below is what'll happen if `Cloning_` returns an object in an object: `React.cloneElement(child, {propsObject: propsToPass})`
+Above is the desired effect. Below is what'll happen if `Cloning_` returns a new object in an object: `React.cloneElement(child, {propsObject: propsToPass})`
 ```bash
 # first render
 Cloning Render
@@ -343,7 +345,7 @@ passProps Object {hi: "hi"}
 PureComponent Render # BAD!
 ```
 
-[[Perf] shouldComponentUpdate/pure components do not work with react element/node type props · Issue #7412 · facebook/react](https://github.com/facebook/react/issues/7412)
+See [this](https://github.com/facebook/react/issues/7412) github issue for more.
 
 # Other reads
 - [Jason Miller 🦊⚛ on Twitter: "found this lying around https://t.co/2FYSvqw6XX https://t.co/BZSNNjN8b6"](https://twitter.com/_developit/status/867120306539954176)
