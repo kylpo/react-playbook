@@ -2,7 +2,7 @@
 ## TL;DR
 - more like `shouldComponentRerender()`
 - never `PureComponent` a component with children
-- `cloneElement` of a `PureComponent` is tricky
+- `cloneElement()` of a `PureComponent` is tricky
 
 ## A brief introduction
 By default, when a component changes and re-renders, all components in its `render()` are also re-rendered, and their subcomponents are re-rendered, and so on, all the way down. `shouldComponentUpdate()` is a class-based lifecycle method that empowers developers to change the default of a component, and prevent re-rendering completely, or only enable it in certain cases.
@@ -23,7 +23,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Note: this hook is only available to class-based components, not Stateless Functional Components. Some Stateless Functional Components may be "pure" in the sense that they do not have side effects, but they will always re-render, so don't confuse them with `React.PureComponent`s.
+Note: this hook is only available to class-based components, not Stateless Functional Components.
 
 ### Why do we care about limiting re-renders?
 Performance!
