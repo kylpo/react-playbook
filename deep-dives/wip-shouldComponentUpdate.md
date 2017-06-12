@@ -1,6 +1,6 @@
 # All about React's `shouldComponentUpdate()`
 ## TL;DR
-- should be renamed `shouldComponentRerender()`
+- more like `shouldComponentRerender()`
 - never `PureComponent` a component with children
 - `cloneElement` of a `PureComponent` is tricky
 
@@ -66,7 +66,7 @@ class MyPureComponent extends React.PureComponent {
 }
 ```
 
-Be careful with the equality checks of functions, objects, and arrays though. You'll want to use their references and consider using an immutable lib for deep equality checks.
+Be careful with the equality checks of functions, objects, and arrays though. You'll want to use their **references** (not creating new ones in `render()`s) and consider using an immutable lib for deep equality checks.
 
 ## OK, intro over. Lets dig in!
 ### Should be renamed to `shouldComponentRerender`
@@ -277,7 +277,7 @@ See [this](https://github.com/facebook/react/issues/8669) github issue for more.
 ## `cloneElement()` of a `PureComponent` child
 This has been a long post, so I'll get right to the point:
 
-> When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` will always be an object, but no value of that object should be a new object, array, or function.
+> When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` can be a new object, but no value of that object should be a new object, array, or function.
 
 Below is an example of safe usage:
 ```jsx
@@ -332,7 +332,7 @@ passProps Object {hi: "hi"}
 # GOOD! missing PureComponent Render
 ```
 
-Above is the desired effect. Below is what'll happen if `Cloning_` returns a new object in an object: `React.cloneElement(child, {propsObject: propsToPass})`
+And now the result of the bad case, where `Cloning_` returns a new object with a new object: `React.cloneElement(child, {propsObject: propsToPass})`
 ```bash
 # first render
 Cloning Render
