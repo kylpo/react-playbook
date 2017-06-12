@@ -270,9 +270,9 @@ Div Render # initial mount
 # nothing after setState
 ```
 
-Yes, the control above shows that `PureComponent` does indeed work when children are not passed to it. The difference is that this `PureComponent` only has subcomponents in its render, not children passed in via the parent. Bummer, this means we can't benefit from `PureComponent`s with children.
+Yes, the control above shows that `PureComponent` does indeed work as expected when there are no children. Note that this `PureComponent` does have *subcomponents* in its render, but does not have *children* passed in via the parent (neat, this exploration helped me understand the distinction between *children* and *subcomponents*!). Still a bummer that we can not benefit from `PureComponent`s with children though.
 
-> New rule: Never `PureComponent` a component with a `children` prop. `PureComponent`s with subcomponents in their render are still OK though.
+> New rule: Never `PureComponent` a component with a `children` prop. `PureComponent`s with *subcomponents* in their render are still OK though.
 
 See [this](https://github.com/facebook/react/issues/8669) github issue for more.
 
