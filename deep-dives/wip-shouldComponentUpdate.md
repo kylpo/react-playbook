@@ -68,8 +68,10 @@ class MyPureComponent extends React.PureComponent {
 
 Be careful with the equality checks of functions, objects, and arrays though. You'll want to use their **references** (not creating new ones in `render()`s) and consider using an immutable lib for deep equality checks.
 
+Note: Some Stateless Functional Components (not class-based) may be "pure" in the sense that they do not have side effects, but they will always re-render, so don't confuse them as `PureComponent`s.
+
 ## OK, intro over. Lets dig in!
-### Should be renamed to `shouldComponentRerender`
+### Should be renamed to `shouldComponentRerender`?
 Given this `sCU => false` component,
 ```jsx
 class NoUpdate extends React.Component {
@@ -125,7 +127,7 @@ Note: this is actually a pretty cool thing! One use case where we don't want to 
 When Dan Abramov tweeted ["PSA: React.PureComponent can make your app slower if you use it everywhere."](https://twitter.com/dan_abramov/status/820668074223353858), he was referring to `PureComponent`'s `shouldComponentUpdate()` executing code for each update. If a component is re-rendered more often that it is prevented, then it is wastefully executing that code. As mentioned in the intro, this'll happen when passing in new objects, arrays, and functions, but there is another case...
 
 ### Exploring `shouldComponentUpdate` and `children`
-Given this page, what do we expect to see in console?
+Let's start with some controls. Given this page, what do we expect to see in console?
 ```jsx
 const Div = (props) => {
   console.log('Div Render');
@@ -348,15 +350,9 @@ PureComponent Render # BAD!
 See [this](https://github.com/facebook/react/issues/7412) github issue for more.
 
 # Other reads
-- [Jason Miller 🦊⚛ on Twitter: "found this lying around https://t.co/2FYSvqw6XX https://t.co/BZSNNjN8b6"](https://twitter.com/_developit/status/867120306539954176)
-- [React.PureComponent Considered Harmful – Hacker Noon](https://hackernoon.com/react-purecomponent-considered-harmful-8155b5c1d4bc)
 - [React PureComponent Pitfalls – ShakaCode](https://blog.shakacode.com/react-purecomponent-pitfalls-d057882f4b6e)
 - [Take `children` off `props` · Issue #4694 · facebook/react](https://github.com/facebook/react/issues/4694)
 - [Optimizing React Rendering (Part 1) – Flexport Engineering](https://flexport.engineering/optimizing-react-rendering-part-1-9634469dca02)
-- [Quick Redux tips for connecting your React components](https://medium.com/dailyjs/quick-redux-tips-for-connecting-your-react-components-e08da72f5b3)
-- [Tommy Leunen on Twitter: "React Q: Should we always use PureComponent and a pure "mixin" for SFC? Or bc most components are not costly to render it's better not?"](https://twitter.com/tommy/status/854366714812747776)
-- [Daniel Steigerwald on Twitter: "ShouldUpdate check belongs to data (redux connect), not view. Learned that the hard way."](https://twitter.com/steida/status/854374773270380544)
-- use primitives over objects/arrays, as http://ericlathrop.com/2017/02/why-did-this-react-component-rerender/ mentions
-
-`React.cloneElement()` breaks PureComponent children because the passedProps is a new object every time?
+- ["React Q: Should we always use PureComponent and a pure "mixin" for SFC? Or bc most components are not costly to render it's better not?"](https://twitter.com/tommy/status/854366714812747776)
+- [Why Did This React Component Re-render? by Eric Lathrop](http://ericlathrop.com/2017/02/why-did-this-react-component-rerender/)
 - [React is Slow, React is Fast: Optimizing React Apps in Practice – DailyJS – Medium](https://medium.com/dailyjs/react-is-slow-react-is-fast-optimizing-react-apps-in-practice-394176a11fba#.tkrfivb1w)
