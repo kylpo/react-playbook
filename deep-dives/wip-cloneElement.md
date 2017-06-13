@@ -1,5 +1,5 @@
-# All about React's cloneElement()
-As mentioned in __TODO__, `React.cloneElement()` is used for **dynamic**, **runtime** component enhancement.
+# All about React's `cloneElement()`
+As mentioned in __TODO__, `React.cloneElement()` is used for **dynamic**, **runtime** component enhancement with a clear **separation of concerns**.
 
 But using it isn't exactly easy or intuitive. Let's learn more about it.
 

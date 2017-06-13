@@ -1,7 +1,7 @@
 # All about React's `shouldComponentUpdate()`
 ## TL;DR
 - more like `shouldComponentRerender()`
-- never `PureComponent` a component with children
+- never `PureComponent` a component with `children`
 
 ## A brief introduction
 By default, when a component changes and re-renders, all components in its `render()` are also re-rendered, and their subcomponents are re-rendered, and so on, all the way down. `shouldComponentUpdate()` is a class-based lifecycle method that empowers developers to change the default of a component, and prevent re-rendering completely, or only enable it in certain cases.
