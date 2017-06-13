@@ -111,7 +111,7 @@ ReactDom.render(<UpdatesChildProp />)
 
 what do you expect to see in `console`?
 
-```
+```bash
 render: {updatingProp: "initial"}
 cWRP: {updatingProp: "updated"}
 ```
@@ -269,7 +269,11 @@ Div Render # initial mount
 # nothing after setState
 ```
 
-Yes, the control above shows that `PureComponent` does indeed work as expected when there are no children. Note that this `PureComponent` does have *subcomponents* in its render, but does not have *children* passed in via the parent (neat, this exploration helped me understand the distinction between *children* and *subcomponents*!). Still a bummer that we can not benefit from `PureComponent`s with children though.
+Yes, the control above shows that `PureComponent` does indeed work as expected when there are no children. Note that this `PureComponent` does have *subcomponents* in its render, but does not have *children* passed in via the parent.
+
+(Neat, this exploration helped me identify a distinction between *children* and *subcomponents*! Children of my component are passed in by my parent (they exist inside my parent’s render). Subcomponents exist in **my** render.)
+
+Still a bummer that we can not benefit from `PureComponent`s with `children` though.
 
 > New rule: Never `PureComponent` a component with a `children` prop. `PureComponent`s with *subcomponents* in their render are still OK though.
 
@@ -280,6 +284,6 @@ See [this](https://github.com/facebook/react/issues/8669) github issue for more.
 - [React PureComponent Pitfalls – ShakaCode](https://blog.shakacode.com/react-purecomponent-pitfalls-d057882f4b6e)
 - [Take `children` off `props` · Issue #4694 · facebook/react](https://github.com/facebook/react/issues/4694)
 - [Optimizing React Rendering (Part 1) – Flexport Engineering](https://flexport.engineering/optimizing-react-rendering-part-1-9634469dca02)
-- ["React Q: Should we always use PureComponent and a pure "mixin" for SFC? Or bc most components are not costly to render it's better not?"](https://twitter.com/tommy/status/854366714812747776)
 - [Why Did This React Component Re-render? by Eric Lathrop](http://ericlathrop.com/2017/02/why-did-this-react-component-rerender/)
-- [React is Slow, React is Fast: Optimizing React Apps in Practice – DailyJS – Medium](https://medium.com/dailyjs/react-is-slow-react-is-fast-optimizing-react-apps-in-practice-394176a11fba#.tkrfivb1w)
+- [React is Slow, React is Fast: Optimizing React Apps in Practice – DailyJS](https://medium.com/dailyjs/react-is-slow-react-is-fast-optimizing-react-apps-in-practice-394176a11fba#.tkrfivb1w)
+- ["React Q: Should we always use PureComponent and a pure "mixin" for SFC? Or bc most components are not costly to render it's better not?"](https://twitter.com/tommy/status/854366714812747776)
