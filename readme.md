@@ -1,4 +1,4 @@
-# React Playbook
+# [kylpo](https://twitter.com/kylpo)'s React Playbook
 Styles, Conventions, Rules, Tips, and Tools!
 
 ## Table of contents
@@ -16,11 +16,12 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
-  - eslint config to support the style //TODO
 - Useful libs
   - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
-  - [js](https://github.com/kylpo/react-playbook/blob/master/libs/js.md)
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/libs/mobx.md)
+- Deep Dives
+  - [You Can Spread Props In JSX, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md)
+  - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md)
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
