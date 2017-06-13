@@ -62,4 +62,12 @@ Enables fast `shouldComponentUpdate`s and memoizable Selectors.
 Clearly draws the line between [App-dependent components](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md#app-dependent) (has Immutable prop data) vs [lib components](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md#what-is-the-criteria-for-lib-components-and-functions) (no Immutable prop data)
 
 ## Cons
-Your components will have to deal with immutable.js props. Especially for presentational components, using immutable's api may be undesirable.
+Your components will have to deal with Immutable.js props. Especially for presentational components, using immutable's api may be undesirable. This can be addressed with container components to convert Immutable to regular javascript, which is a hassle, but likely necessary.
+
+Immutable.js increases bundle size (~60KB unzipped, I think)
+
+Also seen discussions from facebook about performance issues on large projects. (TODO: find talk from Relay team talking about immutable perf issues)
+
+
+## Conclusions
+I love the idea and features, but for now it is just too much of a bother to use. Would really like to see these primitives one day in javascript without a library!

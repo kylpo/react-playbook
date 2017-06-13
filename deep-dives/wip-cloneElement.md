@@ -283,8 +283,77 @@ Basically just a React.createElement with a single `for` loop to copy over props
 ## Re-renders
 Based on what we learned in TODO scu doc, these cloning wrappers will be re-rendering often. Consider caching the computation outside of `render` so its `render` can do as little work as possible. (Note: I have not tried this yet, but plan to.)
 
-## `cloneElement()` of a PureComponent child
-See **TODO** for details
+## `cloneElement()` of a `PureComponent` child
+> When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` can be a new object, but no value of that object should be a new object, array, or function.
+
+Below is an example of safe usage:
+```jsx
+class Cloning_ extends React.Component {
+  render() {
+    console.log('Cloning Render')
+
+    const { children, ...propsToPass } = this.props
+    const child = React.Children.only(children)
+
+    console.log('passProps', propsToPass)
+
+    return React.cloneElement(child, propsToPass)
+  }
+}
+
+class PureComponent extends React.PureComponent {
+  render() {
+    console.log('PureComponent Render')
+    return (
+      <div />
+    )
+  }
+}
+
+export default class App extends React.Component {
+  state = {}
+
+  componentDidMount() {
+    setTimeout(() => this.setState({hi: 'hi'}), 2000)
+  }
+
+  render() {
+    return (
+      <Cloning_ hi='hi'>
+        <PureComponent />
+      </Cloning_>
+    )
+  }
+}
+
+```
+```bash
+# first render
+Cloning Render
+passProps Object {hi: "hi"}
+PureComponent Render
+
+# after setState
+Cloning Render
+passProps Object {hi: "hi"}
+# GOOD! missing PureComponent Render
+```
+
+And now the result of the bad case, where `Cloning_` returns a new object with a new object: `React.cloneElement(child, {propsObject: propsToPass})`
+```bash
+# first render
+Cloning Render
+passProps Object {hi: "hi"}
+PureComponent Render
+
+# after setState
+Cloning Render
+passProps Object {hi: "hi"}
+PureComponent Render # BAD!
+```
+
+See [this](https://github.com/facebook/react/issues/7412) github issue for more.
+
 
 # Nesting
 Think about nested `cloneElement()`s:

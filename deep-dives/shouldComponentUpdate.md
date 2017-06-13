@@ -2,7 +2,6 @@
 ## TL;DR
 - more like `shouldComponentRerender()`
 - never `PureComponent` a component with children
-- `cloneElement()` of a `PureComponent` is tricky
 
 ## A brief introduction
 By default, when a component changes and re-renders, all components in its `render()` are also re-rendered, and their subcomponents are re-rendered, and so on, all the way down. `shouldComponentUpdate()` is a class-based lifecycle method that empowers developers to change the default of a component, and prevent re-rendering completely, or only enable it in certain cases.
@@ -275,79 +274,6 @@ Yes, the control above shows that `PureComponent` does indeed work as expected w
 > New rule: Never `PureComponent` a component with a `children` prop. `PureComponent`s with *subcomponents* in their render are still OK though.
 
 See [this](https://github.com/facebook/react/issues/8669) github issue for more.
-
-## `cloneElement()` of a `PureComponent` child
-This has been a long post, so I'll get right to the point:
-
-> When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` can be a new object, but no value of that object should be a new object, array, or function.
-
-Below is an example of safe usage:
-```jsx
-class Cloning_ extends React.Component {
-  render() {
-    console.log('Cloning Render')
-
-    const { children, ...propsToPass } = this.props
-    const child = React.Children.only(children)
-
-    console.log('passProps', propsToPass)
-
-    return React.cloneElement(child, propsToPass)
-  }
-}
-
-class PureComponent extends React.PureComponent {
-  render() {
-    console.log('PureComponent Render')
-    return (
-      <div />
-    )
-  }
-}
-
-export default class App extends React.Component {
-  state = {}
-
-  componentDidMount() {
-    setTimeout(() => this.setState({hi: 'hi'}), 2000)
-  }
-
-  render() {
-    return (
-      <Cloning_ hi='hi'>
-        <PureComponent />
-      </Cloning_>
-    )
-  }
-}
-
-```
-```bash
-# first render
-Cloning Render
-passProps Object {hi: "hi"}
-PureComponent Render
-
-# after setState
-Cloning Render
-passProps Object {hi: "hi"}
-# GOOD! missing PureComponent Render
-```
-
-And now the result of the bad case, where `Cloning_` returns a new object with a new object: `React.cloneElement(child, {propsObject: propsToPass})`
-```bash
-# first render
-Cloning Render
-passProps Object {hi: "hi"}
-PureComponent Render
-
-# after setState
-Cloning Render
-passProps Object {hi: "hi"}
-PureComponent Render # BAD!
-```
-
-See [this](https://github.com/facebook/react/issues/7412) github issue for more.
 
 # Other reads
 - [Optimizing Performance - React](https://facebook.github.io/react/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
