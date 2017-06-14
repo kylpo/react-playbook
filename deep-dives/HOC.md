@@ -1,5 +1,5 @@
 # What is a HOC?
-![](https://github.com/kylpo/notes/blob/master/assets/HOC.png?raw=true)
+![](https://github.com/kylpo/react-playbook/blob/master/assets/HOC.png?raw=true)
 
 "A Higher-Order Component"
 
