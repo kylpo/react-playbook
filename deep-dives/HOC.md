@@ -32,7 +32,7 @@ function enhance(WrappedComponent, config) {
 }
 ```
 
-# How is it used
+# How is it used?
 Usually, it is used to enhance a component as it is exported, like
 
 ```jsx
@@ -71,7 +71,7 @@ class MyComponent extends React.Component {
 
 Note: Redux's `connect(mapStateToProps, mapDispatchToProps)(MyComponent)` is also a HOC, it just looks a bit more fancy because it is also using currying.
 
-# Considerations when building your own
+# Some considerations when building your own
 First of all, you may not need to! Our community may've already built it.
 
 [Recompose](https://github.com/acdlite/recompose), for example, is a popular HOC utility belt that provides many useful HOCs, like `pure()` and `onlyUpdateForKeys(['prop1', 'prop2'])` to easily set up `shouldComponentUpdate`s. As its docs say, "think of it like lodash for React."
