@@ -3,7 +3,7 @@ Lets say you'd like to extract out some utility code of a component for re-use w
 
 So, how do you go about extracting and reusing this enhancement? Well, you have a couple options.
 
-## tl;dr
+## TL;DR
 - Static enhancement? Use `HOC`.
 - Dynamic enhancement? Use `cloneElement`.
 
@@ -15,11 +15,17 @@ What is a HOC?
 
 What does that mean?
 
-"Well, if a _higher-order function_ is a **function** that **takes a function** and **returns a new function** as the result, then a _higher-order component_ must be a **component** that **takes a component** and **returns a new component** as the result, right?" That is often the community's response, but isn't that just a component with children? Or how about the description that "A Higher Order Component is just a React Component that wraps another one"? Again, isn't that just a component with children?
+"Well, if a _higher-order function_ is a **function** that **takes a function** and **returns a new function** as the result, then a _higher-order component_ must be a **component** that **takes a component** and **returns a new component** as the result, right?"
+
+That is often the community's response, but isn't that just a component with children?
+
+Or how about the description that "A Higher Order Component is just a React Component that wraps another one"?
+
+Again, isn't that just a component with children?
 
 Fortunately, [React's Official Docs](https://facebook.github.io/react/docs/higher-order-components.html) have been updated with a description that makes more sense:
 
-"a higher-order component is a **function** that **takes a component** and **returns a new component**"
+> a higher-order component is a **function** that **takes a component** and **returns a new component**
 
 Ahh, good. A HOC is the `function` that returns the component, not the component itself.
 
@@ -45,7 +51,7 @@ Note: Redux's `connect(mapStateToProps, mapDispatchToProps)(MyComponent)` is als
 ### Back on topic
 OK, we know what a HOC is, but when should we use it?
 
-**Consider using a HOC when it is an enhancement to a component definition. I.e. it is used outside of a `render`, often at the end of a file as the default `export`.**
+**Consider using a HOC when it is an enhancement to a component definition or declaration. I.e. it is used outside of a `render()`**
 
 ```jsx
 class MyComponent extends React.Component {
@@ -90,6 +96,28 @@ class MyComponent extends React.Component {
 ```
 
 But then you'll be recreating the `Enhanced` component on **every** re-render and trigger unmounts and remounts. Read more from [the official docs](https://facebook.github.io/react/docs/higher-order-components.html#dont-use-hocs-inside-the-render-method).
+
+You *could* technically expose all of your configuration options in the resulting enhanced component for updates, but then you lose out on a clear seperation of concerns:
+
+```jsx
+const AnimationComponent = enhanceWithAnimation(SomeComponent, animationConfig)
+const AnimationTouchableComponent = enhanceWithTouch(AnimationComponent, touchableConfig)
+const AnimationTouchableStyledComponent = enhanceWithStyle(AnimationTouchableComponent, styledConfig)
+
+class MyComponent extends React.Component {
+  // ...
+
+  render() {
+    return (
+      <AnimationTouchableStyledComponent
+        animationConfig={this.state.animationConfig}
+        touchableConfig={this.state.touchableConfig}
+        styledConfig={this.state.styledConfig}
+      />
+    )
+  }
+}
+```
 
 ## Enter `cloneElement`
 `React.cloneElement()` allows us to clone a runtime _element_, and apply an enhancement. With it, we can update our enhancement in our render and not worry about triggering unmounts and remounts!
