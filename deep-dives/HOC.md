@@ -1,4 +1,6 @@
 # What is a HOC?
+![](https://github.com/kylpo/notes/blob/master/assets/HOC.png?raw=true)
+
 "A Higher-Order Component"
 
 What does that mean?
