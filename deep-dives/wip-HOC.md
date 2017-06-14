@@ -33,9 +33,11 @@ function enhance(WrappedComponent, config) {
 ```
 
 # How is it used
-Most often, it is used to enhance a component as it is exported, like
+Usualy, it is used to enhance a component as it is exported, like
 
 ```jsx
+import enhanceWithTouch from 'enhance-with-touch'
+
 class MyComponent extends React.Component {
   render() {
     return (
@@ -51,7 +53,7 @@ export default enhanceWithTouch(MyComponent, {onPress: (e) => console.log(e)})
 or it is used to enhance a component after it has been imported, like
 
 ```jsx
-import SomeComponent from 'some-component'
+import SomeComponent from 'SomeComponent'
 
 // use HOC to enhance SomeComponent before it is used in the render()
 const EnhancedComponent = enhance(SomeComponent)
@@ -70,12 +72,16 @@ class MyComponent extends React.Component {
 Note: Redux's `connect(mapStateToProps, mapDispatchToProps)(MyComponent)` is also a HOC, it just looks a bit more fancy because it is also using currying.
 
 # Considerations when building your own
-First of all, you may not need to - our community may've already built it! [Recompose](https://github.com/acdlite/recompose), for example, is a popular HOC utility belt that provides many useful HOCs, like `pure()` and `onlyUpdateForKeys(['prop1', 'prop2'])` to easily set up `shouldComponentUpdate`s. As its docs say, "think of it like lodash for React."
+First of all, you may not need to! Our community may've already built it.
+
+[Recompose](https://github.com/acdlite/recompose), for example, is a popular HOC utility belt that provides many useful HOCs, like `pure()` and `onlyUpdateForKeys(['prop1', 'prop2'])` to easily set up `shouldComponentUpdate`s. As its docs say, "think of it like lodash for React."
 
 If you are building your own though, be sure to:
 - pass `props` that aren't related to your HOC, so it will play well with other wrappers
 - hoist `static`s so the original component's API is not compromised. You might like [hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics) for this.
 - provide a debug label using `displayName`
 - `ref`s aren't passed through, so use `refNode` pattern. (TODO: link to refs article)
+
+---
 
 Props to [Official Docs](https://facebook.github.io/react/docs/higher-order-components.html#convention-pass-unrelated-props-through-to-the-wrapped-component) for greatly improving its HOC documentation!
