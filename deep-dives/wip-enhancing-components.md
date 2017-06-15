@@ -3,6 +3,17 @@ Lets say you'd like to extract out some utility code of a component for re-use w
 
 So, how do you go about extracting and reusing this enhancement? Well, you have a couple options.
 
+HOC, class decorators, cloneElement, child function
+
+Really, it comes down to whether you'd like this enhancement done inside a component's `render()` (i.e. runtime/dynamic) or not.
+
+
+class decorators
+- [Exploring EcmaScript Decorators – Google Developers – Medium](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841)
+  - scroll to "Decorating a class"
+- [wycats/javascript-decorators](https://github.com/wycats/javascript-decorators#class-declaration)
+- use for similar functionality as `react.createClass()`'s `mixin` to modify the class.
+
 ## TL;DR
 - Static enhancement? Use `HOC`.
 - Dynamic enhancement? Use `cloneElement`.

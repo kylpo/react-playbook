@@ -13,12 +13,6 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Best Practices
   - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
   - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
-- Style
-  - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
-  - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
-- Useful libs
-  - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
-  - [MobX](https://github.com/kylpo/react-playbook/blob/master/libs/mobx.md)
 - Deep Dives
   - [You Can Spread Props In JSX, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md)
   - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md)
@@ -31,6 +25,12 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
   - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
+- Style
+  - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
+  - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
+- Useful libs
+  - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
+  - [MobX](https://github.com/kylpo/react-playbook/blob/master/libs/mobx.md)
 - Trivia
   - [React](https://github.com/kylpo/react-playbook/blob/master/trivia/react.md)
 

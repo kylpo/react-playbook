@@ -39,6 +39,8 @@ linkRef
 - [Glen Mailer on Twitter: "@dan_abramov That's a very long way to say "null means unmount, use it as a signal to perform cleanup" 😉😊"](https://twitter.com/glenathan/status/859161300668166146)
 
 ## onLayout
+props to Mike for the idea
+
 - https://facebook.github.io/react/docs/refs-and-the-dom.html#caveats
 
 https://github.com/necolas/react-native-web/issues/60
