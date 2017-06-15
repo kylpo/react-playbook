@@ -10,6 +10,8 @@
 # MobX
 MobX is an app state manager (used in place of something like Redux)
 
+---
+
 **UPDATE:** Below is fairly old notes by now. Honestly, just read [Mobdux: Combining the good parts of MobX and Redux](https://medium.com/@cameronfletcher92/mobdux-combining-the-good-parts-of-mobx-and-redux-61bac90ee448). It is the best MobX article I've read!
 
 ---
