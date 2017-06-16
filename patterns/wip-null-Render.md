@@ -14,7 +14,7 @@ render() {
 Can you tell me which of these components renders nothing to the DOM?
 
 ```jsx
-import Redirct from 'react-router'
+import Redirect from 'react-router'
 
 <View>
   <Redirect />

@@ -43,3 +43,7 @@ React Playbook is a collection of documents that attempts to give React its rail
 
 ## Note
 If you are new to React, looking through [petehunt/react-howto: Your guide to the (sometimes overwhelming!) React ecosystem.](https://github.com/petehunt/react-howto) is recommended.
+
+## Like this playbook? Maybe you'll like the other ones, too!
+- [Web Playbook](https://github.com/kylpo/web-playbook)
+- [Dev Playbook](https://github.com/kylpo/dev-playbook)
