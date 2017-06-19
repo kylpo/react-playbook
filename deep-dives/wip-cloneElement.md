@@ -1,9 +1,41 @@
 # All about React's `cloneElement()`
-As mentioned in __TODO__, `React.cloneElement()` is used for **dynamic**, **runtime** component enhancement with a clear **separation of concerns**.
+## What is it?
+[React.cloneElement()](https://facebook.github.io/react/docs/react-api.html#cloneelement) allows us to clone a runtime _element_ (not the class), and apply an enhancement to it.
 
-But using it isn't exactly easy or intuitive. Let's learn more about it.
+```jsx
+class Press_ extends React.Component {
+  render() {
+    // React.cloneElement() requires a single child
+    const Child = React.Children.only(this.props.children)
 
-# How does it work?
+    // return new element with an `enhance` prop
+    // note: this could also be wrapped in other components, if we wanted
+    return React.cloneElement(Child, {onPress: this.props.onPress})
+  }
+}
+
+class MyComponent extends React.Component {
+  handlePress = () => {
+    // ...
+  }
+
+  render() {
+    return (
+      <Press_ onPress={this.handlePress}>
+        <div />
+      </Press_>
+    )
+  }
+}
+
+ReactDom.Render(<MyComponent />, /* ... */)
+```
+
+The code above renders a `div` with the `onPress` wired up. It is a contrived example, as a we can just pass in an `onPress` directly to the `div`, but what if `<Press_ />` computed something complicated, then translated the result to something `div` could use? That is quite a powerful abstraction! Also, this `<Press_ />` component allows us to clearly separate concerns and reuse them on other elements. We might reuse our `Press_` on an `image` or `span`, for example. We might also use `cloneElement()` components for other concerns, like `<Style_ />`, `<Animate_ />`, `<Touch_ />`, etc.
+
+*Wondering about this `Name_` convention? Read more about Injector Components [here](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md).*
+
+## How does it work?
 Given this page, what do we expect to see in console?
 
 ```jsx
@@ -167,7 +199,7 @@ cloneProps:  Object {hi: "bye", bye: "bye"}
 
 Notice the change in the value of `hi`. OK, one last thing. See that `bye: "bye"` part? That crept in because `Div` has `static defaultProps = {bye: 'bye'}`. Thanks to it being a `static`, `React.CreateElement()` is able to use it for the returned `element`.
 
-## Order of operations in rendering `elements`, `components`, parents, and children?
+### Order of operations in rendering `elements`, `components`, parents, and children?
 Allllright, lets finish this exploration. What do you expect to be logged in this example?
 
 ```jsx
@@ -265,7 +297,7 @@ Div Mount
 Cloning Mount
 ```
 
-## Putting it all together
+### Putting it all together
 The [offical docs](https://facebook.github.io/react/docs/components-and-props.html) have a template of how updates happen. Let's modify it with our use case:
 1. `ReactDOM.render()` is called with with the `<App />` element
 2. Using the `App` element, React creates and renders the `App` component
@@ -276,14 +308,14 @@ The [offical docs](https://facebook.github.io/react/docs/components-and-props.ht
 7. Our `Div` component returns a `<div />` element as the result.
 8. React DOM efficiently updates the DOM to match the tree of elements.
 
-# Performance Considerations
-## How does `cloneElement()` compare to `createElement()`?
+## Performance Considerations
+### How does `cloneElement()` compare to `createElement()`?
 Basically just a React.createElement with a single `for` loop to copy over props passed. See its [source](https://github.com/facebook/react/blob/master/src/isomorphic/classic/element/ReactElement.js#L300-L369), and [this](https://twitter.com/spikebrehm/status/829032493286248448) tweet thread.
 
-## Re-renders
+### Re-renders
 Based on what we learned in TODO scu doc, these cloning wrappers will be re-rendering often. Consider caching the computation outside of `render` so its `render` can do as little work as possible. (Note: I have not tried this yet, but plan to.)
 
-## `cloneElement()` of a `PureComponent` child
+### `cloneElement()` of a `PureComponent` child
 > When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` can be a new object, but no value of that object should be a new object, array, or function.
 
 Below is an example of safe usage:
@@ -354,8 +386,7 @@ PureComponent Render # BAD!
 
 See [this](https://github.com/facebook/react/issues/7412) github issue for more.
 
-
-# Nesting
+## Nesting
 Think about nested `cloneElement()`s:
 ```jsx
 <Cloning_>
@@ -367,7 +398,7 @@ Think about nested `cloneElement()`s:
 
 To be a good cloning citizen, be sure to pass props through that are not related to yours. In the above example, `Cloning2_` should pass `Cloning_`'s props to `Div`, as well as its own.
 
-# References
+## References
 - Props to the current official [docs](https://facebook.github.io/react/docs/components-and-props.html), which explain all of this nicely. I just needed more examples to solidify everything.
 
 ---
