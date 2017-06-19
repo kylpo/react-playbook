@@ -16,6 +16,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Deep Dives
   - [You Can Spread Props In JSX, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md)
   - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md)
+  - [All about cloneElement()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/cloneElement.md)
   - [What is a HOC?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/HOC.md)
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
