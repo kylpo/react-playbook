@@ -1,6 +1,6 @@
 # All about React's `cloneElement()`
 ## What is it?
-[React.cloneElement()](https://facebook.github.io/react/docs/react-api.html#cloneelement) allows us to clone a runtime _element_ (not the class), and apply an enhancement to it.
+[React.cloneElement()](https://facebook.github.io/react/docs/react-api.html#cloneelement) allows us to clone a runtime `element` (not the class), and apply an enhancement to it.
 
 ```jsx
 class Press_ extends React.Component {
@@ -8,9 +8,12 @@ class Press_ extends React.Component {
     // React.cloneElement() requires a single child
     const Child = React.Children.only(this.props.children)
 
-    // return new element with an `enhance` prop
+    // compute props to pass
+    const propsToPass = {onPress: this.props.onPress}
+
+    // return new element with props to pass
     // note: this could also be wrapped in other components, if we wanted
-    return React.cloneElement(Child, {onPress: this.props.onPress})
+    return React.cloneElement(Child, propsToPass)
   }
 }
 
@@ -31,7 +34,9 @@ class MyComponent extends React.Component {
 ReactDom.Render(<MyComponent />, /* ... */)
 ```
 
-The code above renders a `div` with the `onPress` wired up. It is a contrived example, as a we can just pass in an `onPress` directly to the `div`, but what if `<Press_ />` computed something complicated, then translated the result to something `div` could use? That is quite a powerful abstraction! Also, this `<Press_ />` component allows us to clearly separate concerns and reuse them on other elements. We might reuse our `Press_` on an `image` or `span`, for example. We might also use `cloneElement()` components for other concerns, like `<Style_ />`, `<Animate_ />`, `<Touch_ />`, etc.
+The code above renders a `div` with the `onPress` wired up. It is a contrived example, as a we can just pass in an `onPress` directly to the `div`, but what if `<Press_ />` computed something complicated, then translated the result to something `div` could use? That is quite a powerful abstraction!
+
+Also, this `<Press_ />` component allows us to clearly separate concerns and reuse them on other elements. We might reuse our `Press_` on an `image` or `span`, for example. We might have other `cloneElement()` components for concerns like `<Style_ />`, `<Animate_ />`, `<Touch_ />`, etc.
 
 *Wondering about this `Name_` convention? Read more about Injector Components [here](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md).*
 
@@ -85,7 +90,7 @@ export default class App extends React.Component {
 }
 ```
 
-```
+```bash
 Cloning Render
 ChildProps:  Object {hi: "hi", bye: "bye"}
 Div Render
@@ -96,7 +101,7 @@ Cloning Mount
 
 Hmmm, how can `Cloning_` have the child `Div` without `Div` being rendered first? Ahhhh, it must create an instance of it, which `Cloning_` can use. So, lets `console.log()` in each of their `constructor()`s.
 
-```
+```bash
 Cloning Constructor
 Cloning Render
 ChildProps:  Object {hi: "hi", bye: "bye"}
@@ -155,7 +160,7 @@ export default class App extends React.Component {
 
 ```
 
-```
+```bash
 Div element created
 Cloning_ element created
 ```
@@ -192,14 +197,14 @@ export default class App extends React.Component {
   }
 }
 ```
-```
+```bash
 childProps:  Object {hi: "hi", bye: "bye"}
 cloneProps:  Object {hi: "bye", bye: "bye"}
 ```
 
 Notice the change in the value of `hi`. OK, one last thing. See that `bye: "bye"` part? That crept in because `Div` has `static defaultProps = {bye: 'bye'}`. Thanks to it being a `static`, `React.CreateElement()` is able to use it for the returned `element`.
 
-### Order of operations in rendering `elements`, `components`, parents, and children?
+### Order of operations in rendering elements, components, parents, and children?
 Allllright, lets finish this exploration. What do you expect to be logged in this example?
 
 ```jsx
@@ -284,7 +289,7 @@ ReactDOM.render(
 )
 ```
 
-```
+```bash
 Div element
 Cloning_ element
 
@@ -371,7 +376,7 @@ passProps Object {hi: "hi"}
 # GOOD! missing PureComponent Render
 ```
 
-And now the result of the bad case, where `Cloning_` returns a new object with a new object: `React.cloneElement(child, {propsObject: propsToPass})`
+And now the result of the bad case, where `Cloning_` returns a new object with a new object: `React.cloneElement(child, {nestedNewObject: {}})`
 ```bash
 # first render
 Cloning Render
@@ -396,10 +401,10 @@ Think about nested `cloneElement()`s:
 </Cloning_>
 ```
 
-To be a good cloning citizen, be sure to pass props through that are not related to yours. In the above example, `Cloning2_` should pass `Cloning_`'s props to `Div`, as well as its own.
+To be a good cloning citizen, be sure to pass props through that are not related to yours! In the above example, `Cloning2_` should pass `Cloning_`'s props to `Div`, as well as its own.
 
 ## References
-- Props to the current official [docs](https://facebook.github.io/react/docs/components-and-props.html), which explain all of this nicely. I just needed more examples to solidify everything.
+Props to the current official [docs](https://facebook.github.io/react/docs/components-and-props.html), which explain all of this nicely. I just needed more examples to solidify everything.
 
 ---
 

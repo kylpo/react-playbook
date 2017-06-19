@@ -131,6 +131,10 @@ class MyComponent extends React.Component {
 ```
 
 ## Enter `cloneElement`
+As mentioned in __TODO__, `React.cloneElement()` is used for **dynamic**, **runtime** component enhancement with a clear **separation of concerns**.
+
+But using it isn't exactly easy or intuitive. Let's learn more about it.
+
 `React.cloneElement()` allows us to clone a runtime _element_, and apply an enhancement. With it, we can update our enhancement in our render and not worry about triggering unmounts and remounts!
 
 ```jsx
