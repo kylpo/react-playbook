@@ -23,6 +23,7 @@
 ![](https://camo.githubusercontent.com/a829185bcb329fb225c3bce6d8a5a05918625bc1/68747470733a2f2f7261772e6769746875622e636f6d2f627269676164652f72656163742d776179706f696e742f6d61737465722f72656163742d776179706f696e742d64656d6f2e676966)
 
 - [react-lazyload: Lazyload your Component, Image or anything matters the performance.](https://github.com/jasonslyvia/react-lazyload)
+- [react-helmet: A document head manager for React](https://github.com/nfl/react-helmet)
 
 ## Layout
 - [React Sortable Higher-order Components](http://clauderic.github.io/react-sortable-hoc/#/basic-configuration/basic-usage?_k=5zvgfe)

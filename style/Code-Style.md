@@ -221,6 +221,9 @@ render() {
 # React-specific conventions
 In general, keep your components as small and focussed as possible (and reasonable). The conventions below will help with this.
 
+## Use `get` methods for derived data
+See [react-patterns](https://github.com/planningcenter/react-patterns#computed-props) for more
+
 ## Imports order
 Structure your imports like: functions, constants, __vertical space__, then components. Each block should be ordered as external, then local.
 ```javascript
