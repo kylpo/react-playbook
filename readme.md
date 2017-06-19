@@ -26,10 +26,13 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
   - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
+- Patterns and Conventions
+  - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md)
+  - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
-- Useful libs
+- Useful Libs
   - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/libs/mobx.md)
 - Trivia
@@ -41,9 +44,6 @@ I believe the __Rails__ part of Ruby on Rails was what made it so popular and de
 Conventions, patterns, rules, styles, etc reduce the mental load while you are developing. Instead of spending your decision-making energy on how best to perform a routine task, you can essentially go into auto-pilot mode, saving that energy for solving more interesting problems.
 
 React Playbook is a collection of documents that attempts to give React its rails.
-
-## Note
-If you are new to React, looking through [petehunt/react-howto: Your guide to the (sometimes overwhelming!) React ecosystem.](https://github.com/petehunt/react-howto) is recommended.
 
 ## Like this playbook? Maybe you'll like the other ones, too!
 - [Web Playbook](https://github.com/kylpo/web-playbook)

@@ -1,7 +1,7 @@
 # Enhancing Components
 Lets say you'd like to extract out some utility code of a component for re-use with other components. It could be something that connects to stores, something that calculates values and passes them along, something that adds a loading spinner while retrieving data, etc. We'll broadly call that something an *enhancement* going forward, but you could also think of it as a configuration or manipulation.
 
-So, how do you go about extracting and reusing this enhancement? Well, you have a couple options.
+So, how do you go about extracting and reusing this enhancement? Well, you have a some options...
 
 HOC, class decorators, cloneElement, child function
 
@@ -15,8 +15,8 @@ class decorators
 - use for similar functionality as `react.createClass()`'s `mixin` to modify the class.
 
 ## TL;DR
-- Static enhancement? Use `HOC`.
-- Dynamic enhancement? Use `cloneElement`.
+- Static enhancement? Use `HOC` or `@decorator`.
+- Dynamic enhancement? Use `cloneElement` or `child function`.
 
 ## HOC
 ### But first, a detour
