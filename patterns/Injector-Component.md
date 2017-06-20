@@ -115,4 +115,4 @@ Naming conventions enable tooling. I've edited my vim color scheme to color Inje
 
 In the future, we could also create lint rules to identify errors at code-time using this convention.
 
-**more naming conventions => more helpful tooling**
+> more conventions => more helpful tooling

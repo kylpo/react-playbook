@@ -93,11 +93,9 @@ Naming conventions enable tooling. I've edited my vim color scheme to style Null
 
 ![](https://github.com/kylpo/react-playbook/blob/master/assets/NullComponent.png?raw=true)
 
-In the future, we could also create lint rules to identify errors at code-time using this convention.
+In the future, we might also have an editor with a toggleable option to hide all components that do not add to the DOM directly.
 
-We might also have some tool to hide all components that do now add something to the DOM.
-
-**more naming conventions => more helpful tooling**
+> more conventions => more helpful tooling
 
 ## Other naming conventions
-Link to other naming conventions
+[Injector_](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) | [IMMUTABLE]()
