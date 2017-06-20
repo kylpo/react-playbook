@@ -1,23 +1,30 @@
 # A Naming Convention for Null Components
 ## What is a Null Component?
+A component that returns `null`, and likely uses lifecycle hooks to make side effects.
 
 ```jsx
-render() {
-  // Potentially do logic
+class NullComponent extends React.Component {
+  // Potentially perform side effect in a lifecycle method
 
-  return null
+  render() {
+    // Potentially perform side effect
+
+    return null
+  }
 }
 ```
-(I got the name from this oooold issue: https://github.com/facebook/react/issues/1058)
+*(I got the name from this oooold issue: https://github.com/facebook/react/issues/1058)*
 
 ## Can You Spot Them?
-Can you tell me which of these components renders nothing to the DOM?
+Can you tell me which of these components renders nothing?
 
 ```jsx
-import Redirect from 'react-router'
+import { Redirect } from 'react-router'
+import MyComponent from './my-component'
 
 <View>
   <Redirect />
+  <MyComponent />
 </View>
 ```
 
@@ -25,27 +32,72 @@ I can't either. I'd need prior knowledge of the components or read through how t
 
 If you are familiar with React Router V4, you may know that it doesn't render anything, but what if you could know without prior knowledge?
 
-## Introducing the `<_RendersNull_ />` Convention
+## Introducing the `<_NullComponent_ />` Convention
+Aligning closely with the [<Injector_ >](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) naming convention, Null Components are denoted with a postfix AND prefix `_`. e.g. `<_NullComponent_ />`. The idea is that the additional prefix `_` of a Null Component denotes that it is even more incomplete than an Injector.
 
-With this naming convention, you quickly see exactly what renders nothing. Even better, you can use tooling to better highlight it. My vim config highlights these a different color.
+> Null Components are denoted with a prefix and postfix `_`. e.g. `<_NullComponent_ />`
 
+Let's look at our example again with the naming convention applied. Which component(s) render nothing?
 
-Now, which of these components renders nothing in the DOM?
+```jsx
+import { Redirect as _Redirect_ } from 'react-router'
+import MyComponent from './my-component'
 
+<View>
+  <_Redirect_ />
+  <MyComponent />
+</View>
+```
+
+`<_Redirect_ />` jumps out as a Null Component. I don't need to read its source or have prior knowledge of it's implementation to know this.
+
+How about one more example, with an Injector Component added. How many components are rendered to the DOM?
 
 ```jsx
 <View>
   <Style_>
-    <View />
+    <Text />
   </Style_>
 
   <_Redirect_ />
 </View>
 ```
 
-## It Gets Better
+By convention, we know that `Style_` and `_Redirect_` do not add anything to the DOM. So, we can mentally comment them out:
 
-## And better tooling
+```jsx
+<View>
+  {/*<Style_>*/}
+    <Text />
+  {/*</Style_>*/}
+
+  {/*<_Redirect_ />*/}
+</View>
+```
+
+I count 2 in the above code.
+
+## It Gets Better
+Can you spot the error(s) in this render?
+
+```jsx
+<_MyComponent_>
+  <Child />
+</_MyComponent_>
+```
+
+Yes! Null Components should never have `children`--they'd never be rendered.
+
+## Even Better with Tooling
+Naming conventions enable tooling. I've edited my vim color scheme to style Null Components similarly to comments, which further reinforces their concept, and allows me to easily skim renders and identify or ignore them.
+
+![](https://github.com/kylpo/react-playbook/blob/master/assets/NullComponent.png?raw=true)
+
+In the future, we could also create lint rules to identify errors at code-time using this convention.
+
+We might also have some tool to hide all components that do now add something to the DOM.
+
+**more naming conventions => more helpful tooling**
 
 ## Other naming conventions
 Link to other naming conventions

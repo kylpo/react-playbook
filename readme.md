@@ -46,5 +46,4 @@ Conventions, patterns, rules, styles, etc reduce the mental load while you are d
 React Playbook is a collection of documents that attempts to give React its rails.
 
 ## Like this playbook? Maybe you'll like the other ones, too!
-- [Web Playbook](https://github.com/kylpo/web-playbook)
-- [Dev Playbook](https://github.com/kylpo/dev-playbook)
+[Web Playbook](https://github.com/kylpo/web-playbook) | [Dev Playbook](https://github.com/kylpo/dev-playbook)

@@ -93,7 +93,7 @@ With `constelation`, we've chosen to denote injector components with a postfix `
 Notice how much easier it is to identify the injectors? Also, we can now easily see that there are two elements added to the DOM (two do not have a postfix `_`).
 
 ## It Gets Better
-Can you spot the errors in this render?
+Can you spot the error(s) in this render?
 
 ```jsx
 <Style_ />
@@ -104,19 +104,15 @@ Can you spot the errors in this render?
 </TouchableWithoutFeedback_>
 ```
 
-Yes! Injector components should never be self-closing, and they should never wrap multiple children. We can fix this at code-time and not wait for the errors at runtime.
+Yes! Injector Components should never be self-closing, and they should never wrap multiple children. We can fix this at code-time and not wait for the errors at runtime.
 
 This naming convention helps developers understand the component's contract, and certainly would've helped me better understand how `TouchableWithoutFeedback` and `TouchableOpacity` differ.
 
 ## Even Better with Tooling
-Naming conventions enable tooling. I've edited my vim color scheme to color injector components as props are colored, which further reinforces the concept and allows me to easily skim renders and identify them.
+Naming conventions enable tooling. I've edited my vim color scheme to color Injector Components as props are colored, which further reinforces the concept and allows me to easily skim renders and identify them.
 
 ![](https://github.com/kylpo/react-playbook/blob/master/assets/InjectorComponents.png?raw=true)
 
 In the future, we could also create lint rules to identify errors at code-time using this convention.
 
 **more naming conventions => more helpful tooling**
-
----
-
-Note: I publish these to learn from your responses! Please let me know if you have any thoughts on the subject.
