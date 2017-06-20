@@ -97,5 +97,5 @@ In the future, we might also have an editor with a toggleable option to hide all
 > more conventions => more helpful tooling
 
 ## Other naming conventions
-- [<Injector_ >](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
-- [<IMMUTABLE />]()
+- [<Injector_ >](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) Components
+- [<IMMUTABLE />]() Components

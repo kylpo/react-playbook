@@ -1,7 +1,5 @@
 # A Naming Convention for Injector Components
-## What is an "injector component"?
-
-An injector component takes props, optionally computes new ones, then injects them into its child via `React.cloneElement()`. Crucially, it also does not add any new components to the DOM. It only exists in React's virtual DOM.
+An "injector component" takes props, optionally computes new ones, then injects them into its child via `React.cloneElement()`. Crucially, it also does not add any new components to the DOM. It only exists in React's virtual DOM.
 
 ```jsx
 export class InjectorComponent extends React.Component {
@@ -118,5 +116,5 @@ In the future, we could also create lint rules to identify errors at code-time u
 > more conventions => more helpful tooling
 
 ## Other naming conventions
-- [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
-- [<IMMUTABLE />]()
+- [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) Components
+- [<IMMUTABLE />]() Components
