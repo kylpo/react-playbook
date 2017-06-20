@@ -18,6 +18,8 @@ class decorators
 - Static enhancement? Use `HOC` or `@decorator`.
 - Dynamic enhancement? Use `cloneElement` or `child function`.
 
+[Using Functions as Children and Render Props in React Components](https://medium.com/codedaily/using-functions-as-children-and-render-props-in-react-components-113315b044ea)
+
 ## HOC
 ### But first, a detour
 What is a HOC?

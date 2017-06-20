@@ -1,5 +1,5 @@
 # A Naming Convention for Null Components
-A component that returns `null`, and likely uses lifecycle hooks to make side effects, is a "Null Component".
+A "Null Component" is a component that returns `null`, and likely uses lifecycle hooks to make side effects.
 
 ```jsx
 class NullComponent extends React.Component {
@@ -27,16 +27,18 @@ import MyComponent from './my-component'
 </View>
 ```
 
-I can't either. I'd need prior knowledge of the components or read through how they were implemented.
+I can’t either. I need prior knowledge of the components, or I need to read through their implementation.
 
 If you are familiar with React Router V4, you may know that it doesn't render anything, but what if you could know without prior knowledge?
 
-## Introducing the `<_NullComponent_ />` Convention
-Aligning closely with the [<Injector_ >](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) naming convention, Null Components are denoted with a postfix AND prefix `_`. e.g. `<_NullComponent_ />`. The idea is that the additional prefix `_` of a Null Component denotes that it is even more incomplete than an Injector.
+## Introducing the `<_NullComponent_ />` Naming Convention
+Aligning closely with the [<Injector_ >](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) naming convention, Null Components are denoted with a **prefix** and **postfix** `_` (e.g. `<_NullComponent_ />`). 
 
-> Null Components are denoted with a prefix and postfix `_`. e.g. `<_NullComponent_ />`
+> Null Components are denoted with a prefix and postfix `_`
 
-Let's look at our example again with the naming convention applied. Which component(s) render nothing?
+The idea is that the additional prefix `_` of a Null Component symbolizes that it adds even less to the DOM than an Injector. I picture the name falling through to become just the `_`, like the unused argument convention in javascript functions: `const handleEvent = (_, id) => { console.log(id) }`.
+
+Cool, let's look at our example again with the naming convention applied. Which component(s) render nothing?
 
 ```jsx
 import { Redirect as _Redirect_ } from 'react-router'
@@ -97,5 +99,5 @@ In the future, we might also have an editor with a toggleable option to hide all
 > more conventions => more helpful tooling
 
 ## Other naming conventions
-- [<Injector_ >](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) Components
-- [<IMMUTABLE />]() Components
+- [<Injector_ > Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
+- [<IMMUTABLE /> Components]()
