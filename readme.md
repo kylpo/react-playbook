@@ -29,7 +29,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Patterns and Conventions
   - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md)
   - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
-  - [<_Null_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
+  - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
 - Style
   - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)

@@ -1,6 +1,5 @@
 # A Naming Convention for Null Components
-## What is a Null Component?
-A component that returns `null`, and likely uses lifecycle hooks to make side effects.
+A component that returns `null`, and likely uses lifecycle hooks to make side effects, is a "Null Component".
 
 ```jsx
 class NullComponent extends React.Component {
@@ -86,7 +85,7 @@ Can you spot the error(s) in this render?
 </_MyComponent_>
 ```
 
-Yes! Null Components should never have `children`--they'd never be rendered.
+Yes! Null Components should never have `children` - they'd never be rendered.
 
 ## Even Better with Tooling
 Naming conventions enable tooling. I've edited my vim color scheme to style Null Components similarly to comments, which further reinforces their concept, and allows me to easily skim renders and identify or ignore them.
