@@ -10,9 +10,6 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Example App Structure](https://github.com/kylpo/react-playbook/blob/master/component-architecture/5_Example-App-Structure.md)
   - [Future Tooling](https://github.com/kylpo/react-playbook/blob/master/component-architecture/6_Future-Tooling.md)
   - [Appendix](https://github.com/kylpo/react-playbook/blob/master/component-architecture/Appendix.md)
-- Best Practices
-  - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
-  - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
 - Deep Dives
   - [You Can Spread Props In JSX, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md)
   - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md)
@@ -22,6 +19,9 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md)
   - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
   - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
+- Best Practices
+  - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
+  - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
@@ -47,4 +47,5 @@ Conventions, patterns, rules, styles, etc reduce the mental load while you are d
 React Playbook is a collection of documents that attempts to give React its rails.
 
 ## Like this playbook? Maybe you'll like the other ones, too!
-[Web Playbook](https://github.com/kylpo/web-playbook) | [Dev Playbook](https://github.com/kylpo/dev-playbook)
+- [Web Playbook](https://github.com/kylpo/web-playbook)
+- [Dev Playbook](https://github.com/kylpo/dev-playbook)
