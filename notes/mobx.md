@@ -10,11 +10,13 @@
 # MobX
 MobX is an app state manager (used in place of something like Redux)
 
----
-
-**UPDATE:** Below are fairly old notes by now. Honestly, just read [Mobdux: Combining the good parts of MobX and Redux](https://medium.com/@cameronfletcher92/mobdux-combining-the-good-parts-of-mobx-and-redux-61bac90ee448). It is the best MobX article I've read!
 
 ---
+
+***UPDATE:** Below are fairly old notes at this point. Honestly, just read [Mobdux: Combining the good parts of MobX and Redux](https://medium.com/@cameronfletcher92/mobdux-combining-the-good-parts-of-mobx-and-redux-61bac90ee448). It is the best MobX article I've read!*
+
+---
+
 
 ## Getting Started
 - [Video: 3 mins] [Mobx and React intro ](https://egghead.io/lessons/javascript-mobx-and-react-intro-syncing-the-ui-with-the-app-state-using-observable-and-observer?utm_content=buffer621b3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)

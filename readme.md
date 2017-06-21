@@ -18,6 +18,10 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md)
   - [All about cloneElement()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/cloneElement.md)
   - [What is a HOC?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/HOC.md)
+- Patterns and Conventions
+  - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md)
+  - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
+  - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
@@ -26,12 +30,8 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
   - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
-- Patterns and Conventions
-  - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md)
-  - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
-  - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
 - Style
-  - [coding style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
+  - [Coding Style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)
 - Useful Libs
   - [React](https://github.com/kylpo/react-playbook/blob/master/libs/react.md)
