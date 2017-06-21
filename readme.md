@@ -24,12 +24,13 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
-  - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
-  - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
-  - [React](https://github.com/kylpo/react-playbook/blob/master/notes/react.md)
-  - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
-  - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
+  - [How React Works](https://github.com/kylpo/react-playbook/blob/master/notes/how-react-works.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
+  - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
+  - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
+  - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
+  - [Security](https://github.com/kylpo/react-playbook/blob/master/notes/security.md)
+  - [Terms](https://github.com/kylpo/react-playbook/blob/master/notes/terms.md)
 - Style
   - [Coding Style](https://github.com/kylpo/react-playbook/blob/master/style/Code-Style.md)
   - [Decisions](https://github.com/kylpo/react-playbook/blob/master/style/Decisions.md)

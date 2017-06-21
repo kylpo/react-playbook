@@ -20,6 +20,19 @@ class decorators
 
 [Using Functions as Children and Render Props in React Components](https://medium.com/codedaily/using-functions-as-children-and-render-props-in-react-components-113315b044ea)
 
+
+
+## HOCs
+Basically a HOC enhances a component with new capabilities. This way you can abstract common behaviors into reusable pieces.
+
+## Types of HOCs
+Wrappers -> wrap children and introduce something to dom
+
+Manipulators (or Injectors) -> pass props (injects props into child(ren))
+
+## Function as Children
+[Ryan Florence on Twitter: "@wincent @timbucki @sebmck I think we're talking about <Thing>{() => ()}</Thing> v. <Thing render={() => ()}/> In which case, I, too, prefer the "attribute" form."](https://twitter.com/ryanflorence/status/865302840696225792)
+
 ## HOC
 ### But first, a detour
 What is a HOC?

@@ -1,11 +1,11 @@
 _WIP_
 
 ## Praising Preact
-"That's our situation now. We're switching to Preact, which causes a ripple effect of downsizing other parts. 💯" - [Eric Clemmons](https://twitter.com/ericclemmons/status/845055605924659200)
+> "That's our situation now. We're switching to Preact, which causes a ripple effect of downsizing other parts. 💯" - [Eric Clemmons](https://twitter.com/ericclemmons/status/845055605924659200)
 
-"PWA Update: - Regular 2G (no cache) - 10x CPU Slowdown - 100/100 Lighthouse" - [Kristofer Baxter](https://twitter.com/kristoferbaxter/status/844806518176329728)
+> "PWA Update: - Regular 2G (no cache) - 10x CPU Slowdown - 100/100 Lighthouse" - [Kristofer Baxter](https://twitter.com/kristoferbaxter/status/844806518176329728)
 
-"Yup! 😂 Preact weighs less than web component polyfills. So I struggle to find a good reason to use native web components today." - [Cory House](https://twitter.com/housecor/status/873320068993699840)
+> "Yup! 😂 Preact weighs less than web component polyfills. So I struggle to find a good reason to use native web components today." - [Cory House](https://twitter.com/housecor/status/873320068993699840)
 
 ## Libs
 - [preact-cli](https://github.com/developit/preact-cli)
