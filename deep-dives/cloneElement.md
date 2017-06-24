@@ -38,7 +38,7 @@ The code above renders a `div` with the `onPress` wired up. It is a contrived ex
 
 Also, this `<Press_ />` component allows us to clearly separate concerns and reuse them on other elements. We might reuse our `Press_` on an `image` or `span`, for example. We might have other `cloneElement()` components for concerns like `<Style_ />`, `<Animate_ />`, `<Touch_ />`, etc.
 
-*Wondering about this `Name_` convention? Read more about Injector Components [here](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md).*
+*Wondering about this `Name_` convention? Check out [Injector Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md).*
 
 ## How does it work?
 Given this page, what do we expect to see in console?
@@ -202,7 +202,9 @@ childProps:  Object {hi: "hi", bye: "bye"}
 cloneProps:  Object {hi: "bye", bye: "bye"}
 ```
 
-Notice the change in the value of `hi`. OK, one last thing. See that `bye: "bye"` part? That crept in because `Div` has `static defaultProps = {bye: 'bye'}`. Thanks to it being a `static`, `React.CreateElement()` is able to use it for the returned `element`.
+Notice the change in the value of `hi`.
+
+OK, one last thing. See that `bye: "bye"` part? That crept in because `Div` has `static defaultProps = {bye: 'bye'}`. Thanks to it being a `static`, `React.CreateElement()` is able to use it for the returned `element`.
 
 ### Order of operations in rendering elements, components, parents, and children?
 Allllright, lets finish this exploration. What do you expect to be logged in this example?
@@ -321,7 +323,7 @@ Basically just a React.createElement with a single `for` loop to copy over props
 Based on what we learned in TODO scu doc, these cloning wrappers will be re-rendering often. Consider caching the computation outside of `render` so its `render` can do as little work as possible. (Note: I have not tried this yet, but plan to.)
 
 ### `cloneElement()` of a `PureComponent` child
-> When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` can be a new object, but no value of that object should be a new object, array, or function.
+When cloning a `PureComponent`, the 2nd argument of the `cloneElement()` can be a new object, but no value of that object should be a new object, array, or function.
 
 Below is an example of safe usage:
 ```jsx

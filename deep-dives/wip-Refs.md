@@ -12,6 +12,8 @@ https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md#refs
 
 https://facebook.github.io/react/docs/refs-and-the-dom.html#caveats
 
+[Refs and the DOM - React Express](http://www.react.express/refs_and_the_dom)
+
 ## RefNode
 ```js
 refNode={node => this.node = node}

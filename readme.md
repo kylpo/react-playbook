@@ -11,17 +11,17 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [Future Tooling](https://github.com/kylpo/react-playbook/blob/master/component-architecture/6_Future-Tooling.md)
   - [Appendix](https://github.com/kylpo/react-playbook/blob/master/component-architecture/Appendix.md)
 - Deep Dives
-  - [You Can Spread Props In JSX, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md)
-  - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md)
-  - [All about cloneElement()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/cloneElement.md)
-  - [What is a HOC?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/HOC.md)
+  - [You Can Spread Props In JSX, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md) - [[Post](https://medium.com/@kylpo/you-can-spread-props-in-jsx-but-should-you-6cc3e766e281)]
+  - [All about shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md) - [[Post](https://medium.com/@kylpo/all-about-reacts-shouldcomponentupdate-cc3b1e497e97)]
+  - [All about cloneElement()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/cloneElement.md) - [[Post](https://medium.com/@kylpo/all-about-reacts-cloneelement-964853391337)]
+  - [What is a HOC?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/HOC.md) - [[Post](https://medium.com/@kylpo/what-is-a-hoc-bf91060be8b2)]
 - Patterns and Conventions
-  - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md)
-  - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
-  - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
+  - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md) - [[Post](https://medium.com/@kylpo/spacing-components-612ec4cf97ee)]
+  - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) - [[Post](https://medium.com/@kylpo/a-naming-convention-for-injector-components-c421a07debe5)]
+  - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) - [[Post](https://medium.com/@kylpo/a-naming-convention-for-null-components-fb0ab91b7cd2)]
 - Best Practices
   - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
-  - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md)
+  - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md) - [[Post](https://medium.com/@kylpo/redux-best-practices-eef55a20cc72)]
 - Notes
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [How React Works](https://github.com/kylpo/react-playbook/blob/master/notes/how-react-works.md)

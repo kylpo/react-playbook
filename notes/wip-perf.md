@@ -1,4 +1,13 @@
-_Work In Progress_
+```
+._   _       _            
+| \ | | ___ | |_ ___  ___
+|  \| |/ _ \| __/ _ \/ __|
+| |\  | (_) | ||  __/\__ \
+|_| \_|\___/ \__\___||___/
+
+```
+
+# React Performance
 
 ## Keep Stateful Components Shallow
 # Reduce re-renders by keeping stateful components shallow

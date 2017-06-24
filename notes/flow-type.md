@@ -18,11 +18,13 @@
 - [thejameskyle/babel-plugin-react-flow-props-to-prop-types: Convert Flow React props annotation to PropTypes](https://github.com/thejameskyle/babel-plugin-react-flow-props-to-prop-types). See
 [this](https://twitter.com/thejameskyle/status/870762618599817216) for the announcement.
 ![](https://pbs.twimg.com/media/DBWR8agUQAApEmb.jpg)
+- [Type safe CSS Modules with Flow](https://hackernoon.com/type-safe-css-modules-with-flow-dd95e761bbe5)
 
 # Still some rough patches
 - [$Keys types values missing in autocomplete](https://github.com/facebook/flow/issues/4215)
   - Example of editor tooling not being caught up with the actual type checking
 - No `@decorator` support
+- No platform-specific support (RN's `index.android.js`) - [issue](https://github.com/facebook/flow/issues/945#issuecomment-270590866)
 
 # Style
 ## `Array<Foo>`, not `Foo[]`
