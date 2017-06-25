@@ -4,14 +4,12 @@ An "Immutable Component" is a component that, after rendering once, can not re-r
 *See [this](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md) writeup if you'd like more information on `shouldComponentUpdate`*
 
 ## When Are Immutable Components Useful?
-As mentioned in [All About shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md), the most performant thing we could do in our React apps today would be to make all of our component's `scu => false`, but this isn't practical for dynamic apps. Even in dynamic apps, however, there are likely many components which will never change after they are rendered. 
+Many of your components will need to live and respond to `prop` or `state` updates, but there are also likely components that are never updated. Perhaps it is a layout component used for spacing, or a header component with a fixed label. So why should these unchanging components execute re-`render()`s and slow down the javascript thread? They shouldn't! They should be immutable components.
 
-React's primary mechanism for tuning performance is with a component's `shouldComponentUpdate()` lifecycle. Unfortunately, the component itself needs to specify that it should not update, but often this is better known at its parent level, where the component is actually used. So, I propose we have a standard and convention for tuning performance at the parent level.
+## The Problem
+React gives us a mechanism to create immutable components within the component's `shouldComponentUpdate()` method, but often this power exists at the wrong level. As a component, I don't always know that I should not re-render. As that component's **parent**, however, I might have more context to know if that component can safely be immutable.
 
-The standard is to always export a version of your component that sets `scu => false`. The convention is to call that Immutable Component like IMMUTABLE.
-
-## Can You Spot Them?
-Can you tell me which of these components do not re-render?
+Also, since immutable components prevent re-renders of their `children`, I should probably know how to identify them. Can you tell me which of these components do not re-render?
 
 ```jsx
 <Col>
@@ -27,28 +25,72 @@ Can you tell me which of these components do not re-render?
 
 I can’t either. I need prior knowledge of the components, or I need to read through their implementation.
 
-## Introducing the `<IMMUTABLE>` Component Naming Convention
+## Introducing the `<IMMUTABLE>` Standard and Naming Convention
+The standard is to export a version of your component that sets `scu => false`. This way, we're empowering the component's parent to make the performance optimization.
 
-`<SPACE size={40} />` means we can optimize `scu => false`
+The convention is to call that immutable component something in all caps, like `IMMUTABLE`.
 
-`<DIV className={} />` would also be useful
+> Export ta version of your component that sets `scu => false` and name it `UPPER_CASE`
 
-Would love for React to handle this automatically. Just like react auto-handles lowercase components, it could handle UPPER_CASE components and PROPS.
+```jsx
+<Col>
+  <VIEW padding={20}>
+    <TEXT>Hi there</TEXT>
+  </VIEW>
+
+  <SPACE size={20} />
+
+  <View padding={20}>
+    <Text>{this.state.label}</Text>
+  </View>
+
+  <TEXT style={styles.bye}>Bye bye now</TEXT>
+</Col>
+```
+
+Notice how much easier it is to identify the immutable components?
 
 ## It Gets Better
+Can you spot the error(s) in this render?
+
+```jsx
+  <VIEW padding={20}>
+    <Text>{this.state.label}</Text>
+  </VIEW>
+```
+Yes! Because immutable components prevent their `children` from re-rendering, too, they should probably not have non-immutable `children`.
 
 ## Even Better with Tooling
+Naming conventions enable tooling. I've edited my vim color scheme to style immutable components the same as values (`boolean`, `number`).
 
-## Extra Credit
-Immutable props
+![](https://github.com/kylpo/react-playbook/blob/master/assets/IMMUTABLE.png?raw=true)
+
+> more conventions => more helpful tooling
+
+## Future
+I would love for React to handle this automatically. Just like react auto-handles lowercase components (e.g. `<div />`), it could handle `UPPER_CASE` components.
+
+And how about going one step further in empowering a component's parent by specifying per-prop immutability?!
+
+```jsx
+<View
+  updatingProp={this.state.value}
+  IMMUTABLE_PROP='fix value'
+/>
+```
+
+Immutable props would be skipped from the `shouldComponentUpdate()` check.
+
+Perhaps a babel plugin could come along to handle immutable components and props?
 
 ## Other naming conventions
 - [<Injector_ > Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
 - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) Components
+
 ---
 
 # Notes to self
-Immutable vs Constant:
+"Immutable Component" vs "Constant Component":
 
 Chose immutable because immutable can not change after initialized. `const` is a one-time assignment, but it can mutate. `const` would make more sense if you declared the component outside of your class, and used that `const` inside your `render()`.
 
