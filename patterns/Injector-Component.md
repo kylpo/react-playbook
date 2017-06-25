@@ -116,5 +116,5 @@ In the future, we could also create lint rules to identify errors at code-time u
 > more conventions => more helpful tooling
 
 ## Other naming conventions
-- [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) Components
-- [<IMMUTABLE />]() Components
+- [<\_Null\_ /> Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md)
+- [<IMMUTABLE> Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Immutable-Component.md)

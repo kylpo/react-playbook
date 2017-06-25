@@ -18,7 +18,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Patterns and Conventions
   - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md) - [[post](https://medium.com/@kylpo/spacing-components-612ec4cf97ee)]
   - [<Injector_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-injector-components-c421a07debe5)]
-  - [<IMMUTABLE />](https://github.com/kylpo/react-playbook/blob/master/patterns/Immutable-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-injector-components-c421a07debe5)]
+  - [<IMMUTABLE />](https://github.com/kylpo/react-playbook/blob/master/patterns/Immutable-Component.md)
   - [<\_Null\_ />](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-null-components-fb0ab91b7cd2)]
 - Best Practices
   - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)

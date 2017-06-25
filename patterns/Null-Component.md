@@ -100,4 +100,4 @@ In the future, we might also have an editor with a toggleable option to hide all
 
 ## Other naming conventions
 - [<Injector_ > Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)
-- [<IMMUTABLE /> Components]()
+- [<IMMUTABLE> Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Immutable-Component.md)
