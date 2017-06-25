@@ -61,5 +61,5 @@ Shallow stateful components also play nicely with the [single responsibility pri
 ## Place connected container components as deep in the tree as possible
 The higher your connected container components, the more subcomponents will re-render on app store changes. So, try to place them as deep as possible. It is totally OK to have multiple connected components to the same store.
 
-#### Referene
+#### Reference
 Thought about while reading https://dev.bleacherreport.com/3-things-i-learned-about-working-with-data-in-redux-5fa0d5f89c8b#.ij978jnby
