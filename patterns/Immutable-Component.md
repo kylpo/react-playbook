@@ -1,5 +1,5 @@
 # A Standard and Naming Convention for Immutable Components
-An "Immutable Component" is a component that, after rendering once, can **not** re-render (i.e. it has `shouldComponentUpdate() { return false }`)
+An "Immutable Component" is a component that, after rendering once, can **not** re-render (i.e. it has `shouldComponentUpdate() { return false }`).
 
 *See [this](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md) writeup if you'd like more information on `shouldComponentUpdate`*
 
@@ -26,11 +26,11 @@ Also, since immutable components prevent re-renders of their `children`, I shoul
 I can’t either. I need prior knowledge of the components, or I need to read through their implementation.
 
 ## Introducing the `<IMMUTABLE>` Standard and Naming Convention
-The standard is to export a version of your component that sets `scu => false`. This way, we're empowering the component's parent to make the performance optimization.
+The standard is to export a version of your component that sets `sCU => false`. This way, we're empowering the component's parent to make the performance optimization.
 
 The convention is to call that immutable component something in all caps, like `IMMUTABLE`.
 
-> Export an `UPPER_CASE` version of your component that sets `scu => false`
+> Export an `UPPER_CASE` version of your component that sets `sCU => false`
 
 ```jsx
 <Col>
@@ -68,9 +68,9 @@ Naming conventions enable tooling. I've edited my vim color scheme to style immu
 > more conventions => more helpful tooling
 
 ## Future
-I would love for React to handle this standard automatically. Just like react auto-handles *lowercase* components (e.g. `<div />`) from *PascalCase* composite components, it could handle *UPPER_CASE* components.
+I would love for React to handle this standard automatically. Just like react handles *lowercase* components (e.g. `<div />`) differently from *PascalCase* composite components, it could also auto-handle *UPPER_CASE* components.
 
-And how about going one step further in empowering a component's parent by specifying per-prop immutability?!
+And how about going one step further in empowering a component's parent by specifying **per-prop immutability**?! Immutable props would be skipped from the `shouldComponentUpdate()` check.
 
 ```jsx
 <View
@@ -78,8 +78,6 @@ And how about going one step further in empowering a component's parent by speci
   IMMUTABLE_PROP='fixed value'
 />
 ```
-
-Immutable props would be skipped from the `shouldComponentUpdate()` check.
 
 Perhaps a babel plugin could come along to handle immutable components and props in the meantime?
 
