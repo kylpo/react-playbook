@@ -3,8 +3,12 @@ An "Immutable Component" is a component that, after rendering once, can not re-r
 
 *See [this](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md) writeup if you'd like more information on `shouldComponentUpdate`*
 
-
 ## When Are Immutable Components Useful?
+As mentioned in [All About shouldComponentUpdate()](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md), the most performant thing we could do in our React apps today would be to make all of our component's `scu => false`, but this isn't practical for dynamic apps. Even in dynamic apps, however, there are likely many components which will never change after they are rendered. 
+
+React's primary mechanism for tuning performance is with a component's `shouldComponentUpdate()` lifecycle. Unfortunately, the component itself needs to specify that it should not update, but often this is better known at its parent level, where the component is actually used. So, I propose we have a standard and convention for tuning performance at the parent level.
+
+The standard is to always export a version of your component that sets `scu => false`. The convention is to call that Immutable Component like IMMUTABLE.
 
 ## Can You Spot Them?
 Can you tell me which of these components do not re-render?
@@ -23,10 +27,6 @@ Can you tell me which of these components do not re-render?
 
 I can’t either. I need prior knowledge of the components, or I need to read through their implementation.
 
-React's primary mechanism for tuning performance is with a component's `shouldComponentUpdate()` lifecycle. Unfortunately, the component itself needs to specify that it should not update, but often this is better known at its parent level, where the component is actually used. So, I propose we have a standard and convention for tuning performance at the parent level.
-
-The standard is to always export a version of your component that sets `scu => false`. The convention is to call that Immutable Component like IMMUTABLE.
-
 ## Introducing the `<IMMUTABLE>` Component Naming Convention
 
 `<SPACE size={40} />` means we can optimize `scu => false`
@@ -38,6 +38,9 @@ Would love for React to handle this automatically. Just like react auto-handles 
 ## It Gets Better
 
 ## Even Better with Tooling
+
+## Extra Credit
+Immutable props
 
 ## Other naming conventions
 - [<Injector_ > Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md)

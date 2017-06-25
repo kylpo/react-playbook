@@ -24,7 +24,9 @@
 - [$Keys types values missing in autocomplete](https://github.com/facebook/flow/issues/4215)
   - Example of editor tooling not being caught up with the actual type checking
 - No `@decorator` support
+  - Really a bummer when using MobX
 - No platform-specific support (RN's `index.android.js`) - [issue](https://github.com/facebook/flow/issues/945#issuecomment-270590866)
+- Sometimes confusing error messages
 
 # Style
 ## `Array<Foo>`, not `Foo[]`
