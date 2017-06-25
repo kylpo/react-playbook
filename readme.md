@@ -52,4 +52,4 @@ React Playbook is a collection of documents that attempts to give React its rail
 - [Web Playbook](https://github.com/kylpo/web-playbook)
 - [Dev Playbook](https://github.com/kylpo/dev-playbook)
 
-Feel free to follow @kylpo on [Twitter](https://twitter.com/kylpo) and [Medium](https://medium.com/@kylpo)
+Feel free to follow **@kylpo** on [Twitter](https://twitter.com/kylpo) and [Medium](https://medium.com/@kylpo)

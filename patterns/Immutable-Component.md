@@ -68,7 +68,7 @@ Naming conventions enable tooling. I've edited my vim color scheme to style immu
 > more conventions => more helpful tooling
 
 ## Future
-I would love for React to handle this standard automatically. Just like react handles *lowercase* components (e.g. `<div />`) differently from *PascalCase* composite components, it could also auto-handle *UPPER_CASE* components.
+I would love for React to handle this standard automatically. Just like react handles *lowercase* components (e.g. `<div />`) differently from *PascalCase* composite components, it could handle *UPPER_CASE* components.
 
 And how about going one step further in empowering a component's parent by specifying **per-prop immutability**?! Immutable props would be skipped from the `shouldComponentUpdate()` check.
 
