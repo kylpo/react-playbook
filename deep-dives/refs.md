@@ -244,7 +244,7 @@ Well, if you're using [Preact](https://github.com/developit/preact), you're in l
 
 ![](https://camo.githubusercontent.com/a2afe02731bdae6d2eacd5d6c975d754423db525/687474703a2f2f692e696d6775722e636f6d2f56346b5467626e2e706e67)
 
-`linkref` does not [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a babel plugin is created in the future to accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [this](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
+`linkref` does **not** [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a babel plugin is created in the future to accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [This](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
 
 ## The gotchas
 ### Avoid inlining `ref` callbacks
@@ -270,8 +270,8 @@ I'll defer to Dan Abramov for this one:
 > That's a very long way to say "null means unmount, use it as a signal to perform cleanup" 😉😊 - [Glen Mailer](https://twitter.com/glenathan/status/859161300668166146)
 
 ### No `ref` for functional components
-- You may not use the ref attribute on functional components because they don't have instances. https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components
+> You may not use the ref attribute on functional components because they don't have instances. 
 
----
+from the [official docs](https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components).
 
-If you haven't read the [official docs](https://facebook.github.io/react/docs/refs-and-the-dom.html), or haven't read it in a year or so, I recommend you check it out.
+Speaking of the official docs, if you haven't read it, or it has been a while, I recommend you check it out!
