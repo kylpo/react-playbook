@@ -84,4 +84,4 @@ Open your local site with `?react_perf` (e.g. `localhost:8080?react_perf`) to se
 
 ![](https://cloud.githubusercontent.com/assets/810438/17909012/90eff4dc-697a-11e6-84c1-d83a07171585.png)
 
-Also, check out `Perf.start()`, `Perf.stop()`, and `Perf.printWasted` from [Performance Tools - React](https://facebook.github.io/react/docs/perf.html)
+Also, check out `Perf.start()`, `Perf.stop()`, and `Perf.printWasted()` from [Performance Tools - React](https://facebook.github.io/react/docs/perf.html) and the analysis tips in the [web-playbook]( https://github.com/kylpo/web-playbook/blob/master/notes/wip-performance.md#how-to-analyze-perf).
