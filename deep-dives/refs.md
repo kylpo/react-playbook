@@ -64,7 +64,7 @@ But reallistically, you're likely to need some imperative functionality: animati
 ## The cool stuff
 Now that we're using `ref` callbacks, we can do some pretty cool stuff with them.
 
-#### `refNode` pattern
+### `refNode` pattern
 Back when `ref` strings were the norm, it was difficult to extract out subcomponents:
 
 ```jsx
@@ -158,7 +158,7 @@ This is the `refNode` pattern, and is standardized across all primitives in [con
 
 > `refNode` pattern: composite components accept a `refNode` prop to set outermost DOM element `ref`
 
-#### onLayout
+### onLayout
 Measuring dimensions of a DOM node is often the reason to set a `ref` in the first place.
 
 ```jsx
@@ -224,8 +224,8 @@ class MyComponent extends React.Component {
 
 *Shoutout to [Mike Hobizal - @openmike503](https://twitter.com/openmike503) for the idea!*
 
-#### `linkRef`
-Alright, fine, `ref` callback give us more power than `ref` strings, but using them the correct way requires much more boilerplate.
+### `linkRef`
+Alright, fine, `ref` callbacks give us more power than `ref` strings, but using them the correct way requires much more boilerplate.
 
 ```jsx
   setRef = (node) => {
@@ -244,11 +244,10 @@ Well, if you're using [Preact](https://github.com/developit/preact), you're in l
 
 ![](https://camo.githubusercontent.com/a2afe02731bdae6d2eacd5d6c975d754423db525/687474703a2f2f692e696d6775722e636f6d2f56346b5467626e2e706e67)
 
-`linkref` does not [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a babel plugin is created in the future to accomplish this. 
-[babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below).
+`linkref` does not [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a babel plugin is created in the future to accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [this](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
 
 ## The gotchas
-#### Avoid inlining `ref` callbacks
+### Avoid inlining `ref` callbacks
 Code examples look so much simpler and easier to follow when `ref` callbacksare inlined:
 
 ```jsx
@@ -263,14 +262,14 @@ Do the right thing:
 <div ref={this.setRef} />
 ```
 
-#### `ref` can become `null` after it is set
+### `ref` can become `null` after it is set
 I'll defer to Dan Abramov for this one:
 
 > Ever wondered why callback refs get called with null during the updates? I wrote a bit about this: https://t.co/42kdCy0eKF - [Dan Abramov](https://twitter.com/dan_abramov/status/859159065498406913)
 
 > That's a very long way to say "null means unmount, use it as a signal to perform cleanup" 😉😊 - [Glen Mailer](https://twitter.com/glenathan/status/859161300668166146)
 
-#### No `ref` for functional components
+### No `ref` for functional components
 - You may not use the ref attribute on functional components because they don't have instances. https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components
 
 
