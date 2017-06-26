@@ -1,4 +1,4 @@
-# All About Refs
+# All About `ref`s
 `ref` is one of two special props in React--the other being `key`--because it isn't really a prop. Instead of being passed in to the associated component as a `this.props.ref`, React snatches it up, and uses it to associate a reference to the component's instance or DOM node.
 
 ```jsx
@@ -15,7 +15,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Above example shows setting `this.node` to the `div` DOM node via a `ref callback`. Note: the old `ref string` way, `<div ref='node' />` is deprecated; don't do it!
+Above example shows setting `this.node` to the `div` DOM node via a `ref` callback. Note: the old `ref` string way, `<div ref='node' />` is deprecated; don't do it!
 
 ## When is it a DOM node vs. a component's instance?
 If it is placed on a primitive like `<div ref={...} />`, it will give you the DOM node instance. If it is placed on a composite component like `<MyComponent ref={...} />`, it will give you the component instance.
@@ -62,10 +62,10 @@ You may be able to avoid needing a `ref` with declarative props, as the official
 But reallistically, you're likely to need some imperative functionality: animating, media playback, DOM measurements, etc. For example, an `Animate` component may be more unwieldy managing an `isAnimating` prop than just calling a `this.animate.trigger()`.
 
 ## The cool stuff
-Now that we're using `ref callbacks`, we can do some pretty cool stuff with them.
+Now that we're using `ref` callbacks, we can do some pretty cool stuff with them.
 
 #### `refNode` pattern
-Back when `ref strings` were the norm, it was difficult to extract out subcomponents:
+Back when `ref` strings were the norm, it was difficult to extract out subcomponents:
 
 ```jsx
 class MyTooBigComponent extends React.Component {
@@ -119,7 +119,7 @@ class MyTooBigComponent extends React.Component {
 }
 ```
 
-you lose access to the DOM node. But with `ref callbacks`, you can pass the callback as a non-`ref` prop, and the subcomponent can set the `ref` correctly.
+you lose access to the DOM node. But with `ref` callbacks, you can pass the callback as a non-`ref` prop, and the subcomponent can set the `ref` correctly.
 
 ```jsx
 class MySubComponent extends React.Component {
@@ -186,7 +186,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-This adds quite a bit of boilerplate to accomplish a simple task. Let's do better by combining our learnings of **when** a `ref` is set with the power of `ref callbacks`.
+This adds quite a bit of boilerplate to accomplish a simple task. Let's do better by combining our learnings of **when** a `ref` is set with the power of `ref` callbacks.
 
 ```jsx
 class MyComponent extends React.Component {
@@ -248,8 +248,8 @@ Well, if you're using [Preact](https://github.com/developit/preact), you're in l
 [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below).
 
 ## The gotchas
-#### Avoid inlining `ref callbacks`
-Code examples look so much simpler and easier to follow when `ref callbacks`are inlined:
+#### Avoid inlining `ref` callbacks
+Code examples look so much simpler and easier to follow when `ref` callbacksare inlined:
 
 ```jsx
 <div ref={node => this.node = node} />

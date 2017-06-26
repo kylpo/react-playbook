@@ -13,6 +13,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Deep Dives
   - [All about `shouldComponentUpdate()`](https://github.com/kylpo/react-playbook/blob/master/deep-dives/shouldComponentUpdate.md) - [[post](https://medium.com/@kylpo/all-about-reacts-shouldcomponentupdate-cc3b1e497e97)]
   - [All about `cloneElement()`](https://github.com/kylpo/react-playbook/blob/master/deep-dives/cloneElement.md) - [[post](https://medium.com/@kylpo/all-about-reacts-cloneelement-964853391337)]
+  - [All about `ref`s](https://github.com/kylpo/react-playbook/blob/master/deep-dives/ref.md)
   - [What is a `HOC`?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/HOC.md) - [[post](https://medium.com/@kylpo/what-is-a-hoc-bf91060be8b2)]
   - [You Can Spread Props In `JSX`, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md) - [[post](https://medium.com/@kylpo/you-can-spread-props-in-jsx-but-should-you-6cc3e766e281)]
 - Patterns and Conventions
