@@ -12,6 +12,18 @@
 ## Official Docs
 [Optimizing Performance - React](https://facebook.github.io/react/docs/optimizing-performance.html) docs have dramatically improved. Be sure to read through it!
 
+## What can slow down a React app?
+- Browser
+  - DOM elements and mutations
+  - Repaints and reflows
+  - Garbage collection
+- React
+  - Unnecessary renders
+  - Development build of React
+
+#### Reference
+[bvaughn at Forward JS](https://bvaughn.github.io/forward-js-2017/#/4/7)
+
 ## Keep stateful components shallow
 Reduce re-renders by keeping stateful components shallow. Given a render like:
 
@@ -63,3 +75,13 @@ The higher your connected container components, the more subcomponents will re-r
 
 #### Reference
 Thought about while reading https://dev.bleacherreport.com/3-things-i-learned-about-working-with-data-in-redux-5fa0d5f89c8b#.ij978jnby
+
+## Reduce bundle size
+[Two Quick Ways To Reduce React App’s Size In Production](https://medium.com/@rajaraodv/two-quick-ways-to-reduce-react-apps-size-in-production-82226605771a)
+
+## How to analyze perf
+Open your local site with `?react_perf` (e.g. `localhost:8080?react_perf`) to see React events in Chrome Devtool's Timeline.
+
+![](https://cloud.githubusercontent.com/assets/810438/17909012/90eff4dc-697a-11e6-84c1-d83a07171585.png)
+
+Also, check out `Perf.start()`, `Perf.stop()`, and `Perf.printWasted` from [Performance Tools - React](https://facebook.github.io/react/docs/perf.html)
