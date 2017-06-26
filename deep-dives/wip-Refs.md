@@ -44,6 +44,7 @@ class Logs extends React.Component {
   }
 }
 
+// Results:
 // 'render'
 // 'ref'
 // 'cdm'
@@ -61,25 +62,172 @@ You may be able to avoid needing a `ref` with declarative props, as the official
 But reallistically, you're likely to need some imperative functionality: animating, media playback, DOM measurements, etc. For example, an `Animate` component may be more unwieldy managing an `isAnimating` prop than just calling a `this.animate.trigger()`.
 
 ## The cool stuff
+Now that we're using `ref callbacks`, we can do some pretty cool stuff with them.
+
+#### `refNode` pattern
+Back when `ref strings` were the norm, it was difficult to extract out subcomponents:
+
+```jsx
+class MyTooBigComponent extends React.Component {
+  componentDidMount() {
+    // this.refs.componentToExtract is a DOM node
+  }
+
+  render() {
+    return (
+      <div>
+        {/* ... other stuff */}
+
+        <div ref='componentToExtract'>
+          <span>...</span>
+        </div>
+
+      </div>
+    )
+  }
+}
+```
+
+If you refactored it to
+
+```jsx
+class MySubComponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <span>...</span>
+      </div>
+    )
+  }
+}
+
+class MyTooBigComponent extends React.Component {
+  componentDidMount() {
+    // this.refs.componentToExtract is a component instance!
+  }
+
+  render() {
+    return (
+      <div>
+        {/* ... other stuff */}
+
+        <MySubComponent ref='componentToExtract' />
+
+      </div>
+    )
+  }
+}
+```
+
+you lose access to the DOM node. But with `ref callbacks`, you can pass the callback as a non-`ref` prop, and the subcomponent can set the `ref` correctly.
+
+```jsx
+class MySubComponent extends React.Component {
+  render() {
+    return (
+      <div ref={this.props.refNode}>
+        <span>...</span>
+      </div>
+    )
+  }
+}
+
+class MyTooBigComponent extends React.Component {
+  componentDidMount() {
+    // this.componentToExtract is again the DOM node!
+  }
+
+  setRef = (node) => {
+    this.componentToExtract = node
+  }
+
+  render() {
+    return (
+      <div>
+        {/* ... other stuff */}
+
+        <MySubComponent refNode={this.setRef} />
+
+      </div>
+    )
+  }
+}
+```
+
+This is the `refNode` pattern, and is standardized across all primitives in [constelation](https://github.com/constelation/monorepo), the react-native and web prototyping framework I use everyday.
+
+> `refNode` pattern: composite components accept a `refNode` prop to set outermost DOM element `ref`
 
 #### onLayout
-props to Mike for the idea
+Measuring dimensions of a DOM node is often the reason to set a `ref` in the first place.
 
-- https://facebook.github.io/react/docs/refs-and-the-dom.html#caveats
+```jsx
+class MyComponent extends React.Component {
+  componentDidMount() {
+    if (this.node) {
+      this.measure()
+    }
+  }
 
-https://github.com/necolas/react-native-web/issues/60
+  measure = () => {
+    const { height, width } = this.node.getBoundingClientRect()
+    // ...
+  }
 
-https://github.com/constelation/monorepo/issues/79
+  setRef = (node) => {
+    this.node = node
+  }
 
-## RefNode
-```js
-refNode={node => this.node = node}
-ref={this.props.refNode}
+  render() {
+    return (
+      <Image refNode={this.setRef} />
+    )
+  }
+}
 ```
+
+This adds quite a bit of boilerplate to accomplish a simple task. Let's do better by combining our learnings of **when** a `ref` is set with the power of `ref callbacks`.
+
+```jsx
+class MyComponent extends React.Component {
+  setRef = (node) => {
+    // null-check for reason mentioned later
+    if (node) {
+      const { height, width } = node.getBoundingClientRect()
+      // ...
+    }
+  }
+
+  render() {
+    return (
+      <Image refNode={this.setRef} />
+    )
+  }
+}
+```
+
+Cool! That radically reduces our boilerplate. We don't even need to store the `ref` in our instance. In [constelation](https://github.com/constelation/monorepo), we've gone one step further in reducing boilerplate for our primitives. We reduced the above code into a simple `onLayout` prop (similar to [react-native](https://facebook.github.io/react-native/docs/view.html#onlayout)).
+
+```jsx
+class MyComponent extends React.Component {
+  handleLayout = ({ height, width }) => {
+    // ...
+  }
+
+  render() {
+    return (
+      <Image onLayout={this.handleLayout} />
+    )
+  }
+}
+```
+
+*Shoutout to [Mike Hobizal - @openmike503](https://twitter.com/openmike503) for the idea!*
 
 #### linkRef
 - how to reduce boilerplate with something like https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function?
 - wish I could have a `setRef` prop that just accepts a pointer to my instance field.
+
 OK, fine, callback refs replaced string refs. This gives us more power! But, dang, this does add more boilerplate.
 linkRef
 
@@ -90,9 +238,9 @@ linkRef
 - [James Kyle on Twitter: "@_developit @aweary @preactjs Here you go https://t.co/QT6YrAaNBE"](https://twitter.com/thejameskyle/status/859420749844680708)
 
 
-## Gotchas
-#### Avoid inlining `ref callback`s
-Code examples look so much simpler and easier to follow when `ref callback`s are inlined:
+## The gotchas
+#### Avoid inlining `ref callbacks`
+Code examples look so much simpler and easier to follow when `ref callbacks`are inlined:
 
 ```jsx
 <div ref={node => this.node = node} />
