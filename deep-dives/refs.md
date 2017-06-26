@@ -272,7 +272,6 @@ I'll defer to Dan Abramov for this one:
 ### No `ref` for functional components
 - You may not use the ref attribute on functional components because they don't have instances. https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components
 
-
 ---
 
-If you haven't read the official docs or haven't read it in a year or so, I recommend you read it. It even covers functional components not being `ref`-able.
+If you haven't read the [official docs](https://facebook.github.io/react/docs/refs-and-the-dom.html), or haven't read it in a year or so, I recommend you check it out.
