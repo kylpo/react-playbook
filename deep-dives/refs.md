@@ -59,7 +59,7 @@ You may be able to avoid needing a `ref` with declarative props, as the official
 
 > For example, instead of exposing `open()` and `close()` methods on a `Dialog` component, pass an `isOpen` prop to it.
 
-But reallistically, you're likely to need some imperative functionality: animating, media playback, DOM measurements, etc. For example, an `Animate` component may be more unwieldy managing an `isAnimating` prop than just calling a `this.animate.trigger()`.
+But realistically, you're likely to need some imperative functionality: animating, media playback, DOM measurements, etc. For example, an `Animate` component may be more unwieldy managing an `isAnimating` prop than just calling a `this.animate.trigger()`.
 
 ## The cool stuff
 Now that we're using `ref` callbacks, we can do some pretty cool stuff with them.
@@ -156,7 +156,7 @@ class MyTooBigComponent extends React.Component {
 
 This is the `refNode` pattern, and is standardized across all primitives in [constelation](https://github.com/constelation/monorepo), the react-native and web prototyping framework I use everyday.
 
-> `refNode` pattern: composite components accept a `refNode` prop to set outermost DOM element `ref`
+> `refNode` pattern: composite components accept a `refNode` prop to set outermost DOM element's `ref`
 
 ### onLayout
 Measuring dimensions of a DOM node is often the reason to set a `ref` in the first place.
@@ -240,7 +240,7 @@ vs. `<div ref='myRef' />`
 
 Wouldn't it be nice to use `ref` callbacks with the same DX of `ref` strings?
 
-Well, if you're using [Preact](https://github.com/developit/preact), you're in luck. [linkref](https://github.com/developit/linkref), from Preact's creator, provides an abstraction for creating and setting function `ref`s:
+Well, if you're using [Preact](https://github.com/developit/preact), you're in luck. [linkref](https://github.com/developit/linkref), from Preact's creator, provides an abstraction for creating and setting function `ref`s.
 
 ![](https://camo.githubusercontent.com/a2afe02731bdae6d2eacd5d6c975d754423db525/687474703a2f2f692e696d6775722e636f6d2f56346b5467626e2e706e67)
 
@@ -270,8 +270,8 @@ I'll defer to Dan Abramov for this one:
 > That's a very long way to say "null means unmount, use it as a signal to perform cleanup" 😉😊 - [Glen Mailer](https://twitter.com/glenathan/status/859161300668166146)
 
 ### No `ref` for functional components
-> You may not use the ref attribute on functional components because they don't have instances. 
+> You may not use the `ref` attribute on functional components because they don't have instances. 
 
 from the [official docs](https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components).
 
-Speaking of the official docs, if you haven't read it, or it has been a while, I recommend you check it out!
+Speaking of the official docs, if it has been a while, I recommend you re-read them!
