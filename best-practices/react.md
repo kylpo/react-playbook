@@ -28,10 +28,11 @@
 ## Context
 - Always make sure context is shallowly immutable, avoids issues with PureRenderMixin components not propagating context changes
   - [mweststrate tweet](https://twitter.com/mweststrate/status/764182336888078336)
+
 ## APIs
 - Generic components that need broad customization should provide and act on a `render___` prop to override their default implementation.
   - e.g. Navbar's `title` (string) prop vs `renderTitle` (function (Component)) prop
-- Only use `setState` iff it affects something that should be rerendered and it can not be computed from props.
+- Only use `setState` if and only if it affects something that should be rerendered and it can not be computed from props.
   - from [Dan](https://twitter.com/dan_abramov/status/749710501916139520):
 ![](https://pbs.twimg.com/media/CmeBsGzW8AQp_av.jpg)
 
@@ -39,7 +40,7 @@
 - [The Netflix Tech Blog: Crafting a high-performance TV user interface using React](http://techblog.netflix.com/2017/01/crafting-high-performance-tv-user.html)
   - Goes in to react.createElement() costs and avoiding it with inlining, which can only work in `ref`-less components.
   - Also an interesting idea of merging props with `__proto__` and not something like `const newProps = Object.assign({}, this.props, { prop1: 'foo' })`
-- Do not pass in Array or Object literals to subcomponents. If you do, PureRenderMixin will not work, since `['hi', 'bye'] !== ['hi', 'bye']`. Instead, move that array creation to an instance field or completely outside of the component. This means you should also define inline styles outside of your `render()`.
+- Where possible, do not pass in Array or Object literals to subcomponents. If you do, PureRenderMixin will not work, since `['hi', 'bye'] !== ['hi', 'bye']`. Instead, move that array creation to an instance field or completely outside of the component. This means you should also define inline styles outside of your `render()`.
   - [Performance Engineering with React](http://benchling.engineering/performance-engineering-with-react/)
   - [React.js pure render performance anti-pattern — Medium](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.y7zpsjsu6)
 - "Don’t stress over binding in render() too much. In my experience it makes a real difference in maybe 10% of cases."
@@ -81,5 +82,3 @@ Write component tests that accomplish the following goals (from [Getting Started
 "Testing exact render is bad, but testing props have correct impact in render is big. Also events and lifecycle." - [@FwardPhoenix](https://twitter.com/FwardPhoenix/status/757591796641914880)
 
 "Jest snapshot testing + inline style + css-layout = auto layout regression prevention." - [cheng lou](https://twitter.com/_chenglou/status/758461301307748353)
-
-### Many more to come...

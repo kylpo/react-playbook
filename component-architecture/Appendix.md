@@ -8,6 +8,7 @@
 ```
 # Appendix
 ## Other Proposed Architectures
+- [react-conf-app/app/scenes at master · Thinkmill/react-conf-app](https://github.com/Thinkmill/react-conf-app/tree/master/app/scenes) is really similar
 - [Grouped by component complexity - like Atomic Design](https://twitter.com/abritinthebay/status/731132426773110784)
 - Dan Abramov tweets
   - [People ask about Redux app file structure very often. Here’s what I think might be sensible:](https://twitter.com/dan_abramov/status/731121278971707392)
@@ -16,3 +17,4 @@
 - [Rules For Structuring (Redux) Applications — Jack Hsu](http://jaysoo.ca/2016/02/28/organizing-redux-application/)
 - [Node Hero - Node.js Project Structure Tutorial | @RisingStack](https://blog.risingstack.com/node-hero-node-js-project-structure-tutorial/)
 - [Ember Module unification - dgeb](https://github.com/dgeb/rfcs/blob/module-unification/text/0000-module-unification.md)
+- [How OkCupid organizes its multi-page React app](https://tech.okcupid.com/how-okcupid-organizes-its-multi-page-react-app/?utm_source=reactnl&utm_medium=email)
