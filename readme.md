@@ -17,7 +17,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [What is a `HOC`?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/HOC.md) - [[post](https://medium.com/@kylpo/what-is-a-hoc-bf91060be8b2)]
   - [You Can Spread Props In `JSX`, But Should You?](https://github.com/kylpo/react-playbook/blob/master/deep-dives/JSX-Spread.md) - [[post](https://medium.com/@kylpo/you-can-spread-props-in-jsx-but-should-you-6cc3e766e281)]
 - Patterns and Conventions
-  - [`<IMMUTABLE />`](https://github.com/kylpo/react-playbook/blob/master/patterns/Immutable-Component.md)
+  - [`<IMMUTABLE />`](https://github.com/kylpo/react-playbook/blob/master/patterns/Immutable-Component.md) - [[post](https://medium.com/@kylpo/a-standard-and-naming-convention-for-immutable-components-7a933f5f5118)]
   - [`<Injector_ />`](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-injector-components-c421a07debe5)]
   - [`<_Null_ />`](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-null-components-fb0ab91b7cd2)]
   - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md) - [[post](https://medium.com/@kylpo/spacing-components-612ec4cf97ee)]
