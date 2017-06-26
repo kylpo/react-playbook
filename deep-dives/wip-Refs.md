@@ -206,7 +206,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-Cool! That radically reduces our boilerplate. We don't even need to store the `ref` in our instance. In [constelation](https://github.com/constelation/monorepo), we've gone one step further in reducing boilerplate for our primitives. We reduced the above code into a simple `onLayout` prop (similar to [react-native](https://facebook.github.io/react-native/docs/view.html#onlayout)).
+Cool! That radically reduces our boilerplate. We don't even need to store the `ref` for later use. In [constelation](https://github.com/constelation/monorepo), we've gone one step further in reducing boilerplate for our primitives. We abstracted the above code into a simple `onLayout` prop (similar to [react-native](https://facebook.github.io/react-native/docs/view.html#onlayout), but the measure only happens once).
 
 ```jsx
 class MyComponent extends React.Component {
@@ -224,19 +224,28 @@ class MyComponent extends React.Component {
 
 *Shoutout to [Mike Hobizal - @openmike503](https://twitter.com/openmike503) for the idea!*
 
-#### linkRef
-- how to reduce boilerplate with something like https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function?
-- wish I could have a `setRef` prop that just accepts a pointer to my instance field.
+#### `linkRef`
+Alright, fine, `ref` callback give us more power than `ref` strings, but using them the correct way requires much more boilerplate.
 
-OK, fine, callback refs replaced string refs. This gives us more power! But, dang, this does add more boilerplate.
-linkRef
+```jsx
+  setRef = (node) => {
+    this.node = node
+  }
 
-[developit/linkref: Like Linked State, but for Refs. Works with Preact and React.](https://github.com/developit/linkref)
+  // ... later
+  <div ref={this.setRef} />
+```
 
+vs. `<div ref='myRef' />`
 
-- [Jason Miller 🦊⚛ on Twitter: "@aweary This is one reason I recommend linkRef: https://t.co/dEpsDrOrIT https://t.co/euiZDxFF8W"](https://twitter.com/_developit/status/859384258498101250)
-- [James Kyle on Twitter: "@_developit @aweary @preactjs Here you go https://t.co/QT6YrAaNBE"](https://twitter.com/thejameskyle/status/859420749844680708)
+Wouldn't it be nice to use `ref` callbacks with the same DX of `ref` strings?
 
+Well, if you're using [Preact](https://github.com/developit/preact), you're in luck. [linkref](https://github.com/developit/linkref), from Preact's creator, provides an abstraction for creating and setting function `ref`s:
+
+![](https://camo.githubusercontent.com/a2afe02731bdae6d2eacd5d6c975d754423db525/687474703a2f2f692e696d6775722e636f6d2f56346b5467626e2e706e67)
+
+`linkref` does not [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a babel plugin is created in the future to accomplish this. 
+[babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below).
 
 ## The gotchas
 #### Avoid inlining `ref callbacks`
