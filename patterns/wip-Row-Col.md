@@ -1,3 +1,15 @@
+# The Case for `Row` and `Col` Components
+React Native gives us a really smart set of primitives out of the box. `View` is one of these primitives, and it forces the use of flexbox, but also importantly defaults to `flexDirection: 'column'`.
+
+
+In React Native, we are given View.
+
+Made our own primitives, immediately built Row, Col, can now do convenient things like `alignHorizontal`.
+
+`horizontal` prop explored for consistency with `ScrollView`
+
+---
+
 Had a mini breakthrough on our `<View horizontal >` discussion. I realized having `Row` is REALLY useful for reading jsx as a dev. Specifically, it tells to me “instead of reading components top-down, now read them left-right”. This of course is what `<View horizontal >` tells me, but it fails in with the ending tag. The skimmer can not easily see _when_ to stop reading left-right, especially if the children jsx height is tall enough to not see the opening and closing `View` tag on the screen. SO, I’m thinking about bring it back in some form. (edited)
 
 Here’s a code sample with `Row` in it:

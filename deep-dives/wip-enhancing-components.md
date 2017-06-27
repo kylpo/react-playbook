@@ -7,6 +7,7 @@ HOC, class decorators, cloneElement, child function
 
 Really, it comes down to whether you'd like this enhancement done inside a component's `render()` (i.e. runtime/dynamic) or not.
 
+Pros and Cons of each of the 4 options
 
 class decorators
 - [Exploring EcmaScript Decorators – Google Developers – Medium](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841)

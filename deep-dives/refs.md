@@ -1,5 +1,5 @@
 # All About `ref`s
-`ref` is one of two special props in React--the other being `key`--because it isn't really a prop. Instead of being passed in to the associated component as a `this.props.ref`, React snatches it up, and uses it to associate a reference to the component's instance or DOM node.
+`ref` is one of two special props in React--the other being `key`--because it isn't really a prop. Instead of being passed in to the associated component as a `this.props.ref`, React snatches it up and uses it to associate a reference to the component's instance or DOM node.
 
 ```jsx
 class MyComponent extends React.Component {
@@ -27,7 +27,7 @@ If it is placed on a primitive like `<div ref={...} />`, it will give you the DO
 Why? Lowercase tags in React are your lowest level primitives. React treats them different from your custom composite components, which can **not** be lowercase.
 
 ## When is the `ref` first set?
-After the first `render()`, but before `componentDidMount()`, your ref will be accessible.
+After the first `render()`, but before `componentDidMount()`, your ref will be set.
 
 Feel free to see for yourself:
 ```jsx
@@ -53,16 +53,16 @@ class Logs extends React.Component {
 ## When would you want a `ref`?
 OK, you know how to get a `ref`, what it points to, and when it is set, but **when** should you actually reach for this power?
 
-Ideally, never! `ref`s impact performance be disabling some production babel transforms ([inline-elements](https://babeljs.io/docs/plugins/transform-react-inline-elements/) and [constant-elements](https://babeljs.io/docs/plugins/transform-react-constant-elements/). Netflix even goes as far as entirely preventing their custom renderer from using `ref`s ([source](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b)) for component inlining.
+Ideally, never! `ref`s impact performance by disabling some production babel transforms ([inline-elements](https://babeljs.io/docs/plugins/transform-react-inline-elements/) and [constant-elements](https://babeljs.io/docs/plugins/transform-react-constant-elements/)). Netflix even goes as far as entirely preventing their custom renderer from using `ref`s ([source](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b)) for component inlining.
 
-You may be able to avoid needing a `ref` with declarative props, as the official docs say:
+And you may be able to forgo a `ref` with declarative props, as the official docs say:
 
 > For example, instead of exposing `open()` and `close()` methods on a `Dialog` component, pass an `isOpen` prop to it.
 
-But realistically, you're likely to need some imperative functionality: animating, media playback, DOM measurements, etc. For example, an `Animate` component may be more unwieldy managing an `isAnimating` prop than just calling a `this.animate.trigger()`.
+But realistically, you're likely to need some imperative functionality: animating, media playback, DOM measurements, etc. For example, an `Animate` component may be more unwieldy managing an `isAnimating` prop than just calling `this.animate.trigger()`.
 
 ## The cool stuff
-Now that we're using `ref` callbacks, we can do some pretty cool stuff with them.
+With `ref` callbacks, we can do some pretty cool stuff!
 
 ### `refNode` pattern
 Back when `ref` strings were the norm, it was difficult to extract out subcomponents:
@@ -154,7 +154,7 @@ class MyTooBigComponent extends React.Component {
 }
 ```
 
-This is the `refNode` pattern, and is standardized across all primitives in [constelation](https://github.com/constelation/monorepo), the react-native and web prototyping framework I use everyday.
+This is the `refNode` pattern, and is standardized across all primitives in [constelation](https://github.com/constelation/monorepo), a react-native and web prototyping framework my team uses everyday.
 
 > `refNode` pattern: composite components accept a `refNode` prop to set outermost DOM element's `ref`
 
@@ -238,23 +238,23 @@ Alright, fine, `ref` callbacks give us more power than `ref` strings, but using 
 
 vs. `<div ref='myRef' />`
 
-Wouldn't it be nice to use `ref` callbacks with the same DX of `ref` strings?
+Wouldn't it be nice to use `ref` callbacks with the same DX (developer experience) of `ref` strings?
 
 Well, if you're using [Preact](https://github.com/developit/preact), you're in luck. [linkref](https://github.com/developit/linkref), from Preact's creator, provides an abstraction for creating and setting function `ref`s.
 
 ![](https://camo.githubusercontent.com/a2afe02731bdae6d2eacd5d6c975d754423db525/687474703a2f2f692e696d6775722e636f6d2f56346b5467626e2e706e67)
 
-`linkref` does **not** [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a babel plugin is created in the future to accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [This](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
+Unfortunatelu, `linkref` does **not** [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a future babel plugin will accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [This](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
 
 ## The gotchas
-### Avoid inlining `ref` callbacks
-Code examples look so much simpler and easier to follow when `ref` callbacksare inlined:
+### Don't inline `ref` callbacks
+Code examples look so much simpler and easier to follow when `ref` callbacks are inlined:
 
 ```jsx
 <div ref={node => this.node = node} />
 ```
 
-And this is why so many tutorials use them, but **don't** bring this pattern into your code! This inline function produces a performance hit because it creates a new function on **EVERY** re-`render()`.
+Which is why so many tutorials show them inlined, but **don't** bring this bad practice into your code! Arrow and `bind` functions in a `render()` produce a performance hit by creating a new function on **EVERY** re-render.
 
 Do the right thing:
 
@@ -270,8 +270,8 @@ I'll defer to Dan Abramov for this one:
 > That's a very long way to say "null means unmount, use it as a signal to perform cleanup" 😉😊 - [Glen Mailer](https://twitter.com/glenathan/status/859161300668166146)
 
 ### No `ref` for functional components
-> You may not use the `ref` attribute on functional components because they don't have instances. 
+From the [official docs](https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components):
 
-from the [official docs](https://facebook.github.io/react/docs/refs-and-the-dom.html#refs-and-functional-components).
+> You may not use the `ref` attribute on functional components because they don't have instances.
 
-Speaking of the official docs, if it has been a while, I recommend you re-read them!
+Speaking of the official docs, if it has been a while, I recommend you re-read them! They have really improved recently.
