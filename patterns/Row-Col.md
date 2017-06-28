@@ -44,7 +44,7 @@ Now let's add some styles to these `View`s. How will they render?
 </View>
 ```
 
-Hmmm, all of a sudden, when reading my JSX, I don't **know** that they'll render top-down. Either of these newly introduced styles may modify the `flexDirection`. So, I need to jump to the code that defines these styles to figure out how I should read the JSX. This jumping back and forth inhibits the skimability and efficient of your code. It'd be like reading a book where you frequently need to look up words in a dictionary.
+Hmmm, all of a sudden, when reading my JSX, I don't **know** that they'll render top-down. Either of these newly introduced styles may modify the `flexDirection`. So, I need to jump to the code that defines these styles to figure out how I should read the JSX. This jumping back and forth inhibits the skimability and efficiency of your code. It is like reading a technical book, where you frequently need to look up words in a dictionary.
 
 ## The Solution
 Let's add `Row` into the mix. `Row`, for now, just **forces** its `flexDirection` to `'row'`. How do you expect this to render?
@@ -95,13 +95,10 @@ In this new system, `View` is still necessary for two use cases:
 1) A variable `flexDirection`
 
 ```jsx
-<Col style={styles.outer}>
-  <Text>Hi</Text>
-  <View style={styles.inner}>
-    <Text>Hi again</Text>
-    <Text>Bye</Text>
-  </View>
-</Col>
+<View style={style}>
+  <Text>Hi again</Text>
+  <Text>Bye</Text>
+</View>
 ```
 
 `View` signals to the reader that they can't just keep skimming here. They need more context to know if they should read top-down, left-right, bottom-up, or right-left.
@@ -117,7 +114,7 @@ In this new system, `View` is still necessary for two use cases:
 With one child, the direction does not matter, so we signal that to the reader by using `View`.
 
 ## Going Further
-With [constelation](https://github.com/constelation/monorepo), a prototyping framework, we've taken `Row` and `Col` a bit further by adding `alignVertical: 'top' | 'center' | 'bottom'`, `alignHorizontal: 'left' | 'center' | 'right'`, `reverse` for `'column-reverse'` and `'row-reverse'`, and some other convenience props.
+With [constelation](https://github.com/constelation/monorepo), the prototyping framework my team uses, we've taken `Row` and `Col` a bit further by adding `alignVertical: 'top' | 'center' | 'bottom'`, `alignHorizontal: 'left' | 'center' | 'right'`, `reverse` for `'column-reverse'` and `'row-reverse'`, and some other convenience props.
 
 ```jsx
 <Row
