@@ -1,5 +1,5 @@
 # The Case for `<Row>` (and `<Col>`)
-React Native's base set of components are amazing! `<View>` enforcing `flexbox` and defaulting to `position: relative`? *So* smart.
+React Native's base set of components are amazing! `<View>` enforcing `flexbox` and defaulting to `{flexDirection: 'column', position: 'relative'}`? *So* smart.
 
 It is such a successful set of components and constraints to work with that web developers (like me) are bringing them to the web. Twitter Lite using react-native-for-web and Leland's react-primitives, for example.
 
