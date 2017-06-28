@@ -129,12 +129,12 @@ With [constelation](https://github.com/constelation/monorepo), the prototyping f
 
 ## Some Questions You May Have
 
-#### Why not follow `ScrollView`'s lead of using a `horizontal` prop?
+### Why not follow `ScrollView`'s lead of using a `horizontal` prop?
 We actually went down this road! We first started with `Row` and `Col`, then switched to just `View` with a `horizontal` prop for the consistency and ease of teaching. Shortly after we made the switch, however, we missed the clarity of having `Row` and `Col`. The explicitness helps, but also, the **closing tag** remains descriptive!
 
 Compare this partial JSX
 
-```jsx
+```
     <Something />
     <OtherThing />
   </View>
@@ -145,7 +145,7 @@ Compare this partial JSX
 
 with this
 
-```jsx
+```
     <Something />
     <OtherThing />
   </Col>
@@ -156,8 +156,8 @@ with this
 
 In both cases, they render the same thing, but the JSX of the `Col` and `Row` is instantly understood. No scrolling up needed.
 
-#### Does this mean we should have `ScrollRow` and `ScrollCol`?
+### Does this mean we should have `ScrollRow` and `ScrollCol`?
 Well yeah, actually, that would be nice. We have not yet done this, but I don't see how it could be a bad thing.
 
-#### Why not replace `View` with something more descriptive, like `Flex`?
+### Why not replace `View` with something more descriptive, like `Flex`?
 I would like to do this. Or maybe just add a `Flex` for when `flexDirection` is variable, and leave `View` for the case that there is only one child. My team is not yet unified on this, however, so it has not landed in [constelation](https://github.com/constelation/monorepo).
