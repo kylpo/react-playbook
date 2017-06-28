@@ -21,7 +21,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [`<Injector_ />`](https://github.com/kylpo/react-playbook/blob/master/patterns/Injector-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-injector-components-c421a07debe5)]
   - [`<_Null_ />`](https://github.com/kylpo/react-playbook/blob/master/patterns/Null-Component.md) - [[post](https://medium.com/@kylpo/a-naming-convention-for-null-components-fb0ab91b7cd2)]
   - [Spacing Components](https://github.com/kylpo/react-playbook/blob/master/patterns/Spacing-Components.md) - [[post](https://medium.com/@kylpo/spacing-components-612ec4cf97ee)]
-  - [The Case for `<Row>` (and `<Col>`)](https://github.com/kylpo/react-playbook/blob/master/patterns/Row-Col.md)
+  - [The Case for `<Row>` (and `<Col>`)](https://github.com/kylpo/react-playbook/blob/master/patterns/Row-Col.md) - [[post](https://medium.com/@kylpo/the-case-for-row-and-col-6c7466d900d8)]
 - Best Practices
   - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
   - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md) - [[post](https://medium.com/@kylpo/redux-best-practices-eef55a20cc72)]
