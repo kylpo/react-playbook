@@ -71,7 +71,7 @@ Another example:
 </View>
 ```
 
-Within `View`, since there isn't a `style` prop, I can read top-down. Then when I step in to `Row`, it tells me I can read left-right.
+Within `View`, since there isn't a `style` prop, I can read top-down. Then when I step in to `Row`, it tells me I should read left-right.
 
 Now, we could just stop here with adding `Row` to our toolkit, but `View` will often have a `style` prop, so lets formalize things with adding `Col` as well. `Col`, for now, just **forces** its `flexDirection` to `'column'`.
 
