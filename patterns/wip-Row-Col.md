@@ -1,4 +1,13 @@
-# The Case for `Row` and `Col` Components
+# The Case for `<Row>` (and `<Col>`)
+React Native's base set of components are amazing! `<View>` enforcing `flexbox` and defaulting to `position: relative`? *So* smart.
+
+It is such a successful set of components and constraints to work with that web developers (like me) are bringing them to the web. Twitter Lite using react-native-for-web and Leland's react-primitives, for example.
+
+I'd like to add a couple new members to this base set's layout components.
+
+
+---
+
 React Native gives us a really smart set of primitives out of the box. `View` is one of these primitives, and it forces the use of flexbox, but also importantly defaults to `flexDirection: 'column'`.
 
 
