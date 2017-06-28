@@ -71,7 +71,7 @@ Another example:
 </View>
 ```
 
-Within `View`, since there isn't a `style` prop, I can read top-down. Then when I step in to `Row`, I can read left-right.
+Within `View`, since there isn't a `style` prop, I can read top-down. Then when I step in to `Row`, it tells me I can read left-right.
 
 Now, we could just stop here with adding `Row` to our toolkit, but `View` will often have a `style` prop, so lets formalize things with adding `Col` as well. `Col`, for now, just **forces** its `flexDirection` to `'column'`.
 
@@ -127,80 +127,37 @@ With [constelation](https://github.com/constelation/monorepo), the prototyping f
 </Row>
 ```
 
-*This post has already gotten longer than I intended. If you have any more questions, please check out the full write-up in the react-playbook.*
+## Some Questions You May Have
 
----
+#### Why not follow `ScrollView`'s lead of using a `horizontal` prop?
+We actually went down this road! We first started with `Row` and `Col`, then switched to just `View` with a `horizontal` prop for the consistency and ease of teaching. Shortly after we made the switch, however, we missed the clarity of having `Row` and `Col`. The explicitness helps, but also, the **closing tag** remains descriptive!
 
-React Native gives us a really smart set of primitives out of the box. `View` is one of these primitives, and it forces the use of flexbox, but also importantly defaults to `flexDirection: 'column'`.
+Compare this partial JSX
 
-
-In React Native, we are given View.
-
-Made our own primitives, immediately built Row, Col, can now do convenient things like `alignHorizontal`.
-
-`horizontal` prop explored for consistency with `ScrollView`
-
----
-
-Had a mini breakthrough on our `<View horizontal >` discussion. I realized having `Row` is REALLY useful for reading jsx as a dev. Specifically, it tells to me “instead of reading components top-down, now read them left-right”. This of course is what `<View horizontal >` tells me, but it fails in with the ending tag. The skimmer can not easily see _when_ to stop reading left-right, especially if the children jsx height is tall enough to not see the opening and closing `View` tag on the screen. SO, I’m thinking about bring it back in some form. (edited)
-
-Here’s a code sample with `Row` in it:
-
- ```jsx
-     <Style_ borderTop={`1px solid ${COLOR.E5}`}>
-        <View
-          marginTop={32}
-          paddingBottom={this.props.label === 'Color' ? 0 : 28}
-        >
-          <View
-            // paddingTop={28}
-            paddingHorizontal={this.props.label === 'Color' ? 15 : 30}
-            // paddingHorizontal={30}
-          >
-            <View
-              paddingTop={28}
-              paddingBottom={this.props.label === 'Color' ? 10 : 18}
-              paddingHorizontal={this.props.label === 'Color' ? 15 : 0}
-
-              // paddingLeft={30}
-              >
-              <Text
-                size={UIState.fontSize.body}
-                bold
-                >
-                {this.props.label}
-              </Text>
-            </View>
-            <Row
-              wrap='wrap'
-              marginTop='8px'
-              height={this.props.contentHeight}
-            >
-              {Options.slice(0, this.props.visibleCount)}
-              { (this.props.label === 'Size') && (
-                <View
-                  paddingTop={20}
-                >
-                  <Text
-                    size={UIState.fontSize.body}
-                    >
-                    + Extended sizes
-                  </Text>
-                </View>
-              )}
-              {
-                Options.slice(this.props.visibleCount, Options.length).length ?
-                  <MoreOptions filters={Options.slice(4, Options.length)} /> : null
-              }
-            </Row>
-          </View>
-        </View>
-      </Style_>
+```jsx
+    <Something />
+    <OtherThing />
+  </View>
+  <Text>Hi</Text>
+  <Text>Bye</Text>
+</View>
 ```
 
-So easy to see when I am supposed to read top-down vs left-right.
+with this
 
-This is a good reason to bring back something like `Flex`, too.
+```jsx
+    <Something />
+    <OtherThing />
+  </Col>
+  <Text>Hi</Text>
+  <Text>Bye</Text>
+</Row>
+```
 
+In both cases, they render the same thing, but the JSX of the `Col` and `Row` is instantly understood. No scrolling up needed.
 
-Does this mean we should also have a `ScrollRow` and `ScrollCol`? Well, yeah, actually. That would be nice.
+#### Does this mean we should have `ScrollRow` and `ScrollCol`?
+Well yeah, actually, that would be nice. We have not yet done this, but I don't see how it could be a bad thing.
+
+#### Why not replace `View` with something more descriptive, like `Flex`?
+I would like to do this. Or maybe just add a `Flex` for when `flexDirection` is variable, and leave `View` for the case that there is only one child. My team is not yet unified on this, however, so it has not landed in [constelation](https://github.com/constelation/monorepo).
