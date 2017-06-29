@@ -1,11 +1,32 @@
 # Enhancing Components
-Lets say you'd like to extract out some utility code of a component for re-use with other components. It could be something that connects to stores, something that calculates values and passes them along, something that adds a loading spinner while retrieving data, etc. We'll broadly call that something an *enhancement* going forward, but you could also think of it as a configuration or manipulation.
+Lets say you'd like to extract out some utility code out of a component for re-use with other components. It could be something that connects to stores, something that calculates values and passes them along, something that adds a loading spinner while retrieving data, etc. We'll broadly call that something an **enhancement** going forward, but you could also think of it as a configuration or manipulation.
 
 So, how do you go about extracting and reusing this enhancement? Well, you have a some options...
 
-HOC, class decorators, cloneElement, child function
+*TL;DR*
+- *Static enhancement? Use `HOC` or `@decorator`.*
+- *Dynamic enhancement? Use `cloneElement` or `child function`.*
+
+## HOC
+
+## @decorator
+
+## cloneElement
+
+## child function
+
+## Summary
+
+## Other resources
+- [React Higher Order Components in depth – franleplant – Medium](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
+- [Write a Higher Order Component from Scratch - react Video Tutorial #free @eggheadio](https://egghead.io/lessons/react-write-a-higher-order-component-from-scratch) for a good intro to HOC (other than the terminology)
 
 Really, it comes down to whether you'd like this enhancement done inside a component's `render()` (i.e. runtime/dynamic) or not.
+
+---
+
+HOC, class decorators, cloneElement, child function
+
 
 Pros and Cons of each of the 4 options
 
@@ -15,9 +36,6 @@ class decorators
 - [wycats/javascript-decorators](https://github.com/wycats/javascript-decorators#class-declaration)
 - use for similar functionality as `react.createClass()`'s `mixin` to modify the class.
 
-## TL;DR
-- Static enhancement? Use `HOC` or `@decorator`.
-- Dynamic enhancement? Use `cloneElement` or `child function`.
 
 [Using Functions as Children and Render Props in React Components](https://medium.com/codedaily/using-functions-as-children-and-render-props-in-react-components-113315b044ea)
 
@@ -189,9 +207,6 @@ More on `cloneElement()` in a future post.
 ## Wrapping it up
 Use `HOC` for static enhancement and `cloneElement` for dynamic enhancement. If you know upfront how to enhance a component without the enhancement changing, use a HOC. Else use `cloneElement` to enhance a runtime element.
 
-## Other resources
-- [React Higher Order Components in depth – franleplant – Medium](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
-- [Write a Higher Order Component from Scratch - react Video Tutorial #free @eggheadio](https://egghead.io/lessons/react-write-a-higher-order-component-from-scratch) for a good intro to HOC (other than the terminology)
 
 ---
 
