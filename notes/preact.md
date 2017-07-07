@@ -27,3 +27,5 @@
 - [Wiretie](https://github.com/synacor/wiretie)
   - A 1.3kb solution for working with async data in Preact
   - ![](https://pbs.twimg.com/media/DBrIsNJUwAAIdIf.jpg)
+
+- [preact-render-spy: Render preact components with access to the produced virtual dom for testing.](https://github.com/mzgoddard/preact-render-spy)
