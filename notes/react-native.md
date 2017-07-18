@@ -32,3 +32,12 @@ Javacript Core runs in a separate thread and talks to native iOS modules via RCT
 ## Tricks/Hacks
 Need something accessible from every file? Add it to `global` in your `index.{ios|android}.js`.
 - Found this in [initializeCore.js](https://github.com/facebook/react-native/blob/master/Libraries/Core/InitializeCore.js) from [package defaults](https://github.com/facebook/react-native/blob/master/packager/defaults.js)
+
+## Gestures
+![](https://github.com/kylpo/react-playbook/blob/master/assets/Gestures.jpg?raw=true)
+
+![](https://github.com/kylpo/react-playbook/blob/master/assets/Gestures2.jpg?raw=true)
+
+![](https://github.com/kylpo/react-playbook/blob/master/assets/Gestures3.jpg?raw=true)
+
+![](https://github.com/kylpo/react-playbook/blob/master/assets/Gestures4.jpg?raw=true)
