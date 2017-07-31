@@ -60,6 +60,8 @@ Fortunately, there are some babel plugins to help us out.
 ### [transform-react-constant-elements](https://babeljs.io/docs/plugins/transform-react-constant-elements/)
 Use variables to store react elements.
 
+"transform hoists element creation to the top level for subtrees that are fully static, which reduces calls to React.createElement and the resulting allocations" - [compiler optimizations](https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#compiler-optimizations)
+
 This transform hoists elements out of your `return` and places it in a `var` in your module. The hoisted `var` only runs `React.createElement()` once to generate the element's object, and the object is used as a constant in the `render`--saving `React.createElement()` calls in all subsequent `render`s.
 
 
@@ -126,10 +128,14 @@ class MyComponent extends React.Component {
 
 This was the original intent of the transform, I think, but in practice today, it actually just converts `React.createElement()` to `BabelHelpers.jsx()`, which is a more optimized version for product. Specifically, it avoids a `for` loop mapping over props.
 
-### Powerful combo
-`inline` reduces code execution by subverting `React.createElement`
+Note: not all elements can benefit from this transform. See this [before](https://github.com/kylpo/babel-exploration/blob/master/2-after-emotion.js) and [after](https://github.com/kylpo/babel-exploration/blob/master/3b-after-inline.js).
 
-`constant` reduces re-render code execution by storing the result React Element objects
+De-opts: `ref` prop, spreading `{...props}`.
+
+### Powerful combo
+`inline` reduces code execution by subverting `React.createElement`, but still creates new object literals on every re-render.
+
+`constant` reduces re-render code execution by storing a single resultant React Element object literal, then referring to it in the `render()`.
 
 ## Where does JSX fit in to this?
 `JSX` is what you're likely used to using, but it is really just sugar on top of `React.createElement()`. It relies on a babel transform to convert invalid javascript code into valid `React.createElement()` code. `JSX` represents objects (specifically React Element objects).
@@ -160,8 +166,14 @@ render() {
 
 ## Where do non-primitive elements fit in to this?
 
+## Stateless Functional Component optimization
+First, read this excellent article: [45% Faster React Functional Components, Now](https://medium.com/missive-app/45-faster-react-functional-components-now-3509a668e69f)
+
+So, when extracting a set of components into a new subcomponent, consider using the Functional form if it doesn't need React's lifecycle hooks or state.
+
+Note for self: this is made so much easier with Preact's `render(props)` API. Refactoring to/from SFC to Class is much easier.
+
 ## Resources
 - [Introducing JSX - React](https://facebook.github.io/react/docs/introducing-jsx.html)
 - [Rendering Elements - React](https://facebook.github.io/react/docs/rendering-elements.html)
 - [Reconciliation - React](https://facebook.github.io/react/docs/reconciliation.html)
-- [45% Faster React Functional Components, Now](https://medium.com/missive-app/45-faster-react-functional-components-now-3509a668e69f)
