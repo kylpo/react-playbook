@@ -14,6 +14,7 @@ So, how do you go about extracting and reusing this enhancement? Well, you have 
 ## cloneElement
 
 ## child function
+[Sharing stateful UI logic in React apps using Render Callback components](https://trevordmiller.com/blog/react-render-callback-components)
 
 ## Summary
 

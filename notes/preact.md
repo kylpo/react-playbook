@@ -15,6 +15,9 @@
 
 > "Yup! 😂 Preact weighs less than web component polyfills. So I struggle to find a good reason to use native web components today." - [Cory House](https://twitter.com/housecor/status/873320068993699840)
 
+## Testing
+- "preact-render-spy: like enzyme, but for Preact. It's awesome. https://t.co/97h8QJva3m https://t.co/JaXw1jl6ku" [Jason Miller 🦊⚛ on Twitter](https://twitter.com/_developit/status/884446691776241665)
+
 ## Libs
 - [preact-cli](https://github.com/developit/preact-cli)
   - "Your next Preact PWA starts in 30 seconds."
