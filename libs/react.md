@@ -39,6 +39,8 @@
   - "Super easy magic-move transitions for React apps"
 
 ## Forms
+- [rofrischmann/react-controlled-form: Flexible, Modular & Controlled Forms for React and Redux](https://github.com/rofrischmann/react-controlled-form)
+  - Simplify form management with React and Redux using **your own components**
 - [react-input-enhancements](https://github.com/alexkuz/react-input-enhancements)
   - "Set of enhancements for input control"
 - [formik: Forms in React, without tears](https://github.com/jaredpalmer/formik)
