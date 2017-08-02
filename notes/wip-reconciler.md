@@ -16,6 +16,8 @@ Understand that React works with a single, big, deeply nested JSON object of Rea
 
 Primitive types, ones that map one-to-one with your DOM elements, have a string `type`. These are your `div`s, `span`s, `h1`s, etc. React's lifecycle hooks are not applied to these, the React Element is simply an immutable snapshot of the attributes of a DOM element, and React simply updates the DOM where they have changed, or does not update them at all if they do not change.
 
+Note: maybe not say React Element, maybe `vdom` is better, as [WTF is JSX](https://jasonformat.com/wtf-is-jsx/) approaches this.
+
 You could return the object representation (shown above) of your react elements in you react components, if you'd like:
 
 ```jsx
