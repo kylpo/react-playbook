@@ -165,6 +165,7 @@ render() {
 ```
 
 ## Where do non-primitive elements fit in to this?
+TODO [Components and Props - React](https://facebook.github.io/react/docs/components-and-props.html)
 
 ## Stateless Functional Component optimization
 First, read this excellent article: [45% Faster React Functional Components, Now](https://medium.com/missive-app/45-faster-react-functional-components-now-3509a668e69f)
@@ -172,6 +173,20 @@ First, read this excellent article: [45% Faster React Functional Components, Now
 So, when extracting a set of components into a new subcomponent, consider using the Functional form if it doesn't need React's lifecycle hooks or state.
 
 Note for self: this is made so much easier with Preact's `render(props)` API. Refactoring to/from SFC to Class is much easier.
+
+#### Extra Credit
+TODO: use naming convention and babel transform to automatically call SFC this way. I don't want to dirty my purrrty `JSX`
+
+## The Differ
+React's VDOM is all about combining your one, big render object with a diffing algorith, then finally the DOM updater.
+
+In traversing your render object, the differ checks for `type` changes and `prop` changes.
+- same type, same props => no update
+- DOM element changes => update only the `attribute` that changed in the DOM (no React lifecycle hooks run === super performant)
+- Custom element changes => call `componentWillReceiveProps()` and `componentWillUpdate()` on the underlying instance, then `render()` and recurse result with diffing algorithm.
+- ... others... read [Reconciliation - React](https://facebook.github.io/react/docs/reconciliation.html)
+
+So, the less custom elements in your tree, the better? When is a re-render called? When `setState()` or `forceUpdate()` is called in a custom component. TODO: rephrase above from "one, big render() object" to something more like "a component's render object -- at the start is is just the render of your Root."
 
 ## Resources
 - [Introducing JSX - React](https://facebook.github.io/react/docs/introducing-jsx.html)

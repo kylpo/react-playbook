@@ -44,6 +44,7 @@
 - [react-input-enhancements](https://github.com/alexkuz/react-input-enhancements)
   - "Set of enhancements for input control"
 - [formik: Forms in React, without tears](https://github.com/jaredpalmer/formik)
+- [25th-floor/revalidation: Higher Order Component for Validating Forms in React](https://github.com/25th-floor/revalidation)
 
 ## Charts and Animations
 - [Chart Transitions with React and D3 4.0](http://www.delimited.io/blog/2016/5/18/react-and-d3-40)
