@@ -28,6 +28,10 @@
 - No platform-specific support (RN's `index.android.js`) - [issue](https://github.com/facebook/flow/issues/945#issuecomment-270590866)
 - Sometimes confusing error messages
 
+# Companies using Flow
+- Facebook
+- [Coursera](https://twitter.com/_lewisf/status/905166964661698560)
+
 # Style
 ## `Array<Foo>`, not `Foo[]`
 ### Why?
@@ -83,3 +87,6 @@ from https://github.com/ryyppy/flow-guide/issues/6
 ## DefaultProps get nullable type errors
 "You don’t have to mark your defaultProps as optional properties in your props. Flow knows how to handle them properly."
 from [official docs](https://flow.org/en/docs/frameworks/react/#toc-adding-types-for-react-component-props)
+
+## How to type-check HOCs?
+[Typing Higher\-order Components in Recompose With Flow](https://medium.com/flow-type/flow-support-in-recompose-1b76f58f4cfc)
