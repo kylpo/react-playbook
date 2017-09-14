@@ -30,6 +30,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [How React Works](https://github.com/kylpo/react-playbook/blob/master/notes/how-react-works.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
   - [MobX](https://github.com/kylpo/react-playbook/blob/master/notes/mobx.md)
+  - [License](https://github.com/kylpo/react-playbook/blob/master/notes/license.md)
   - [Performance](https://github.com/kylpo/react-playbook/blob/master/notes/performance.md)
   - [Preact](https://github.com/kylpo/react-playbook/blob/master/notes/preact.md)
   - [React Native](https://github.com/kylpo/react-playbook/blob/master/notes/react-native.md)
