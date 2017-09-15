@@ -7,8 +7,10 @@
 
 ```
 
-# BSD-3 + License
-There has been quite the uproar lately about React's (and other OSS Facebook projects') license agreement. I can see both sides of the argument, but I think I'm leaning towards the side that will avoid using these projects where possible, unfortunately.
+# React's BSD-3 + License
+There has been quite the uproar lately about React's (and other OSS Facebook projects') license agreement. I can see both sides of the argument, but I'm leaning towards the side that will avoid using these projects where possible, unfortunately.
+
+*Update: Looks like Wordpress is [actively removing](https://ma.tt/2017/09/on-react-and-wordpress/) their React usage*
 
 Here are some good reads about it:
 
@@ -16,6 +18,7 @@ Here are some good reads about it:
 - [An analysis of the licenses used by 75\+ Open Source projects across 35 companies](https://medium.com/@raulk/list-of-companies-and-popular-projects-by-the-open-source-licenses-they-use-35a53eaf1c80)
   - React, Jest, Draft.js, Flow, Immutable.js, and GraphQL reference impl under this license
 - [Brain dump: notes and questions arising from “Facebook’s BSD\-3 \+ strong patent retaliation” license](https://medium.com/@raulk/further-notes-and-questions-arising-from-facebooks-bsd-3-strong-patent-retaliation-license-c6386e8e1d60)
+- [Explaining React's license \| Engineering Blog \| Facebook Code \| Facebook](https://code.facebook.com/posts/112130496157735/explaining-react-s-license/)
 - [The React license for founders and CTOs – James Ide](https://medium.com/@ji/the-react-license-for-founders-and-ctos-b38d2538f3e5)
 
 And some discussions on Twitter:
