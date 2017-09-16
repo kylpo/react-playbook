@@ -8,6 +8,8 @@
 ```
 
 # Forms
+- [React Form Validation without abstraction – Daniel Steigerwald](https://medium.com/@steida/react-form-validation-without-abstraction-41264608473c) 
+
 ## Generic `handleChange()`
 ![](https://pbs.twimg.com/media/C7Z8QNfU4AAEc2p.jpg:large)
 [Rahul Devaskar on Twitter](https://twitter.com/apostopher/status/843998603127414784)
