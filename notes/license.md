@@ -14,6 +14,8 @@ There has been quite the uproar lately about React's (and other OSS Facebook pro
 
 Here are some good reads about it:
 
+- [The Facebook Patent License Punishes You For Suing Facebook, But Lets Them Sue You](http://yehudakatz.com/2017/09/16/facebook-patent-clause-protects-facebook-not-you/)
+  - And its associated [twitter thread](https://twitter.com/wycats/status/909134245334999040)
 - [If you’re a startup, you should not use React \(reflecting on the BSD \+ patents license\)](https://medium.com/@raulk/if-youre-a-startup-you-should-not-use-react-reflecting-on-the-bsd-patents-license-b049d4a67dd2)
 - [An analysis of the licenses used by 75\+ Open Source projects across 35 companies](https://medium.com/@raulk/list-of-companies-and-popular-projects-by-the-open-source-licenses-they-use-35a53eaf1c80)
   - React, Jest, Draft.js, Flow, Immutable.js, and GraphQL reference impl under this license
