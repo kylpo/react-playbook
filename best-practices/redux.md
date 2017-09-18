@@ -142,6 +142,7 @@ export const selectTodos = (state) => state
 * Flow: [Using Redux with Flow](http://frantic.im/using-redux-with-flow) is a nice write-up
 
 ## Other Considerations
+* `connect()` better thought of as side-loading in a top-down system - derived from [@aweary](https://twitter.com/aweary/status/889661798177046528)
 * [Idiomatic Redux: Thoughts on Thunks, Sagas, Abstraction, and Reusability · Mark's Dev
   Blog](http://blog.isquaredsoftware.com/2017/01/idiomatic-redux-thoughts-on-thunks-sagas-abstraction-and-reusability/)
 
