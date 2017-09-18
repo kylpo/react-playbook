@@ -25,7 +25,7 @@ Styles, Conventions, Rules, Tips, and Tools!
 - Best Practices
   - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
   - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md) - [[post](https://medium.com/@kylpo/redux-best-practices-eef55a20cc72)]
-- Notes
+- Notes (aka Shallow Dives)
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
   - [How React Works](https://github.com/kylpo/react-playbook/blob/master/notes/how-react-works.md)
   - [Immutable](https://github.com/kylpo/react-playbook/blob/master/notes/immutable.md)
