@@ -13,7 +13,7 @@ There has been quite the uproar lately about React's (and other OSS Facebook pro
 *Update: Looks like Wordpress is [actively removing](https://ma.tt/2017/09/on-react-and-wordpress/) their React usage*
 
 Here are some good reads about it:
-
+- [3 Points to Consider before Migrating Away from React Because of Facebook’s ‘BSD\+ Patent’ License](https://blog.cloudboost.io/3-points-to-consider-before-migrating-away-from-react-because-of-facebooks-bsd-patent-license-b4a32562d268)
 - [The Facebook Patent License Punishes You For Suing Facebook, But Lets Them Sue You](http://yehudakatz.com/2017/09/16/facebook-patent-clause-protects-facebook-not-you/)
   - And its associated [twitter thread](https://twitter.com/wycats/status/909134245334999040)
 - [If you’re a startup, you should not use React \(reflecting on the BSD \+ patents license\)](https://medium.com/@raulk/if-youre-a-startup-you-should-not-use-react-reflecting-on-the-bsd-patents-license-b049d4a67dd2)
@@ -24,7 +24,6 @@ Here are some good reads about it:
 - [The React license for founders and CTOs – James Ide](https://medium.com/@ji/the-react-license-for-founders-and-ctos-b38d2538f3e5)
 
 And some discussions on Twitter:
-
 - "You know what would suck? If I invented a really cool new thing, patented it, implemented it in React, then Facebook decided to copy me"
   - [@thejameskyle](https://twitter.com/thejameskyle/status/898964687303327744)
 - "None of this was a surprise tho; everyone was warned (including by me) that this time bomb would eventually go off."
