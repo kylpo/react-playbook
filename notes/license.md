@@ -41,3 +41,10 @@ And some discussions on Twitter:
 - [Rich Harris on Twitter: "@floydophone @lukeed05 @some\_day\_man @dan\_abramov @ThisIsMissEm @facebook uh, wow\. please elaborate on that statement\. Which patents are being infringed?"](https://twitter.com/Rich_Harris/status/908782891982901249)
   - [Pete Hunt on Twitter: "@Rich\_Harris @lukeed05 @some\_day\_man @dan\_abramov @ThisIsMissEm @facebook When I'm back at my computer I'll show you the "download data and render Dom" patent from some random dead Dutch company"](https://twitter.com/floydophone/status/908787530983706626)
   - [Brandon Dail on Twitter: "@Rich\_Harris @floydophone @lukeed05 @some\_day\_man @dan\_abramov @ThisIsMissEm @facebook I \*think\* maybe he means that patents exist for such broad concepts that almost everything is infringing somehow, even if it's unenforceable"](https://twitter.com/aweary/status/908790460130353154)
+- [Mattias P Johansson on Twitter: "I don't understand why people are suggesting Vue instead of React b/c of license\. Isn't MIT\-only WORSE than Facebooks license?"](https://twitter.com/mpjme/status/909452245372162049)
+
+@floydophone has been digging up some other patents (point being that we're all screwed if we try to sue any of these big companies):
+- [Pete Hunt on Twitter: "Remember everyone: if you are doing responsive web design, you are infringing on a Google patent: https://t\.co/jWHvlvKuK9"](https://twitter.com/floydophone/status/910542586988957697)
+- [Pete Hunt on Twitter: "Better hope you aren't preloading JS with your favorite bundler\! It infringes on another Google patent https://t\.co/EGvol1kStJ"](https://twitter.com/floydophone/status/910544627320619008)
+- [Pete Hunt on Twitter: "Looks like ever webapp that supports third\-party plugins \(Wordpress etc\) likely violates this Google patent: https://t\.co/TCMKZJGEpM"](https://twitter.com/floydophone/status/910545768410488838)
+- [Pete Hunt on Twitter: "You guys thought @tomdale invented progressive enhancement but it was actually Google\. Now pay up\! https://t\.co/Akfl39LNXQ"](https://twitter.com/floydophone/status/910547163637325824)
