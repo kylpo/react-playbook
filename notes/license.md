@@ -7,10 +7,18 @@
 
 ```
 
+*Update Sep 22, 2017: React, Jest, Flow, and Immutable are now MIT!*
+
+See [Relicensing React, Jest, Flow, and Immutable\.js \| Facebook](https://code.facebook.com/posts/300798627056246/relicensing-react-jest-flow-and-immutable-js/) and the [twitter post](https://twitter.com/reactjs/status/911347634069168128) for more.
+
+---
+
+Keeping below links/notes as an archive. They're no longer acurate.
+
 # React's BSD-3 + License
 There has been quite the uproar lately about React's (and other OSS Facebook projects') license agreement. I can see both sides of the argument, but I'm leaning towards the side that will avoid using these projects where possible, unfortunately.
 
-*Update: Looks like Wordpress is [actively removing](https://ma.tt/2017/09/on-react-and-wordpress/) their React usage*
+*Looks like Wordpress is [actively removing](https://ma.tt/2017/09/on-react-and-wordpress/) their React usage*
 
 Here are some good reads about it:
 - [3 Points to Consider before Migrating Away from React Because of Facebook’s ‘BSD\+ Patent’ License](https://blog.cloudboost.io/3-points-to-consider-before-migrating-away-from-react-because-of-facebooks-bsd-patent-license-b4a32562d268)
