@@ -244,10 +244,13 @@ Well, if you're using [Preact](https://github.com/developit/preact), you're in l
 
 ![](https://camo.githubusercontent.com/a2afe02731bdae6d2eacd5d6c975d754423db525/687474703a2f2f692e696d6775722e636f6d2f56346b5467626e2e706e67)
 
-Unfortunatelu, `linkref` does **not** [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a future babel plugin will accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [This](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
+Unfortunately, `linkref` does **not** [currently](https://github.com/developit/linkref/issues/2) work in React. I'm hoping it will someday, or a future babel plugin will accomplish this. [babel-plugin-transform-jsx-ref-to-function](https://github.com/fresk-nc/babel-plugin-transform-jsx-ref-to-function) comes close, but it uses inline `ref` callbacks, which hurts performance (as mentioned below). [This](https://twitter.com/thejameskyle/status/859420749844680708) tweet thread with @thejameskyle is also relevant.
 
 ## The gotchas
 ### Don't inline `ref` callbacks
+
+> Edit 11/2017: looks like something like reflective-bind could be a nice solve for inline functions: [Ending the debate on inline functions in React – Flexport Engineering](https://flexport.engineering/ending-the-debate-on-inline-functions-in-react-8c03fabd144)
+
 Code examples look so much simpler and easier to follow when `ref` callbacks are inlined:
 
 ```jsx
