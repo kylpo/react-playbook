@@ -24,6 +24,7 @@ Styles, Conventions, Rules, Tips, and Tools!
   - [The Case for `<Row>` (and `<Col>`)](https://github.com/kylpo/react-playbook/blob/master/patterns/Row-Col.md) - [[post](https://medium.com/@kylpo/the-case-for-row-and-col-6c7466d900d8)]
 - Best Practices
   - [React](https://github.com/kylpo/react-playbook/blob/master/best-practices/react.md)
+  - [Reusable Components](https://github.com/kylpo/react-playbook/blob/master/best-practices/reusable-components.md)
   - [Redux](https://github.com/kylpo/react-playbook/blob/master/best-practices/redux.md) - [[post](https://medium.com/@kylpo/redux-best-practices-eef55a20cc72)]
 - Notes (aka Shallow Dives)
   - [Flow-Type](https://github.com/kylpo/react-playbook/blob/master/notes/flow-type.md)
