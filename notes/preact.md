@@ -32,3 +32,10 @@
   - ![](https://pbs.twimg.com/media/DBrIsNJUwAAIdIf.jpg)
 
 - [preact-render-spy: Render preact components with access to the produced virtual dom for testing.](https://github.com/mzgoddard/preact-render-spy)
+
+## Look in to
+- [Alligator\.io on Twitter: "Build a SSR App With Preact, Unistore and Preact Router: https://t\.co/2NgDtvoyq1 via @scotch\_io… "](https://twitter.com/alligatorio/status/981604827699535872)
+- [Preact meets CMS: Building Lightweight Portable Widget Components](https://medium.com/@_zouhir/preact-meets-cms-building-lightweight-portable-widget-components-e151622e2ac6)
+- [Jason Miller 🦊⚛ on Twitter: "React Morph is really neat\! The code is nice and concise, and it seems to work well with Preact \(pending a little PropTypes fix ;\) https://t\.co/3tRkz45vja… https://t\.co/hcSZnU9oYZ"](https://twitter.com/_developit/status/968503628465131520)
+- [Zouhir ⚡ on Twitter: "Demo time 🎬 : static website generator on top of preact\-cli that is pretty much Gatsby, will call it Gatspre\. ▶️ 00:10 content folder markdown \+ frontmatter files are made statics\. ▶️ 00:25 full route splitting\. 🏎 super fast builds\. 🐥 tiny: 30kb > a typical blog >15kb\.… https://t\.co/8amXKuXizn"](https://twitter.com/_zouhir/status/969883925756641280)
+- [Behind the scenes: Preact Gallery – Colin van Eenige – Medium](https://medium.com/@cvaneenige/behind-the-scenes-preact-gallery-c1788ee01001)
