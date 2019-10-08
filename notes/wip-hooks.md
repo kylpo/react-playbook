@@ -4,6 +4,20 @@
 
 from [React Hook Pitfalls \- Kent C\. Dodds \- React Rally 2019 \- YouTube](https://www.youtube.com/watch?v=VIRcX2X7EUk&t=517s)
 
+> `useState`: Persist value between renders, trigger re-render
+>
+> `useRef`: Persist value between renders, no re-render
+>
+> `useEffect`: Side effects that run after render
+>
+> `useReducer`: useState in reducer pattern
+>
+> `useMemo`: Memoize value between renders
+>
+> `useCallback`: Persist ref equality between renders
+>
+> - [Tyler McGinnis](https://twitter.com/tylermcginnis/status/1169667360795459584)
+
 ## Rules
 
 From [docs](https://reactjs.org/docs/hooks-overview.html#rules-of-hooks):
