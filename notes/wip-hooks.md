@@ -26,11 +26,11 @@ From [docs](https://reactjs.org/docs/hooks-overview.html#rules-of-hooks):
 >
 > Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions.
 
-## Ref
+## `useRef()`
 
 Ref is like a class property. It does not affect (re-)rendering.
 
-## Effect
+## `useEffect()`
 
 From [docs](https://reactjs.org/docs/hooks-effect.html):
 
@@ -79,6 +79,11 @@ If passing a second argument (array), React will run the callback after the firs
 By passing the second argument an empty array, React will compare after each render the array and will see nothing was changed, thus calling the callback only after the first render.
 
 https://stackoverflow.com/questions/53120972/how-to-call-loading-function-with-react-useeffect-only-once
+
+## Community Hooks
+
+- [Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
+- [react\-use: React Hooks — 👍](https://github.com/streamich/react-use)
 
 # Resources
 
