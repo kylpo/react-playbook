@@ -1,5 +1,7 @@
 _WIP_
 
+[Everything You Need to Know About FLIP Animations in React \| CSS\-Tricks](https://css-tricks.com/everything-you-need-to-know-about-flip-animations-in-react/)
+
 # Unmounting animations
 - "unmounting animations are the hardest, I wish it were easier" - [@browniefed](https://twitter.com/browniefed/status/839514443285311488)
 - use `transition-group`

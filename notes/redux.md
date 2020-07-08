@@ -117,6 +117,8 @@ Every time the state tree updates, the selector is recalculated. This may be fin
 
 **Solution**: memoize selectors with [reselect](https://github.com/reduxjs/reselect) to only recompute the selector when a value it uses changes. Else it returns the cached value.
 
+Note: Selectors make your UI unaware of the state structure. Without using selectors, your components would drill directly in to your store's state to `mapStateToProps`, which could result in a bunch of fixes needed when you change the shape of your state.
+
 ### Reducers can get complicated
 
 Reducers are simple in theory, but can quickly get out of hand and complicated. [immer](https://github.com/immerjs/immer) provides a nicer API for producing next states, and is only 3kB in size.
@@ -312,5 +314,3 @@ Common effects: (`yield ___()`)
 ## Dev tools
 
 One of the best reasons to use Redux. See all of the amazing tools at [Ecosystem \| Redux](https://redux.js.org/introduction/ecosystem#dev-tools).
-
-## Resources
