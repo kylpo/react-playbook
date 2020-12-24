@@ -181,6 +181,8 @@ Note: Eventually, this `/shared/` folder might contain too many components to re
 - A __Scene__ is a top-level, routed-to component and exists in the `/scenes/` folder
 - __Shared__ app components exist in the `/shared/` folder
 
+Nested folders show dependence and scope. Need to use this code in another place, too? Put it in their shared ancestor. Simple.
+
 Next up, we'll explore app-dependent and independent components!
 
 ## Next Up: [Component Dependencies](https://github.com/kylpo/react-playbook/blob/master/component-architecture/4_Component-Dependencies.md)
