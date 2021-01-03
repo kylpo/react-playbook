@@ -30,6 +30,15 @@ From [docs](https://reactjs.org/docs/hooks-overview.html#rules-of-hooks):
 
 Ref is like a class property. It does not affect (re-)rendering.
 
+## `useMemo()`
+
+When to use useMemo()?
+
+1. Referential equality (that you want updated when a dependency changes)
+2. Computationally expensive calculations
+
+https://kentcdodds.com/blog/usememo-and-usecallback
+
 ## `useEffect()`
 
 From [docs](https://reactjs.org/docs/hooks-effect.html):
