@@ -1,3 +1,7 @@
+Update [2023-4-13]: others are starting to write about this approach.
+- [Fighting inter\-component HTML bloat by Elise Hein](https://elisehe.in/2023/03/27/minimal-html-in-design-systems)
+- Radix's `asChild` prop
+
 # A Naming Convention for Injector Components
 An "injector component" takes props, optionally computes new ones, then injects them into its child via `React.cloneElement()`. Crucially, it also does not add any new components to the DOM. It only exists in React's virtual DOM.
 
